@@ -3,6 +3,7 @@ import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Journey from "./sections/Journey";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       {/* projects */}
       {/* testimonial */}
       <Contact />
+      <Footer />
     </div>
   );
 }

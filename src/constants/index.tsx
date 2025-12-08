@@ -26,7 +26,7 @@ export const experiences = [
     job: "Next Steps",
     date: "Vision",
     contents: [
-      "Die Tech-Welt steht nie still – und ich auch nicht. Ich bin neugierig und immer offen dafür, neue Technologien zu lernen.",
+      "Die Tech-Welt steht nie still und ich auch nicht. Ich bin neugierig und immer offen dafür, neue Technologien zu lernen.",
       "Aktuell vertiefe ich mein Wissen im Bereich Künstliche Intelligenz (KI) und wie man diese in moderne Web-Apps integriert.",
       "Ich suche kein statisches Umfeld, sondern ein Team, in dem ich mich weiterentwickeln und spannende Projekte umsetzen kann.",
       "Egal ob Startup oder etabliertes Unternehmen: Ich bin bereit für die nächste Challenge.",
