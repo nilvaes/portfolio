@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { FlipWords } from "./FlipWords";
 
 export default function HeroText() {
-  const words: string[] = ["Innovative", "Reliable", "Efficient"];
+  const words: string[] = ["innovative", "zuverlässige", "effiziente"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -18,7 +18,7 @@ export default function HeroText() {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, Ich bin Savas
+          Hi, ich bin Savas
         </motion.h1>
         <div className="fflex flex-col items-start">
           <motion.p
@@ -28,7 +28,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.3 }}
           >
-            Full-Stack Developer <br /> Dedicated to Crafting
+            Full Stack Developer <br /> mit Fokus auf
           </motion.p>
           <motion.div
             variants={variants}
@@ -48,7 +48,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Solutions
+            Weblösungen
           </motion.p>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function HeroText() {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm Savas
+          Hi, ich bin Savas
         </motion.p>
         <div>
           <motion.p
@@ -71,7 +71,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.3 }}
           >
-            Building
+            Ich baue
           </motion.p>
           <motion.div
             variants={variants}
@@ -91,7 +91,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Applications
+            Webanwendungen
           </motion.p>
         </div>
       </div>

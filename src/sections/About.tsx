@@ -17,7 +17,7 @@ export default function About() {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, Ich bin Savas</p>
+            <p className="headtext">Hi, ich bin Savas</p>
             <p className="subtext">
               Ich bin ein leidenschaftlicher Entwickler mit Fokus auf moderne
               Webtechnologien.
@@ -89,9 +89,10 @@ export default function About() {
         {/* grid3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
+            <p className="headtext">Zeitzone</p>
             <p className="subtext">
-              I'm based in Germany, and open to remote work worldwide
+              Ich wohne in Deutschland und arbeite gern remote mit Teams
+              weltweit
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -101,7 +102,9 @@ export default function About() {
         {/* grid4 */}
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">Do you want to work with me?</p>
+            <p className="text-center headtext">
+              Hast du Lust, mit mir zu arbeiten?
+            </p>
             <CopyEmailButton />
           </div>
         </div>
@@ -110,8 +113,8 @@ export default function About() {
           <div className="z-10 w-[50%]">
             <p className="headtext">Tech Stack</p>
             <p className="subtext">
-              I specialize in a variety of libraries, Frameworks and tools that
-              allow me to build robust and scalable applications
+              Ich setze moderne Bibliotheken, Frameworks und Tools ein, um
+              robuste und skalierbare Anwendungen zu bauen
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">

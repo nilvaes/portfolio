@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Start", href: "#home" },
   { label: "Info", href: "#info" },
-  { label: "About Me", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Über mich", href: "#about" },
+  { label: "Kontakt", href: "#contact" },
 ];
 
 type NavigationProps = {

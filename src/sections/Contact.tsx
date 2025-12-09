@@ -81,17 +81,15 @@ export default function Contact() {
       {showAlert && <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let's Talk</h2>
+          <h2 className="text-heading">Lass uns reden</h2>
           <p className="font-normal text-neutral-400">
-            Whether you are looking to build a new website, improve your
-            existing platform, or bring a unique project to life, I'm here to
-            help.
+            Du brauchst eine neue Website, willst deine Plattform verbessern oder ein besonderes Projekt umsetzen? Ich helfe gern.
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
             <label htmlFor="name" className="field-label">
-              Full Name
+              Vollständiger Name
             </label>
             <input
               id="name"
@@ -107,14 +105,14 @@ export default function Contact() {
           </div>
           <div className="mb-5">
             <label htmlFor="email" className="field-label">
-              Email
+              E-Mail
             </label>
             <input
               id="email"
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder=" MaxMustermann@gmail.com"
+              placeholder=" max.mustermann@gmail.com"
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -123,14 +121,14 @@ export default function Contact() {
           </div>
           <div className="mb-5">
             <label htmlFor="message" className="field-label">
-              Message
+              Nachricht
             </label>
             <textarea
               id="message"
               name="message"
               rows={4}
               className="field-input field-input-focus"
-              placeholder="Share your thoughts"
+              placeholder="Teile deine Gedanken"
               autoComplete="message"
               value={formData.message}
               onChange={handleChange}
@@ -141,7 +139,7 @@ export default function Contact() {
             type="submit"
             className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
           >
-            {isLoading ? "Sending..." : "Send"}
+            {isLoading ? "Sende..." : "Senden"}
           </button>
         </form>
       </div>
