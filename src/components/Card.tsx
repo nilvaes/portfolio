@@ -9,7 +9,7 @@ export default function Card({
   text?: string;
   style: React.CSSProperties;
   image?: string;
-  containerRef?: React.RefObject<HTMLDivElement>;
+  containerRef?: React.RefObject<HTMLDivElement | null>;
 }) {
   return image && !text ? (
     <motion.img

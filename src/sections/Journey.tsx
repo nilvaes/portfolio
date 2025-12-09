@@ -3,7 +3,7 @@ import { experiences } from "../constants";
 
 export default function Journey() {
   return (
-    <section id="info">
+    <section id="about">
       <Timeline data={experiences} />
     </section>
   );

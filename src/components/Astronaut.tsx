@@ -32,20 +32,20 @@ type GLTFResult = GLTF & {
   };
 };
 
-type ActionName = "Idle";
-type GLTFActions = Record<ActionName, THREE.AnimationAction>;
-
 export function Astronaut(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
   const { nodes, materials, animations } = useGLTF(
     "/models/falling-spaceman.glb"
   ) as unknown as GLTFResult;
-  const { actions } = useAnimations<GLTFActions>(animations, group);
+  const { actions, names } = useAnimations(animations, group);
   useEffect(() => {
-    if (animations.length > 0) {
-      actions[animations[0].name as ActionName]?.play();
-    }
-  }, [actions, animations]);
+    if (!actions) return;
+    const action = actions.Idle ?? (names[0] ? actions[names[0]] : undefined);
+    action?.reset().fadeIn(0.3).play();
+    return () => {
+      action?.fadeOut(0.3);
+    };
+  }, [actions, names]);
 
   const yPosition = useMotionValue(5);
   const ySpring = useSpring(yPosition, { damping: 30 });
@@ -53,7 +53,9 @@ export function Astronaut(props: JSX.IntrinsicElements["group"]) {
     ySpring.set(-1);
   }, [ySpring]);
   useFrame(() => {
-    group.current.position.y = ySpring.get();
+    if (group.current) {
+      group.current.position.y = ySpring.get();
+    }
   });
   return (
     <group
