@@ -7,7 +7,7 @@ Title: Tenhun Falling spaceman (FanArt)
 */
 
 import * as THREE from "three";
-import { useEffect, useRef, type JSX } from "react";
+import { useEffect, useMemo, useRef, type JSX } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import type { GLTF } from "three-stdlib";
 import { useMotionValue, useSpring } from "framer-motion";
@@ -34,8 +34,12 @@ type GLTFResult = GLTF & {
 
 export function Astronaut(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
+  const modelPath = useMemo(
+    () => `${import.meta.env.BASE_URL}models/falling-spaceman.glb`,
+    []
+  );
   const { nodes, materials, animations } = useGLTF(
-    "/models/falling-spaceman.glb"
+    modelPath
   ) as unknown as GLTFResult;
   const { actions, names } = useAnimations(animations, group);
   useEffect(() => {
@@ -153,4 +157,4 @@ export function Astronaut(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/models/falling-spaceman.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}models/falling-spaceman.glb`);
