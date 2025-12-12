@@ -20,7 +20,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="underline hover:text-white"
         >
-          TypeScript
+          TypeScript{" "}
         </a>
         und{" "}
         <a
