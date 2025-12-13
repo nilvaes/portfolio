@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex items-center c-space section-spacing"
+      className="relative flex flex-col px-5 lg:px-20 items-center pt-36"
     >
       <Particles
         className="absolute inset-0 -z-50"
@@ -79,11 +79,12 @@ export default function Contact() {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary ">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Lass uns reden</h2>
           <p className="font-normal text-neutral-400">
-            Du brauchst eine neue Website, willst deine Plattform verbessern oder ein besonderes Projekt umsetzen? Ich helfe gern.
+            Du brauchst eine neue Website, willst deine Plattform verbessern
+            oder ein besonderes Projekt umsetzen? Ich helfe gern.
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
@@ -142,6 +143,23 @@ export default function Contact() {
             {isLoading ? "Sende..." : "Senden"}
           </button>
         </form>
+      </div>
+      <div className="flex justify-center items-center mr-auto mt-auto gap-3 pt-20 pb-5">
+        <a
+          href="https://www.linkedin.com/in/%C3%B6mer-savas-b31643399/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10"
+        >
+          <img className="w-8 md:w-10" src="assets/logos/linkedin-white.svg" />
+        </a>
+        <a
+          href="https://github.com/nilvaes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="w-10 md:w-12" src="assets/logos/github-white.svg" />
+        </a>
       </div>
     </section>
   );

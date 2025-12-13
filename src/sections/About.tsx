@@ -7,7 +7,7 @@ import Frameworks from "../components/Frameworks";
 export default function About() {
   const grid2Container = useRef<HTMLDivElement>(null);
   return (
-    <section className="c-space section-spacing" id="info">
+    <section className="c-space mb-32 lg:mb-48" id="info">
       <h2 className="text-heading">Info</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* grid1 */}
