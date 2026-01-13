@@ -15,9 +15,9 @@ export const experiences = [
     job: "Fullstack & Tools",
     date: "Core Skills",
     contents: [
-      "🎨 Frontend: Spezialisiert auf Vue.js und Nuxt mit TypeScript und Tailwind CSS für moderne UIs.",
-      "⚙️ Backend: Solide Logik mit Node.js und Nest.js. Datenbank-Management über SQL, Supabase, TypeORM und Prisma.",
-      "🛠️ Workflow & Tools: Sicherer Umgang mit Git (GitHub/GitLab), VSCode und Containerisierung via Docker.",
+      "Frontend: Spezialisiert auf Vue.js und Nuxt mit TypeScript und Tailwind CSS für moderne UIs.",
+      "Backend: Solide Logik mit Node.js und Nest.js. Datenbank-Management über SQL, Supabase, TypeORM und Prisma.",
+      "Workflow & Tools: Sicherer Umgang mit Git (GitHub/GitLab), VSCode und Containerisierung via Docker.",
       "Ich bewege mich sicher zwischen Frontend und Backend und liebe es, beide Welten zu verbinden.",
     ],
   },
