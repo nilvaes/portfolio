@@ -44,7 +44,7 @@ export default function Contact() {
         {
           from_name: formData.name,
           from_email: formData.email,
-          to_name: "Savas",
+          to_name: "Herr Savas",
           to_email: "grimmjow@ichigo.me",
           message: formData.message,
         },

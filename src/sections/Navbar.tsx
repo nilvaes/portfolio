@@ -40,7 +40,7 @@ export default function Navbar() {
             href="#home"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Savas
+            Ömer
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}

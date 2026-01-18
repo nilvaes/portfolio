@@ -18,7 +18,7 @@ export default function HeroText() {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, ich bin Savas
+          Hi, ich bin Ömer
         </motion.h1>
         <div className="fflex flex-col items-start">
           <motion.p
@@ -61,7 +61,7 @@ export default function HeroText() {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, ich bin Savas
+          Hi, ich bin Ömer
         </motion.p>
         <div>
           <motion.p

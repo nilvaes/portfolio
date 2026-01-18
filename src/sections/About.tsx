@@ -17,7 +17,7 @@ export default function About() {
             className="absolute scale-[1.75] -right-20 -top-4 md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, ich bin Savas</p>
+            <p className="headtext">Hi, ich bin Ömer</p>
             <p className="subtext">
               Ich bin ein leidenschaftlicher Entwickler mit Fokus auf moderne
               Webtechnologien.

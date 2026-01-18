@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
       <div className="bg-linear-to-r from-transparent mb-4 via-neutral-700 to-transparent h-px w-full" />
-      <div>© {new Date().getFullYear()} Savas. Alle Rechte vorbehalten.</div>
+      <div>© {new Date().getFullYear()} Ömer. Alle Rechte vorbehalten.</div>
       <div>
         Gebaut mit{" "}
         <a
