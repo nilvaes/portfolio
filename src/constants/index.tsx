@@ -2,9 +2,9 @@ export const experiences = [
   {
     title: "Über mich & Ausbildung",
     job: "Fachinformatiker Anwendungsentwicklung",
-    date: "Status: Fast fertig",
+    date: "Status: Abgeschlossen",
     contents: [
-      "Ich stehe kurz vor dem Abschluss meiner Ausbildung und habe meine Leidenschaft in der Fullstack-Entwicklung gefunden.",
+      "Ich habe meine Ausbildung erfolgreich abgeschlossen und dabei meine Leidenschaft in der Fullstack-Entwicklung gefunden.",
       "Mein Antrieb: Ich wollte schon immer verstehen, wie man komplexe Apps baut, die nicht nur funktionieren, sondern auch visuell überzeugen.",
       "Im Team schätzt man mich als kommunikativen und freundlichen Kollegen, der Probleme lösungsorientiert angeht.",
       "Wenn ich nicht am Coden bin, finde ich meinen Ausgleich beim Sport, Kochen oder Musikhören.",
