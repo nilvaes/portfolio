@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from "motion/react";
+import { useI18n } from "../i18n";
 
 export default function Alert({ type, text }: { type: string; text: string }) {
+  const { t } = useI18n();
   const alertVarients = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
     visible: { opacity: 1, y: 0, scale: 1 },
@@ -26,7 +28,7 @@ export default function Alert({ type, text }: { type: string; text: string }) {
               type === "danger" ? "bg-red-500" : "bg-lavender"
             } uppercase px-2 py-1 text-xs font-semibold mr-3`}
           >
-            {type === "danger" ? "Failed" : "Success"}
+            {type === "danger" ? t("alert.failed") : t("alert.success")}
           </p>
           <p className="mr-2 text-left">{text}</p>
         </div>

@@ -1,21 +1,16 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-
-const navLinks = [
-  { label: "Start", href: "#home" },
-  { label: "Info", href: "#info" },
-  { label: "Über mich", href: "#about" },
-  { label: "Kontakt", href: "#contact" },
-];
+import { useI18n } from "../i18n";
 
 type NavigationProps = {
+  links: Array<{ label: string; href: string }>;
   onNavigate?: () => void;
 };
 
-function Navigation({ onNavigate }: NavigationProps) {
+function Navigation({ links, onNavigate }: NavigationProps) {
   return (
     <ul className="nav-ul">
-      {navLinks.map(({ label, href }) => (
+      {links.map(({ label, href }) => (
         <li className="nav-li" key={label}>
           <a
             href={href}
@@ -31,6 +26,14 @@ function Navigation({ onNavigate }: NavigationProps) {
 }
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, t } = useI18n();
+
+  const navLinks = [
+    { label: t("nav.home"), href: "#home" },
+    { label: t("nav.info"), href: "#info" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.contact"), href: "#contact" },
+  ];
 
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
@@ -52,8 +55,29 @@ export default function Navbar() {
               alt="toggle"
             />
           </button>
-          <nav className="hidden sm:flex ">
-            <Navigation />
+          <nav className="hidden sm:flex items-center gap-4">
+            <Navigation links={navLinks} />
+            <div className="flex items-center gap-2 text-sm">
+              <button
+                className={`cursor-pointer ${
+                  language === "de" ? "text-white" : "text-neutral-400"
+                }`}
+                onClick={() => setLanguage("de")}
+                aria-label={t("nav.toggleAria")}
+              >
+                DE
+              </button>
+              <span className="text-neutral-500">/</span>
+              <button
+                className={`cursor-pointer ${
+                  language === "en" ? "text-white" : "text-neutral-400"
+                }`}
+                onClick={() => setLanguage("en")}
+                aria-label={t("nav.toggleAria")}
+              >
+                EN
+              </button>
+            </div>
           </nav>
         </div>
       </div>
@@ -66,7 +90,27 @@ export default function Navbar() {
           transition={{ duration: 1 }}
         >
           <nav className="pb-5">
-            <Navigation onNavigate={() => setIsOpen(false)} />
+            <Navigation links={navLinks} onNavigate={() => setIsOpen(false)} />
+            <div className="flex items-center justify-center gap-4 mt-2 text-sm">
+              <button
+                className={`cursor-pointer ${
+                  language === "de" ? "text-white" : "text-neutral-400"
+                }`}
+                onClick={() => setLanguage("de")}
+                aria-label={t("nav.toggleAria")}
+              >
+                DE
+              </button>
+              <button
+                className={`cursor-pointer ${
+                  language === "en" ? "text-white" : "text-neutral-400"
+                }`}
+                onClick={() => setLanguage("en")}
+                aria-label={t("nav.toggleAria")}
+              >
+                EN
+              </button>
+            </div>
           </nav>
         </motion.div>
       )}

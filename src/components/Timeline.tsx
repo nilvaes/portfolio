@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { useI18n } from "../i18n";
 
 interface TimelineEntry {
   title: string;
@@ -11,6 +12,7 @@ interface TimelineEntry {
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+  const { t } = useI18n();
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -38,7 +40,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="c-space section-spacing" ref={containerRef}>
-      <h2 className="text-heading">Über mich im Detail</h2>
+      <h2 className="text-heading">{t("timeline.heading")}</h2>
 
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (

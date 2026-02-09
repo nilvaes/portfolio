@@ -1,8 +1,14 @@
 import { motion } from "motion/react";
 import { FlipWords } from "./FlipWords";
+import { useI18n } from "../i18n";
 
 export default function HeroText() {
-  const words: string[] = ["innovative", "zuverlässige", "effiziente"];
+  const { t } = useI18n();
+  const words: string[] = [
+    t("hero.words.first"),
+    t("hero.words.second"),
+    t("hero.words.third"),
+  ];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -18,7 +24,7 @@ export default function HeroText() {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, ich bin Ömer
+          {t("hero.greeting")}
         </motion.h1>
         <div className="fflex flex-col items-start">
           <motion.p
@@ -28,7 +34,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.3 }}
           >
-            Full Stack Developer <br /> mit Fokus auf
+            {t("hero.desktopTitle")}
           </motion.p>
           <motion.div
             variants={variants}
@@ -48,7 +54,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Weblösungen
+            {t("hero.desktopSuffix")}
           </motion.p>
         </div>
       </div>
@@ -61,7 +67,7 @@ export default function HeroText() {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, ich bin Ömer
+          {t("hero.greeting")}
         </motion.p>
         <div>
           <motion.p
@@ -71,7 +77,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.3 }}
           >
-            Ich baue
+            {t("hero.mobileTitle")}
           </motion.p>
           <motion.div
             variants={variants}
@@ -91,7 +97,7 @@ export default function HeroText() {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Webanwendungen
+            {t("hero.mobileSuffix")}
           </motion.p>
         </div>
       </div>

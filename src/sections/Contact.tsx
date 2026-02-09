@@ -2,8 +2,10 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import { useI18n } from "../i18n";
 
 export default function Contact() {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,14 +54,11 @@ export default function Contact() {
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "Your message has been sent successfully!");
+      showAlertMessage("success", t("contact.success"));
     } catch (error) {
       setIsLoading(false);
       console.error("Failed to send email:", error);
-      showAlertMessage(
-        "danger",
-        "Ahh, something went wrong. Please try again."
-      );
+      showAlertMessage("danger", t("contact.error"));
     }
   }
 
@@ -81,23 +80,20 @@ export default function Contact() {
       {showAlert && <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary ">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Lass uns reden</h2>
-          <p className="font-normal text-neutral-400">
-            Du brauchst eine neue Website, willst deine Plattform verbessern
-            oder ein besonderes Projekt umsetzen? Ich helfe gern.
-          </p>
+          <h2 className="text-heading">{t("contact.heading")}</h2>
+          <p className="font-normal text-neutral-400">{t("contact.description")}</p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
             <label htmlFor="name" className="field-label">
-              Vollständiger Name
+              {t("contact.fullName")}
             </label>
             <input
               id="name"
               name="name"
               type="text"
               className="field-input field-input-focus"
-              placeholder=" Max Mustermann"
+              placeholder={t("contact.fullNamePlaceholder")}
               autoComplete="name"
               value={formData.name}
               onChange={handleChange}
@@ -106,14 +102,14 @@ export default function Contact() {
           </div>
           <div className="mb-5">
             <label htmlFor="email" className="field-label">
-              E-Mail
+              {t("contact.email")}
             </label>
             <input
               id="email"
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder=" max.mustermann@gmail.com"
+              placeholder={t("contact.emailPlaceholder")}
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -122,14 +118,14 @@ export default function Contact() {
           </div>
           <div className="mb-5">
             <label htmlFor="message" className="field-label">
-              Nachricht
+              {t("contact.message")}
             </label>
             <textarea
               id="message"
               name="message"
               rows={4}
               className="field-input field-input-focus"
-              placeholder="Teile deine Gedanken"
+              placeholder={t("contact.messagePlaceholder")}
               autoComplete="message"
               value={formData.message}
               onChange={handleChange}
@@ -140,7 +136,7 @@ export default function Contact() {
             type="submit"
             className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
           >
-            {isLoading ? "Sende..." : "Senden"}
+            {isLoading ? t("contact.sending") : t("contact.submit")}
           </button>
         </form>
       </div>
