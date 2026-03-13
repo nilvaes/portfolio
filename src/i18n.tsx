@@ -58,6 +58,12 @@ const translations: Record<Language, TranslationTree> = {
       techStackTitle: 'Tech Stack',
       techStackText:
         'Ich setze moderne Frameworks und Tools ein, um wartbare und skalierbare Anwendungen zu entwickeln.',
+      techStackCategories: {
+        frontend: 'Frontend',
+        backend: 'Backend',
+        databases: 'Datenbanken & ORM',
+        tools: 'Tools & Workflow',
+      },
       cards: {
         junior: 'Junior',
         frontend: 'Frontend',
@@ -152,6 +158,12 @@ const translations: Record<Language, TranslationTree> = {
       techStackTitle: 'Tech Stack',
       techStackText:
         'I use modern frameworks and tools to build maintainable and scalable applications.',
+      techStackCategories: {
+        frontend: 'Frontend',
+        backend: 'Backend',
+        databases: 'Databases & ORM',
+        tools: 'Tools & Workflow',
+      },
       cards: {
         junior: 'Junior',
         frontend: 'Frontend',
