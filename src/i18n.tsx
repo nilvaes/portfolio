@@ -29,6 +29,7 @@ const translations: Record<Language, TranslationTree> = {
       home: 'Start',
       info: 'Info',
       about: 'Über mich',
+      projects: 'Projekte',
       contact: 'Kontakt',
       toggleAria: 'Sprache wechseln',
     },
@@ -48,7 +49,7 @@ const translations: Record<Language, TranslationTree> = {
       heading: 'Info',
       introTitle: 'Hi, ich bin Ömer',
       introText:
-        'Ich bin ein leidenschaftlicher Entwickler mit Fokus auf moderne Webtechnologien.',
+        'Ich bin ein Full Stack Developer mit Fokus auf moderne Webtechnologien.',
       stacksLabel: 'TECHNOLOGIESTACKS',
       timezoneTitle: 'Zeitzone',
       timezoneText:
@@ -56,7 +57,7 @@ const translations: Record<Language, TranslationTree> = {
       ctaTitle: 'Hast du Lust, mit mir zu arbeiten?',
       techStackTitle: 'Tech Stack',
       techStackText:
-        'Ich setze moderne Bibliotheken, Frameworks und Tools ein, um robuste und skalierbare Anwendungen zu bauen',
+        'Ich setze moderne Frameworks und Tools ein, um wartbare und skalierbare Anwendungen zu entwickeln.',
       cards: {
         junior: 'Junior',
         frontend: 'Frontend',
@@ -67,6 +68,26 @@ const translations: Record<Language, TranslationTree> = {
     },
     timeline: {
       heading: 'Über mich im Detail',
+    },
+    projects: {
+      heading: 'Projekte',
+      cards: {
+        portfolio: {
+          title: 'Developer Portfolio',
+          description:
+            'Eine performante, responsive Portfolio-Seite mit Fokus auf Animationen, Klarheit und Code-Qualität.',
+        },
+        dashboard: {
+          title: 'Analytics Dashboard',
+          description:
+            'Ein interaktives Dashboard mit Filterung, Diagrammen und einer klaren Informationshierarchie.',
+        },
+        saas: {
+          title: 'SaaS Web App',
+          description:
+            'Eine Fullstack-Anwendung mit Authentifizierung, Rollenverwaltung und einer modernen UI.',
+        },
+      },
     },
     contact: {
       heading: 'Lass uns reden',
@@ -102,6 +123,7 @@ const translations: Record<Language, TranslationTree> = {
       home: 'Home',
       info: 'Info',
       about: 'About',
+      projects: 'Projects',
       contact: 'Contact',
       toggleAria: 'Switch language',
     },
@@ -121,7 +143,7 @@ const translations: Record<Language, TranslationTree> = {
       heading: 'Info',
       introTitle: "Hi, I'm Ömer",
       introText:
-        "I'm a passionate developer focused on modern web technologies.",
+        "I'm a full stack developer focused on modern web technologies.",
       stacksLabel: 'TECH STACKS',
       timezoneTitle: 'Timezone',
       timezoneText:
@@ -129,7 +151,7 @@ const translations: Record<Language, TranslationTree> = {
       ctaTitle: 'Want to work together?',
       techStackTitle: 'Tech Stack',
       techStackText:
-        'I use modern libraries, frameworks, and tools to build robust and scalable applications',
+        'I use modern frameworks and tools to build maintainable and scalable applications.',
       cards: {
         junior: 'Junior',
         frontend: 'Frontend',
@@ -140,6 +162,26 @@ const translations: Record<Language, TranslationTree> = {
     },
     timeline: {
       heading: 'About Me In Detail',
+    },
+    projects: {
+      heading: 'Projects',
+      cards: {
+        portfolio: {
+          title: 'Developer Portfolio',
+          description:
+            'A fast, responsive portfolio site focused on clean design, animations, and code quality.',
+        },
+        dashboard: {
+          title: 'Analytics Dashboard',
+          description:
+            'An interactive dashboard with charts, filters, and a clear information hierarchy.',
+        },
+        saas: {
+          title: 'SaaS Web App',
+          description:
+            'A full stack application with authentication, role management, and a modern UI.',
+        },
+      },
     },
     contact: {
       heading: "Let's Talk",
