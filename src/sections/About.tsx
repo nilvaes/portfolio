@@ -104,11 +104,39 @@ export default function About() {
         </div>
         {/* grid5 */}
         <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
-            <p className="headtext">{t("about.techStackTitle")}</p>
-            <p className="subtext">{t("about.techStackText")}</p>
+          <div className="relative z-10 flex h-full w-[55%] flex-col gap-3">
+            <div>
+              <p className="headtext">{t("about.techStackTitle")}</p>
+              <p className="subtext">{t("about.techStackText")}</p>
+            </div>
+            <div className="mt-1 grid grid-cols-2 gap-x-4 gap-y-3 text-xs md:text-sm text-neutral-300">
+              <div>
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                  {t("about.techStackCategories.frontend")}
+                </p>
+                <p>Nuxt, Vue, React, React Native, Tailwind CSS</p>
+              </div>
+              <div>
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                  {t("about.techStackCategories.backend")}
+                </p>
+                <p>Node.js, Nest.js, REST APIs</p>
+              </div>
+              <div>
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                  {t("about.techStackCategories.databases")}
+                </p>
+                <p>Prisma, TypeORM, PostgreSQL, MariaDB, Supabase, Firebase</p>
+              </div>
+              <div>
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                  {t("about.techStackCategories.tools")}
+                </p>
+                <p>Git, GitHub, GitLab, Docker, TypeScript, Cursor, Codex, KI Tools</p>
+              </div>
+            </div>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+          <div className="absolute inset-y-2 md:inset-y-6 w-full h-full start-[55%] md:scale-110">
             <Frameworks />
           </div>
         </div>

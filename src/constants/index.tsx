@@ -14,10 +14,9 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       job: "Fachinformatiker Anwendungsentwicklung",
       date: "Status: Abgeschlossen",
       contents: [
-        "Ich habe meine Ausbildung erfolgreich abgeschlossen und dabei meine Leidenschaft in der Fullstack-Entwicklung gefunden.",
-        "Mein Antrieb: Ich wollte schon immer verstehen, wie man komplexe Apps baut, die nicht nur funktionieren, sondern auch visuell überzeugen.",
-        "Im Team schätzt man mich als kommunikativen und freundlichen Kollegen, der Probleme lösungsorientiert angeht.",
-        "Wenn ich nicht am Coden bin, finde ich meinen Ausgleich beim Sport, Kochen oder Musikhören.",
+        "Ich habe meine Ausbildung erfolgreich abgeschlossen und dabei meinen Schwerpunkt in der Fullstack-Entwicklung gefunden.",
+        "Ich lege Wert auf sauberen, gut strukturierten Code und Anwendungen, die sowohl zuverlässig als auch visuell ansprechend sind.",
+        "Im Team gelte ich als kommunikativer, hilfsbereiter Kollege mit einem lösungsorientierten Mindset.",
       ],
     },
     {
@@ -25,10 +24,9 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       job: "Fullstack & Tools",
       date: "Core Skills",
       contents: [
-        "Frontend: Spezialisiert auf Vue.js und Nuxt mit TypeScript und Tailwind CSS für moderne UIs.",
-        "Backend: Solide Logik mit Node.js und Nest.js. Datenbank-Management über SQL, Supabase, TypeORM und Prisma.",
-        "Workflow & Tools: Sicherer Umgang mit Git (GitHub/GitLab), VSCode und Containerisierung via Docker.",
-        "Ich bewege mich sicher zwischen Frontend und Backend und liebe es, beide Welten zu verbinden.",
+        "Frontend: Erfahrung mit Vue.js, Nuxt, React, TypeScript und Tailwind CSS für moderne, responsive UIs.",
+        "Backend: Node.js und Nest.js mit Datenbanken wie SQL, Supabase, TypeORM und Prisma.",
+        "Workflow: Versionierung mit Git, Arbeiten mit VSCode sowie Einsatz von Docker für reproduzierbare Umgebungen.",
       ],
     },
     {
@@ -36,10 +34,9 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       job: "Next Steps",
       date: "Vision",
       contents: [
-        "Die Tech-Welt steht nie still und ich auch nicht. Ich bin neugierig und immer offen dafür, neue Technologien zu lernen.",
-        "Aktuell vertiefe ich mein Wissen im Bereich Künstliche Intelligenz (KI) und wie man diese in moderne Web-Apps integriert.",
-        "Ich suche kein statisches Umfeld, sondern ein Team, in dem ich mich weiterentwickeln und spannende Projekte umsetzen kann.",
-        "Egal ob Startup oder etabliertes Unternehmen: Ich bin bereit für die nächste Challenge.",
+        "Ich halte mein Wissen kontinuierlich aktuell und beschäftige mich verstärkt mit dem Einsatz von KI in Web-Anwendungen.",
+        "Ich suche ein Umfeld, in dem ich mich fachlich weiterentwickeln und an praxisnahen Projekten mitarbeiten kann.",
+        "Ob Startup oder etabliertes Unternehmen – entscheidend ist für mich eine offene Lernkultur und gute Zusammenarbeit.",
       ],
     },
   ],
@@ -49,10 +46,9 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       job: "Application Development Specialist",
       date: "Status: Completed",
       contents: [
-        "I successfully completed my apprenticeship and discovered my passion for full stack development.",
-        "My drive: I always wanted to understand how to build complex apps that not only work well but also look great.",
-        "Teams appreciate me as a communicative and friendly colleague who approaches problems with a solution-oriented mindset.",
-        "When I'm not coding, I recharge through sports, cooking, or listening to music.",
+        "I successfully completed my apprenticeship and developed a strong focus on full stack development.",
+        "I care about clean, well-structured code and products that are both reliable and visually polished.",
+        "In teams, I am known as a communicative, friendly colleague with a solution-oriented mindset.",
       ],
     },
     {
@@ -60,10 +56,9 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       job: "Full Stack & Tools",
       date: "Core Skills",
       contents: [
-        "Frontend: Specialized in Vue.js and Nuxt with TypeScript and Tailwind CSS for modern UIs.",
-        "Backend: Solid logic with Node.js and Nest.js. Database management with SQL, Supabase, TypeORM, and Prisma.",
-        "Workflow & Tools: Confident with Git (GitHub/GitLab), VSCode, and containerization with Docker.",
-        "I work comfortably across frontend and backend and enjoy connecting both worlds.",
+        "Frontend: Experience with Vue.js, Nuxt, React, TypeScript, and Tailwind CSS for modern, responsive UIs.",
+        "Backend: Node.js and Nest.js with databases such as SQL, Supabase, TypeORM, and Prisma.",
+        "Workflow: Confident with Git, VSCode, and Docker for reproducible environments.",
       ],
     },
     {
@@ -71,10 +66,9 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       job: "Next Steps",
       date: "Vision",
       contents: [
-        "The tech world never stands still and neither do I. I'm curious and always open to learning new technologies.",
-        "Right now, I am deepening my knowledge in artificial intelligence (AI) and how to integrate it into modern web apps.",
-        "I'm not looking for a static environment, but for a team where I can grow and build exciting projects.",
-        "Whether startup or established company: I'm ready for the next challenge.",
+        "I keep my skills up to date and currently focus on integrating AI into modern web applications.",
+        "I am looking for a team where I can grow professionally and contribute to real-world projects.",
+        "Whether startup or established company, a strong learning culture and good collaboration matter most to me.",
       ],
     },
   ],
