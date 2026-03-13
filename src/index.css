@@ -107,7 +107,7 @@ body {
   @apply row-span-1 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-4 {
-  @apply row-span-1 md:col-span-2 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-2 h-76 md:h-80 relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-5 {
   @apply row-span-1 md:col-span-4 h-76 md:h-80 relative overflow-hidden hover:-translate-y-1 duration-200;
