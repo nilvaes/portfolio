@@ -47,17 +47,12 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       heading: 'Info',
-      introTitle: 'Hi, ich bin Ömer',
-      introText:
-        'Ich bin ein Full Stack Developer mit Fokus auf moderne Webtechnologien.',
-      stacksLabel: 'TECHNOLOGIESTACKS',
+      dragText: 'Ziehen und loslassen!',
       timezoneTitle: 'Zeitzone',
       timezoneText:
         'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
       ctaTitle: 'Hast du Lust, mit mir zu arbeiten?',
       techStackTitle: 'Tech Stack',
-      techStackText:
-        'Ich setze moderne Frameworks und Tools ein, um wartbare und skalierbare Anwendungen zu entwickeln.',
       techStackCategories: {
         frontend: 'Frontend',
         backend: 'Backend',
@@ -147,17 +142,12 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       heading: 'Info',
-      introTitle: "Hi, I'm Ömer",
-      introText:
-        "I'm a full stack developer focused on modern web technologies.",
-      stacksLabel: 'TECH STACKS',
+      dragText: 'Drag and release!',
       timezoneTitle: 'Timezone',
       timezoneText:
         'I live in Germany and can work remotely with teams worldwide',
       ctaTitle: 'Want to work together?',
       techStackTitle: 'Tech Stack',
-      techStackText:
-        'I use modern frameworks and tools to build maintainable and scalable applications.',
       techStackCategories: {
         frontend: 'Frontend',
         backend: 'Backend',
