@@ -36,7 +36,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative c-space section-spacing min-h-screen overflow-hidden"
+      className="relative c-space pt-20 md:pt-30 min-h-screen overflow-hidden"
     >
       <Particles
         className="absolute inset-0"
@@ -48,9 +48,6 @@ export default function Projects() {
 
       <div className="relative z-10">
         <h2 className="text-heading">{t("projects.heading")}</h2>
-        <p className="mt-2 subtext max-w-2xl">
-          {t("hero.desktopTitle")} {t("hero.desktopSuffix")}
-        </p>
 
         <div className="flex flex-col gap-6 mt-10">
           {PROJECTS.map((project) => (
