@@ -26,7 +26,7 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       contents: [
         "Frontend: Erfahrung mit Vue.js, Nuxt, React, TypeScript und Tailwind CSS für moderne, responsive UIs.",
         "Backend: Node.js und Nest.js mit Datenbanken wie SQL, Supabase, TypeORM und Prisma.",
-        "Workflow: Versionierung mit Git, Arbeiten mit VSCode sowie Einsatz von Docker für reproduzierbare Umgebungen.",
+        "Workflow: Versionierung mit Git, Arbeiten mit VSCode, Cursor oder Codex sowie Einsatz von Docker für reproduzierbare Umgebungen.",
       ],
     },
     {
@@ -58,7 +58,7 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       contents: [
         "Frontend: Experience with Vue.js, Nuxt, React, TypeScript, and Tailwind CSS for modern, responsive UIs.",
         "Backend: Node.js and Nest.js with databases such as SQL, Supabase, TypeORM, and Prisma.",
-        "Workflow: Confident with Git, VSCode, and Docker for reproducible environments.",
+        "Workflow: Confident with Git, VSCode, Cursor or Codex and Docker for reproducible environments.",
       ],
     },
     {

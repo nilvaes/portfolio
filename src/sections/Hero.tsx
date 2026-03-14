@@ -23,10 +23,10 @@ export default function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
       <LightRays
-        count={6}
+        count={12}
         color="rgba(124, 87, 219, 0.15)"
-        blur={48}
-        speed={16}
+        blur={10}
+        speed={4}
         length="80vh"
         className="absolute inset-0"
       />
