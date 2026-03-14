@@ -19,9 +19,6 @@ export default function About() {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
-              {t("about.dragText")}
-            </p>
             <Card
               text={t("about.cards.junior")}
               style={{ rotate: "75deg", top: "30%", left: "20%" }}
