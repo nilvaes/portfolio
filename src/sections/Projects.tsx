@@ -12,15 +12,15 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     key: "portfolio",
-    github: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio-demo.com",
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/nilvaes/portfolio-minimal",
+    demo: "https://nilvaes.github.io/portfolio-minimal",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     key: "dashboard",
-    github: "https://github.com/your-username/analytics-dashboard",
-    demo: "https://your-dashboard-demo.com",
-    tech: ["Vue", "Nuxt", "Supabase"],
+    github: "https://github.com/your-username/privacy-first-period-tracker",
+    demo: undefined,
+    tech: ["Expo", "React Native", "NativeWind", "i18n"],
   },
   {
     key: "saas",

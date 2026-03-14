@@ -79,9 +79,9 @@ const translations: Record<Language, TranslationTree> = {
             'Eine performante, responsive Portfolio-Seite mit Fokus auf Animationen, Klarheit und Code-Qualität.',
         },
         dashboard: {
-          title: 'Analytics Dashboard',
+          title: 'Privacy First Period Tracker',
           description:
-            'Ein interaktives Dashboard mit Filterung, Diagrammen und einer klaren Informationshierarchie.',
+            'Eine datenschutzorientierte Perioden-Tracking-App mit Expo, NativeWind und i18n – alles lokal, keine Cloud.',
         },
         saas: {
           title: 'SaaS Web App',
@@ -174,9 +174,9 @@ const translations: Record<Language, TranslationTree> = {
             'A fast, responsive portfolio site focused on clean design, animations, and code quality.',
         },
         dashboard: {
-          title: 'Analytics Dashboard',
+          title: 'Privacy First Period Tracker',
           description:
-            'An interactive dashboard with charts, filters, and a clear information hierarchy.',
+            'A privacy-first period tracking app built with Expo, NativeWind, and i18n – all local, no cloud.',
         },
         saas: {
           title: 'SaaS Web App',
