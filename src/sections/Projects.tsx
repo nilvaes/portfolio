@@ -98,7 +98,7 @@ export default function Projects() {
                   : "Privacy First Period Tracker app preview"
               }
               className={`rounded-xl border border-white/10 shadow-xl ${
-                cursorPreview.project === "portfolio" ? "w-80" : "w-52"
+                cursorPreview.project === "portfolio" ? "w-80" : "w-48"
               }`}
             />
           </div>
