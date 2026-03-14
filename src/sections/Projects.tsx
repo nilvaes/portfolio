@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Particles } from "../components/Particles";
 import { ShineBorder } from "../components/ShineBorder";
 import { useI18n } from "../i18n";
+
+const CURSOR_IMAGE_OFFSET_X = 20;
+const CURSOR_IMAGE_OFFSET_Y = -24;
 
 type Project = {
   key: "portfolio" | "dashboard" | "saas";
@@ -30,8 +34,31 @@ const PROJECTS: Project[] = [
   },
 ];
 
+type PreviewProject = "portfolio" | "dashboard";
+
 export default function Projects() {
   const { t } = useI18n();
+  const [cursorPreview, setCursorPreview] = useState<{
+    project: PreviewProject;
+    x: number;
+    y: number;
+  } | null>(null);
+
+  const handlePreviewMouseEnter = (project: PreviewProject) => {
+    setCursorPreview({ project, x: 0, y: 0 });
+  };
+
+  const handlePreviewMouseMove = (e: React.MouseEvent, project: PreviewProject) => {
+    setCursorPreview({
+      project,
+      x: e.clientX + CURSOR_IMAGE_OFFSET_X,
+      y: e.clientY + CURSOR_IMAGE_OFFSET_Y,
+    });
+  };
+
+  const handlePreviewMouseLeave = () => {
+    setCursorPreview(null);
+  };
 
   return (
     <section
@@ -49,11 +76,48 @@ export default function Projects() {
       <div className="relative z-10">
         <h2 className="text-heading">{t("projects.heading")}</h2>
 
+        {cursorPreview && (
+          <div
+            className="pointer-events-none fixed z-50 hidden md:block"
+            style={{
+              left: cursorPreview.x,
+              top:
+                cursorPreview.y +
+                (cursorPreview.project === "dashboard" ? -12 : 0),
+            }}
+          >
+            <img
+              src={
+                cursorPreview.project === "portfolio"
+                  ? "/assets/portfolio-example.png"
+                  : "/assets/period-tracker.jpg"
+              }
+              alt={
+                cursorPreview.project === "portfolio"
+                  ? "Developer Portfolio preview"
+                  : "Privacy First Period Tracker app preview"
+              }
+              className={`rounded-xl border border-white/10 shadow-xl ${
+                cursorPreview.project === "portfolio" ? "w-80" : "w-52"
+              }`}
+            />
+          </div>
+        )}
+
         <div className="flex flex-col gap-6 mt-10">
           {PROJECTS.map((project) => (
             <div
               key={project.key}
               className="group relative rounded-3xl transition-transform duration-300 hover:-translate-y-0.5"
+              {...(project.key === "portfolio" || project.key === "dashboard"
+                ? {
+                    onMouseEnter: () =>
+                      handlePreviewMouseEnter(project.key as PreviewProject),
+                    onMouseMove: (e) =>
+                      handlePreviewMouseMove(e, project.key as PreviewProject),
+                    onMouseLeave: handlePreviewMouseLeave,
+                  }
+                : {})}
             >
               <article className="relative flex flex-col justify-between p-6 rounded-3xl backdrop-blur-sm bg-primary/30">
                 <div>
@@ -76,24 +140,41 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 mt-6 text-sm">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
-                >
-                  GitHub
-                </a>
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-aqua hover:text-white underline-offset-4 hover:underline"
-                  >
-                    Live Demo
-                  </a>
+              <div className="flex flex-wrap items-center gap-3 mt-6 text-sm">
+                {project.key === "dashboard" ? (
+                  <p className="subtext italic">
+                    {t("projects.cards.dashboard.comingSoon")}
+                  </p>
+                ) : project.key === "saas" ? (
+                  <>
+                    <span className="text-neutral-500 cursor-not-allowed no-underline">
+                      GitHub
+                    </span>
+                    <span className="text-neutral-500 cursor-not-allowed no-underline">
+                      Live Demo
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
+                    >
+                      GitHub
+                    </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-aqua hover:text-white underline-offset-4 hover:underline"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                  </>
                 )}
               </div>
               </article>
