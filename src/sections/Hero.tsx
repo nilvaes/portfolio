@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { LightRays } from "../components/LightRays";
 import { MorphingText } from "../components/MorphingText";
@@ -5,6 +6,19 @@ import { useI18n } from "../i18n";
 
 export default function Hero() {
   const { t } = useI18n();
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isInView, setIsInView] = useState(true);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { rootMargin: "50px", threshold: 0.01 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const morphWords = [
     t("hero.words.first"),
@@ -19,17 +33,29 @@ export default function Hero() {
 
   return (
     <section
+      ref={sectionRef}
       id="home"
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
-      <LightRays
-        count={12}
-        color="rgba(124, 87, 219, 0.15)"
-        blur={10}
-        speed={4}
-        length="80vh"
-        className="absolute inset-0"
-      />
+      {isInView ? (
+        <LightRays
+          count={6}
+          color="rgba(124, 87, 219, 0.15)"
+          blur={10}
+          speed={4}
+          length="80vh"
+          className="absolute inset-0"
+        />
+      ) : (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124, 87, 219, 0.12), transparent 70%)",
+          }}
+          aria-hidden
+        />
+      )}
 
       <div className="relative z-10 flex flex-col items-center gap-6 px-5 text-center md:gap-8">
         <motion.p
@@ -60,10 +86,16 @@ export default function Hero() {
           animate="visible"
           transition={{ delay: 1.0, duration: 0.6 }}
         >
-          <MorphingText
-            texts={morphWords}
-            className="h-16 text-lavender md:h-24"
-          />
+          {isInView ? (
+            <MorphingText
+              texts={morphWords}
+              className="h-16 text-lavender md:h-24"
+            />
+          ) : (
+            <span className="h-16 font-sans text-[40pt] font-bold leading-none text-lavender md:h-24 md:text-5xl lg:text-[6rem]">
+              {morphWords[0]}
+            </span>
+          )}
         </motion.div>
 
         <motion.p
