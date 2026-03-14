@@ -101,7 +101,7 @@ export default function Projects() {
                 shineColor={["rgba(124,87,219,0.9)", "rgba(92,51,204,0.7)", "rgba(124,87,219,0.9)"]}
                 borderWidth={1}
                 duration={3}
-                className="rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="rounded-3xl opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100"
               />
             </div>
           ))}

@@ -93,7 +93,7 @@ export default function About() {
         </div>
         {/* grid5 */}
         <div className="grid-default-color grid-5">
-          <div className="relative z-10 flex min-h-0 w-full flex-col gap-3 overflow-y-auto p-4 md:h-full md:w-[55%] md:p-0">
+          <div className="relative z-10 flex min-h-0 w-full flex-col gap-3 overflow-y-auto rounded-2xl p-4 backdrop-blur-sm bg-primary/50 md:h-full md:w-[55%] md:rounded-none md:bg-transparent md:backdrop-blur-none md:p-0">
             <div>
               <p className="headtext">{t("about.techStackTitle")}</p>
             </div>
@@ -124,7 +124,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-2 hidden w-full h-full start-[55%] md:block md:inset-y-6 md:scale-110">
+          <div className="absolute inset-y-2 z-0 w-full h-full start-[55%] md:inset-y-6 md:scale-110">
             <Frameworks />
           </div>
         </div>
