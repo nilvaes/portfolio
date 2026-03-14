@@ -53,7 +53,7 @@ const translations: Record<Language, TranslationTree> = {
       stacksLabel: 'TECHNOLOGIESTACKS',
       timezoneTitle: 'Zeitzone',
       timezoneText:
-        'Ich wohne in Deutschland und arbeite gern remote mit Teams weltweit',
+        'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
       ctaTitle: 'Hast du Lust, mit mir zu arbeiten?',
       techStackTitle: 'Tech Stack',
       techStackText:
@@ -153,7 +153,7 @@ const translations: Record<Language, TranslationTree> = {
       stacksLabel: 'TECH STACKS',
       timezoneTitle: 'Timezone',
       timezoneText:
-        'I live in Germany and enjoy working remotely with teams worldwide',
+        'I live in Germany and can work remotely with teams worldwide',
       ctaTitle: 'Want to work together?',
       techStackTitle: 'Tech Stack',
       techStackText:
