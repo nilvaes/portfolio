@@ -47,7 +47,6 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       heading: 'Info',
-      dragText: 'Ziehen und loslassen!',
       timezoneTitle: 'Zeitzone',
       timezoneText:
         'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
@@ -143,7 +142,6 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       heading: 'Info',
-      dragText: 'Drag and release!',
       timezoneTitle: 'Timezone',
       timezoneText:
         'I live in Germany and can work remotely with teams worldwide',
