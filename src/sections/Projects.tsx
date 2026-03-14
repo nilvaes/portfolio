@@ -89,8 +89,8 @@ export default function Projects() {
             <img
               src={
                 cursorPreview.project === "portfolio"
-                  ? "/assets/portfolio-example.png"
-                  : "/assets/period-tracker.jpg"
+                  ? `${import.meta.env.BASE_URL}assets/portfolio-example.png`
+                  : `${import.meta.env.BASE_URL}assets/period-tracker.jpg`
               }
               alt={
                 cursorPreview.project === "portfolio"
