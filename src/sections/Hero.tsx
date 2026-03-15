@@ -57,7 +57,7 @@ export default function Hero() {
         />
       )}
 
-      <div className="relative z-10 flex flex-col items-center gap-6 px-5 text-center md:gap-8">
+      <div className="relative z-10 flex flex-col items-center px-5 text-center md:gap-8">
         <motion.p
           className="text-lg tracking-wide text-neutral-400 md:text-xl"
           variants={variants}

@@ -99,16 +99,12 @@ interface MorphingTextProps {
 
 const Texts: React.FC<Pick<MorphingTextProps, "texts">> = ({ texts }) => {
   const { text1Ref, text2Ref } = useMorphingText(texts)
+  const spanClass =
+    "absolute inset-x-0 top-0 m-auto block w-full text-center"
   return (
     <>
-      <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
-        ref={text1Ref}
-      />
-      <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
-        ref={text2Ref}
-      />
+      <span className={spanClass} ref={text1Ref} />
+      <span className={spanClass} ref={text2Ref} />
     </>
   )
 }
@@ -140,7 +136,7 @@ export const MorphingText: React.FC<MorphingTextProps> = ({
 }) => (
   <div
     className={twMerge(
-      "relative mx-auto h-16 w-full max-w-3xl text-center font-sans text-[40pt] leading-none font-bold filter-[url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]",
+      "relative mx-auto h-16 w-full max-w-3xl text-center font-sans text-[2rem] leading-none font-bold filter-[url(#threshold)_blur(0.6px)] md:h-24 md:text-[40pt] lg:text-[6rem]",
       className
     )}
   >
