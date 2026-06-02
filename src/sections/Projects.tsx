@@ -74,16 +74,29 @@ export default function Projects() {
     y: number;
   } | null>(null);
 
-  const handlePreviewMouseEnter = (project: PreviewProject) => {
-    setCursorPreview({ project, x: 0, y: 0 });
-  };
-
-  const handlePreviewMouseMove = (e: React.MouseEvent, project: PreviewProject) => {
+  const setPreviewFromEvent = (
+    e: React.MouseEvent,
+    project: PreviewProject
+  ) => {
     setCursorPreview({
       project,
       x: e.clientX + CURSOR_IMAGE_OFFSET_X,
       y: e.clientY + CURSOR_IMAGE_OFFSET_Y,
     });
+  };
+
+  const handlePreviewMouseEnter = (
+    e: React.MouseEvent,
+    project: PreviewProject
+  ) => {
+    setPreviewFromEvent(e, project);
+  };
+
+  const handlePreviewMouseMove = (
+    e: React.MouseEvent,
+    project: PreviewProject
+  ) => {
+    setPreviewFromEvent(e, project);
   };
 
   const handlePreviewMouseLeave = () => {
@@ -135,8 +148,8 @@ export default function Projects() {
               project.key === "bosporus" ||
               project.key === "dashboard"
                 ? {
-                    onMouseEnter: () =>
-                      handlePreviewMouseEnter(project.key as PreviewProject),
+                    onMouseEnter: (e) =>
+                      handlePreviewMouseEnter(e, project.key as PreviewProject),
                     onMouseMove: (e) =>
                       handlePreviewMouseMove(e, project.key as PreviewProject),
                     onMouseLeave: handlePreviewMouseLeave,
