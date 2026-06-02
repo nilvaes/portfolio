@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { useI18n } from "../i18n";
+import { asset } from "../lib/utils";
 
 type NavigationProps = {
   links: Array<{ label: string; href: string }>;
@@ -51,7 +52,7 @@ export default function Navbar() {
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
           >
             <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+              src={isOpen ? asset("assets/close.svg") : asset("assets/menu.svg")}
               className="w-6 h-6 text-white"
               alt="toggle"
             />

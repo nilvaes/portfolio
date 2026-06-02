@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Particles } from "../components/Particles";
 import { ShineBorder } from "../components/ShineBorder";
 import { useI18n } from "../i18n";
+import { asset } from "../lib/utils";
 
 const CURSOR_IMAGE_OFFSET_X = 20;
 const CURSOR_IMAGE_OFFSET_Y = -24;
@@ -118,7 +119,7 @@ export default function Projects() {
             }}
           >
             <img
-              src={`${import.meta.env.BASE_URL}${activePreview.src}`}
+              src={asset(activePreview.src)}
               alt={activePreview.alt}
               className={`rounded-xl border border-white/10 shadow-xl ${activePreview.widthClass}`}
             />

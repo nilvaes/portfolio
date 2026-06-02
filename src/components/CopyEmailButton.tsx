@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { useI18n } from "../i18n";
+import { asset } from "../lib/utils";
 
 export default function CopyEmailButton() {
   const { t } = useI18n();
@@ -28,7 +29,7 @@ export default function CopyEmailButton() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
           >
-            <img src="assets/copy-done.svg" className="w-5" alt="copy icon" />
+            <img src={asset("assets/copy-done.svg")} className="w-5" alt="copy icon" />
             {t("copyEmail.copied")}
           </motion.p>
         ) : (
@@ -40,7 +41,7 @@ export default function CopyEmailButton() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <img src="assets/copy.svg" className="w-5 " alt="Copy Icon" />
+            <img src={asset("assets/copy.svg")} className="w-5 " alt="Copy Icon" />
             {t("copyEmail.copy")}
           </motion.p>
         )}

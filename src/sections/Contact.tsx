@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 import { useI18n } from "../i18n";
+import { asset } from "../lib/utils";
 
 export default function Contact() {
   const { t } = useI18n();
@@ -39,7 +40,6 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
-      console.log("form submitted", formData);
       await emailjs.send(
         "service_sqv88p5",
         "template_kuazzw4",
@@ -147,14 +147,14 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="w-10"
         >
-          <img className="w-8 md:w-10" src="assets/logos/linkedin-white.svg" />
+          <img className="w-8 md:w-10" src={asset("assets/logos/linkedin-white.svg")} alt="LinkedIn" />
         </a>
         <a
           href="https://github.com/nilvaes"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img className="w-10 md:w-12" src="assets/logos/github-white.svg" />
+          <img className="w-10 md:w-12" src={asset("assets/logos/github-white.svg")} alt="GitHub" />
         </a>
       </div>
     </section>

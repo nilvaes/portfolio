@@ -4,6 +4,7 @@ import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import Frameworks from "../components/Frameworks";
 import { useI18n } from "../i18n";
+import { asset } from "../lib/utils";
 
 export default function About() {
   const { t } = useI18n();
@@ -45,27 +46,27 @@ export default function About() {
               containerRef={grid2Container}
             />
             <Card
-              image="assets/logos/vue.svg"
+              image={asset("assets/logos/vue.svg")}
               style={{ rotate: "30deg", bottom: "70%", left: "70%" }}
               containerRef={grid2Container}
             />
             <Card
-              image="assets/logos/react.svg"
+              image={asset("assets/logos/react.svg")}
               style={{ rotate: "-45deg", bottom: "30%", left: "25%" }}
               containerRef={grid2Container}
             />
             <Card
-              image="assets/logos/tailwindcss.svg"
+              image={asset("assets/logos/tailwindcss.svg")}
               style={{ rotate: "-45deg", top: "12%", left: "18%" }}
               containerRef={grid2Container}
             />
             <Card
-              image="assets/logos/nuxt-icon.svg"
+              image={asset("assets/logos/nuxt-icon.svg")}
               style={{ rotate: "-45deg", top: "22%", left: "35%" }}
               containerRef={grid2Container}
             />
             <Card
-              image="assets/logos/typescript.svg"
+              image={asset("assets/logos/typescript.svg")}
               style={{ rotate: "-45deg", top: "30%", left: "50%" }}
               containerRef={grid2Container}
             />

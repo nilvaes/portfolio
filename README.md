@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Ömer Savas — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site showcasing projects, experience, and contact info. Built with React, TypeScript, and Tailwind CSS, deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+**Live site:** [nilvaes.github.io/portfolio](https://nilvaes.github.io/portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Bilingual UI (DE / EN)
+- Animated hero with morphing text and light rays
+- About section with tech stack and interactive cards
+- Timeline / journey section
+- Projects with hover previews
+- Contact form (EmailJS)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Tech stack
 
-## Expanding the ESLint configuration
+- React 19 + TypeScript
+- Vite 7
+- Tailwind CSS v4
+- Motion (animations)
+- EmailJS (contact form)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run deploy` | Build and deploy to GitHub Pages (`gh-pages-2` branch) |
+
+## Deploy
+
+The site is configured for GitHub Pages at `/portfolio/` (see `vite.config.ts`). Deploy with:
+
+```bash
+npm run deploy
+```
+
+Then enable GitHub Pages from the `gh-pages-2` branch in your repository settings.
+
+## Project structure
+
+```
+src/
+  sections/     # Page sections (Hero, About, Projects, etc.)
+  components/   # Reusable UI components
+  i18n.tsx      # Translations (DE / EN)
+  constants/    # Timeline / experience data
+public/assets/  # Images, logos, project screenshots
 ```
