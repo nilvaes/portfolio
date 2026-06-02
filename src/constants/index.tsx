@@ -10,19 +10,19 @@ export type ExperienceEntry = {
 const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
   de: [
     {
-      title: "Über mich & Ausbildung",
-      job: "Fachinformatiker Anwendungsentwicklung",
-      date: "Status: Abgeschlossen",
+      title: "",
+      job: "",
+      date: "Über mich & Ausbildung",
       contents: [
-        "Ich habe meine Ausbildung erfolgreich abgeschlossen und dabei meinen Schwerpunkt in der Fullstack-Entwicklung gefunden.",
+        "Ich habe meine 3 Jahre lange Ausbildung erfolgreich abgeschlossen und dabei meinen Schwerpunkt in der Fullstack-Entwicklung gefunden.",
         "Ich lege Wert auf sauberen, gut strukturierten Code und Anwendungen, die sowohl zuverlässig als auch visuell ansprechend sind.",
         "Im Team gelte ich als kommunikativer, hilfsbereiter Kollege mit einem lösungsorientierten Mindset.",
       ],
     },
     {
-      title: "Mein Tech-Stack",
-      job: "Fullstack & Tools",
-      date: "Core Skills",
+      title: "",
+      job: "",
+      date: "Mein Tech-Stack",
       contents: [
         "Frontend: Erfahrung mit Vue.js, Nuxt, React, TypeScript und Tailwind CSS für moderne, responsive UIs.",
         "Backend: Node.js und Nest.js mit Datenbanken wie SQL, Supabase, TypeORM und Prisma.",
@@ -30,8 +30,8 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       ],
     },
     {
-      title: "Mindset & Zukunft",
-      job: "Next Steps",
+      title: "",
+      job: "",
       date: "Vision",
       contents: [
         "Ich halte mein Wissen kontinuierlich aktuell und beschäftige mich verstärkt mit dem Einsatz von KI in Web-Anwendungen.",
@@ -42,19 +42,19 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
   ],
   en: [
     {
-      title: "About Me & Education",
-      job: "Application Development Specialist",
-      date: "Status: Completed",
+      title: "",
+      job: "",
+      date: "About me & Education",
       contents: [
-        "I successfully completed my apprenticeship and developed a strong focus on full stack development.",
+        "I successfully completed my 3 year long apprenticeship and developed a strong focus on full stack development.",
         "I care about clean, well-structured code and products that are both reliable and visually polished.",
         "In teams, I am known as a communicative, friendly colleague with a solution-oriented mindset.",
       ],
     },
     {
-      title: "My Tech Stack",
-      job: "Full Stack & Tools",
-      date: "Core Skills",
+      title: "",
+      job: "",
+      date: "My Tech Stack",
       contents: [
         "Frontend: Experience with Vue.js, Nuxt, React, TypeScript, and Tailwind CSS for modern, responsive UIs.",
         "Backend: Node.js and Nest.js with databases such as SQL, Supabase, TypeORM, and Prisma.",
@@ -62,8 +62,8 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
       ],
     },
     {
-      title: "Mindset & Future",
-      job: "Next Steps",
+      title: "",
+      job: "",
       date: "Vision",
       contents: [
         "I keep my skills up to date and currently focus on integrating AI into modern web applications.",

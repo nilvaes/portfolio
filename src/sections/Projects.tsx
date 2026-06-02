@@ -7,18 +7,25 @@ const CURSOR_IMAGE_OFFSET_X = 20;
 const CURSOR_IMAGE_OFFSET_Y = -24;
 
 type Project = {
-  key: "portfolio" | "dashboard" | "saas";
-  github: string;
+  key: "sumi" | "bosporus" | "dashboard" | "saas";
+  github?: string;
   demo?: string;
+  demoOnly?: boolean;
   tech: string[];
 };
 
 const PROJECTS: Project[] = [
   {
-    key: "portfolio",
-    github: "https://github.com/nilvaes/portfolio-minimal",
-    demo: "https://nilvaes.github.io/portfolio-minimal",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    key: "sumi",
+    github: "https://github.com/nilvaes/sumi",
+    demo: "https://sumi-xi.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "AniList GraphQL"],
+  },
+  {
+    key: "bosporus",
+    demo: "https://bosporus-pide.com/",
+    demoOnly: true,
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
   },
   {
     key: "dashboard",
@@ -34,7 +41,29 @@ const PROJECTS: Project[] = [
   },
 ];
 
-type PreviewProject = "portfolio" | "dashboard";
+type PreviewProject = "sumi" | "bosporus" | "dashboard";
+
+const PREVIEW_CONFIG: Record<
+  PreviewProject,
+  { src: string; alt: string; widthClass: string; offsetY?: number }
+> = {
+  sumi: {
+    src: "assets/sumi.png",
+    alt: "Sumi anime discovery platform preview",
+    widthClass: "w-80",
+  },
+  bosporus: {
+    src: "assets/bosporus-pide.png",
+    alt: "Bosporus Lahmacun & Pide restaurant website preview",
+    widthClass: "w-80",
+  },
+  dashboard: {
+    src: "assets/period-tracker.jpg",
+    alt: "Privacy First Period Tracker app preview",
+    widthClass: "w-48",
+    offsetY: -12,
+  },
+};
 
 export default function Projects() {
   const { t } = useI18n();
@@ -60,6 +89,10 @@ export default function Projects() {
     setCursorPreview(null);
   };
 
+  const activePreview = cursorPreview
+    ? PREVIEW_CONFIG[cursorPreview.project]
+    : null;
+
   return (
     <section
       id="projects"
@@ -76,30 +109,18 @@ export default function Projects() {
       <div className="relative z-10">
         <h2 className="text-heading">{t("projects.heading")}</h2>
 
-        {cursorPreview && (
+        {activePreview && cursorPreview && (
           <div
             className="pointer-events-none fixed z-50 hidden md:block"
             style={{
               left: cursorPreview.x,
-              top:
-                cursorPreview.y +
-                (cursorPreview.project === "dashboard" ? -12 : 0),
+              top: cursorPreview.y + (activePreview.offsetY ?? 0),
             }}
           >
             <img
-              src={
-                cursorPreview.project === "portfolio"
-                  ? `${import.meta.env.BASE_URL}assets/portfolio-example.png`
-                  : `${import.meta.env.BASE_URL}assets/period-tracker.jpg`
-              }
-              alt={
-                cursorPreview.project === "portfolio"
-                  ? "Developer Portfolio preview"
-                  : "Privacy First Period Tracker app preview"
-              }
-              className={`rounded-xl border border-white/10 shadow-xl ${
-                cursorPreview.project === "portfolio" ? "w-80" : "w-48"
-              }`}
+              src={`${import.meta.env.BASE_URL}${activePreview.src}`}
+              alt={activePreview.alt}
+              className={`rounded-xl border border-white/10 shadow-xl ${activePreview.widthClass}`}
             />
           </div>
         )}
@@ -109,7 +130,9 @@ export default function Projects() {
             <div
               key={project.key}
               className="group relative rounded-3xl transition-transform duration-300 hover:-translate-y-0.5"
-              {...(project.key === "portfolio" || project.key === "dashboard"
+              {...(project.key === "sumi" ||
+              project.key === "bosporus" ||
+              project.key === "dashboard"
                 ? {
                     onMouseEnter: () =>
                       handlePreviewMouseEnter(project.key as PreviewProject),
@@ -154,16 +177,27 @@ export default function Projects() {
                       Live Demo
                     </span>
                   </>
+                ) : project.demoOnly && project.demo ? (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-aqua hover:text-white underline-offset-4 hover:underline"
+                  >
+                    Live Demo
+                  </a>
                 ) : (
                   <>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
-                    >
-                      GitHub
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
+                      >
+                        GitHub
+                      </a>
+                    )}
                     {project.demo && (
                       <a
                         href={project.demo}

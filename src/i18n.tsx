@@ -72,10 +72,15 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       heading: 'Projekte',
       cards: {
-        portfolio: {
-          title: 'Developer Portfolio',
+        sumi: {
+          title: 'Sumi - Track & Explore New Anime',
           description:
-            'Eine performante, responsive Portfolio-Seite mit Fokus auf Animationen, Klarheit und Code-Qualität.',
+            'Eine Fullstack-Anime-Plattform zum Entdecken und Verfolgen von Anime – mit Browse, Fuzzy-Suche, Airing-Schedule und Detailseiten, powered by AniList und Supabase.',
+        },
+        bosporus: {
+          title: 'Bosporus Lahmacun & Pide',
+          description:
+            'Moderne Restaurant-Website für ein türkisches Restaurant in Köln – mit Speisekarte, Catering, Öffnungszeiten und zweisprachiger DE/TR-Oberfläche.',
         },
         dashboard: {
           title: 'Privacy First Period Tracker',
@@ -167,10 +172,15 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       heading: 'Projects',
       cards: {
-        portfolio: {
-          title: 'Developer Portfolio',
+        sumi: {
+          title: 'Sumi - Track & Explore New Anime',
           description:
-            'A fast, responsive portfolio site focused on clean design, animations, and code quality.',
+            'A full-stack anime discovery platform to browse, search, and track airing shows — with fuzzy search, schedule, and detail pages, powered by AniList and Supabase.',
+        },
+        bosporus: {
+          title: 'Bosporus Lahmacun & Pide',
+          description:
+            'A modern restaurant website for a Turkish restaurant in Cologne — with menu, catering, opening hours, and a bilingual DE/TR interface.',
         },
         dashboard: {
           title: 'Privacy First Period Tracker',
