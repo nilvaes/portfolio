@@ -19,7 +19,7 @@ const PROJECTS: Project[] = [
   {
     key: "sumi",
     github: "https://github.com/nilvaes/sumi",
-    demo: "https://sumi-xi.vercel.app/",
+    demo: "https://sumi.savasbuilds.com/",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "AniList GraphQL"],
   },
   {
