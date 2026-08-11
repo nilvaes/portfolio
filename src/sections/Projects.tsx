@@ -188,7 +188,7 @@ export default function Projects() {
                       GitHub
                     </span>
                     <span className="text-neutral-500 cursor-not-allowed no-underline">
-                      Live Demo
+                      {t("projects.visitWebsite")}
                     </span>
                   </>
                 ) : project.demoOnly && project.demo ? (
@@ -198,7 +198,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className="text-aqua hover:text-white underline-offset-4 hover:underline"
                   >
-                    Live Demo
+                    {t("projects.visitWebsite")}
                   </a>
                 ) : (
                   <>
@@ -219,7 +219,7 @@ export default function Projects() {
                         rel="noreferrer"
                         className="text-aqua hover:text-white underline-offset-4 hover:underline"
                       >
-                        Live Demo
+                        {t("projects.visitWebsite")}
                       </a>
                     )}
                   </>

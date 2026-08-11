@@ -71,6 +71,7 @@ const translations: Record<Language, TranslationTree> = {
     },
     projects: {
       heading: 'Projekte',
+      visitWebsite: 'Website besuchen',
       cards: {
         sumi: {
           title: 'Sumi - Track & Explore New Anime',
@@ -171,6 +172,7 @@ const translations: Record<Language, TranslationTree> = {
     },
     projects: {
       heading: 'Projects',
+      visitWebsite: 'Visit Website',
       cards: {
         sumi: {
           title: 'Sumi - Track & Explore New Anime',

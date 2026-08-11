@@ -142,7 +142,7 @@ export default function Contact() {
       </div>
       <div className="flex justify-center items-center mr-auto mt-auto gap-3 pt-20 pb-5">
         <a
-          href="https://www.linkedin.com/in/%C3%B6mer-savas-b31643399/"
+          href="https://www.linkedin.com/in/savasdev/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-10"
