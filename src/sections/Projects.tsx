@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Particles } from "../components/Particles";
 import { ShineBorder } from "../components/ShineBorder";
 import { useI18n } from "../i18n";
 import { asset } from "../lib/utils";
@@ -110,17 +109,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative pt-20 md:pt-30 min-h-screen overflow-hidden"
+      className="relative pt-20 md:pt-30 min-h-screen"
     >
-      <Particles
-        className="absolute inset-0"
-        quantity={120}
-        ease={80}
-        color="#ffffff"
-        refresh
-      />
-
-      <div className="relative z-10 mx-auto max-w-7xl c-space">
+      <div className="mx-auto max-w-7xl c-space">
         <h2 className="text-heading">{t("projects.heading")}</h2>
 
         {activePreview && cursorPreview && (
