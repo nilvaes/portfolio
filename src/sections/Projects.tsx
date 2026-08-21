@@ -110,7 +110,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative c-space pt-20 md:pt-30 min-h-screen overflow-hidden"
+      className="relative pt-20 md:pt-30 min-h-screen overflow-hidden"
     >
       <Particles
         className="absolute inset-0"
@@ -120,7 +120,7 @@ export default function Projects() {
         refresh
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 mx-auto max-w-7xl c-space">
         <h2 className="text-heading">{t("projects.heading")}</h2>
 
         {activePreview && cursorPreview && (

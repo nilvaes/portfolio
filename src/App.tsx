@@ -8,7 +8,7 @@ import Footer from "./sections/Footer";
 
 function App() {
   return (
-    <div className="container mx-auto max-w-7xl">
+    <>
       <Navbar />
       <Hero />
       <About />
@@ -16,7 +16,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }
 

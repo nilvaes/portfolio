@@ -43,7 +43,7 @@ export default function Hero() {
           color="rgba(124, 87, 219, 0.15)"
           blur={10}
           speed={4}
-          length="80vh"
+          length="120vh"
           className="absolute inset-0"
         />
       ) : (
