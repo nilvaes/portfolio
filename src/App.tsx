@@ -9,26 +9,30 @@ import { Particles } from "./components/Particles";
 
 function App() {
   return (
-    <div className="relative container mx-auto max-w-7xl">
+    <>
       <Navbar />
       <div className="relative z-10 bg-primary">
         <Hero />
-        <About />
       </div>
-      <Particles
-        className="absolute inset-0 z-0"
-        quantity={150}
-        ease={80}
-        color="#ffffff"
-        refresh
-      />
-      <div className="relative z-10">
-        <Journey />
-        <Projects />
-        <Contact />
-        <Footer />
+      <div className="relative container mx-auto max-w-7xl">
+        <div className="relative z-10 bg-primary">
+          <About />
+        </div>
+        <Particles
+          className="absolute inset-0 z-0"
+          quantity={150}
+          ease={80}
+          color="#ffffff"
+          refresh
+        />
+        <div className="relative z-10">
+          <Journey />
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
