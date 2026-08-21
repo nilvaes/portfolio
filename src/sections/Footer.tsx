@@ -4,7 +4,7 @@ export default function Footer() {
   const { t } = useI18n();
 
   return (
-    <section className="mx-auto max-w-7xl flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
+    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
       <div className="bg-linear-to-r from-transparent mb-4 via-neutral-700 to-transparent h-px w-full" />
       <div>
         © {new Date().getFullYear()} Ömer. {t("footer.rights")}

@@ -109,6 +109,11 @@ export default function Hero() {
           <span className="inline md:hidden">{t("hero.mobileSuffix")}</span>
         </motion.p>
       </div>
+
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40 bg-linear-to-b from-transparent to-primary"
+        aria-hidden
+      />
     </section>
   );
 }

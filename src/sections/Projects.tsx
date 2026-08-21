@@ -109,9 +109,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative pt-20 md:pt-30 min-h-screen"
+      className="relative c-space pt-20 md:pt-30 min-h-screen"
     >
-      <div className="mx-auto max-w-7xl c-space">
+      <div className="relative z-10">
         <h2 className="text-heading">{t("projects.heading")}</h2>
 
         {activePreview && cursorPreview && (
