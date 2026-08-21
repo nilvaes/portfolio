@@ -13,6 +13,7 @@ function App() {
       <Navbar />
       <div className="relative z-10 bg-primary">
         <Hero />
+        <About />
       </div>
       <Particles
         className="fixed inset-0 z-0"
@@ -22,7 +23,6 @@ function App() {
         refresh
       />
       <div className="relative z-10">
-        <About />
         <Journey />
         <Projects />
         <Contact />
