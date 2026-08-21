@@ -32,7 +32,7 @@ const createRays = (count: number, cycle: number): LightRay[] => {
   return Array.from({ length: count }, (_, index) => {
     const left = 8 + Math.random() * 84
     const rotate = -28 + Math.random() * 56
-    const width = 160 + Math.random() * 160
+    const width = 80 + Math.random() * 80
     const swing = 0.8 + Math.random() * 1.8
     const delay = Math.random() * cycle
     const duration = cycle * (0.75 + Math.random() * 0.5)

@@ -41,9 +41,9 @@ export default function Hero() {
         <LightRays
           count={6}
           color="rgba(124, 87, 219, 0.15)"
-          blur={10}
+          blur={8}
           speed={4}
-          length="120vh"
+          length="90vh"
           className="absolute inset-0"
         />
       ) : (
