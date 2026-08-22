@@ -27,7 +27,6 @@ const translations: Record<Language, TranslationTree> = {
   de: {
     nav: {
       home: 'Start',
-      info: 'Info',
       about: 'Über mich',
       projects: 'Projekte',
       contact: 'Kontakt',
@@ -35,10 +34,13 @@ const translations: Record<Language, TranslationTree> = {
     },
     hero: {
       greeting: 'Hi, ich bin Ömer',
-      desktopTitle: 'Full Stack Developer mit Fokus auf',
-      mobileTitle: 'Ich baue',
-      desktopSuffix: 'Weblösungen',
-      mobileSuffix: 'Webanwendungen',
+      title: 'Full Stack Developer',
+      titleFocus: 'mit Fokus auf',
+      suffix: 'Weblösungen',
+      availability: 'Offen für Vollzeit',
+      availabilityLocation: 'Deutschland · Remote',
+      projectsCta: 'Projekte ansehen',
+      contactCta: 'Kontakt aufnehmen',
       words: {
         first: 'innovative',
         second: 'zuverlässige',
@@ -46,11 +48,19 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     about: {
-      heading: 'Info',
+      heading: 'Über mich',
+      profileTitle: 'Full Stack mit Blick fürs Ganze',
+      profileIntro:
+        'Nach meiner dreijährigen Ausbildung habe ich meinen Schwerpunkt in der Full-Stack-Entwicklung gefunden.',
+      profileWorkStyle:
+        'Ich entwickle zuverlässige, gut strukturierte Anwendungen und arbeite gern in Teams, die offen kommunizieren und gemeinsam gute Lösungen finden.',
+      profileGoalTitle: 'Mein nächster Schritt',
+      profileGoal:
+        'Ich suche eine Vollzeitstelle, in der ich Verantwortung übernehmen, weiterlernen und zu echten Produkten beitragen kann.',
       timezoneTitle: 'Zeitzone',
       timezoneText:
         'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
-      ctaTitle: 'Hast du Lust, mit mir zu arbeiten?',
+      ctaTitle: 'Lass uns ins Gespräch kommen',
       techStackTitle: 'Tech Stack',
       techStackCategories: {
         frontend: 'Frontend',
@@ -65,9 +75,6 @@ const translations: Record<Language, TranslationTree> = {
         fullstack: 'Fullstack',
         ui: 'UIs',
       },
-    },
-    timeline: {
-      heading: 'Über mich im Detail',
     },
     projects: {
       heading: 'Projekte',
@@ -89,17 +96,12 @@ const translations: Record<Language, TranslationTree> = {
             'Eine datenschutzorientierte Perioden-Tracking-App mit Expo, NativeWind und i18n – alles lokal, keine Cloud.',
           comingSoon: 'Voraussichtlich demnächst in den App-Stores.',
         },
-        saas: {
-          title: 'SaaS Web App',
-          description: 'Derzeit in Arbeit – demnächst mehr.',
-          underConstruction: 'Derzeit in Arbeit – demnächst mehr.',
-        },
       },
     },
     contact: {
       heading: 'Lass uns reden',
       description:
-        'Du brauchst eine neue Website, willst deine Plattform verbessern oder ein besonderes Projekt umsetzen? Ich helfe gern.',
+        'Suchst du Verstärkung für dein Entwicklungsteam oder möchtest dich fachlich austauschen? Ich freue mich auf deine Nachricht.',
       fullName: 'Vollständiger Name',
       email: 'E-Mail',
       message: 'Nachricht',
@@ -128,7 +130,6 @@ const translations: Record<Language, TranslationTree> = {
   en: {
     nav: {
       home: 'Home',
-      info: 'Info',
       about: 'About',
       projects: 'Projects',
       contact: 'Contact',
@@ -136,10 +137,13 @@ const translations: Record<Language, TranslationTree> = {
     },
     hero: {
       greeting: "Hi, I'm Ömer",
-      desktopTitle: 'Full Stack Developer focused on',
-      mobileTitle: 'I build',
-      desktopSuffix: 'web solutions',
-      mobileSuffix: 'web applications',
+      title: 'Full Stack Developer',
+      titleFocus: 'focused on',
+      suffix: 'web solutions',
+      availability: 'Open to full-time',
+      availabilityLocation: 'Germany · Remote',
+      projectsCta: 'View projects',
+      contactCta: 'Contact me',
       words: {
         first: 'innovative',
         second: 'reliable',
@@ -147,11 +151,19 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     about: {
-      heading: 'Info',
+      heading: 'About',
+      profileTitle: 'Full stack with a product mindset',
+      profileIntro:
+        'After completing my three-year apprenticeship, I found my focus in full-stack development.',
+      profileWorkStyle:
+        'I build reliable, well-structured applications and enjoy working in teams that communicate openly and solve problems together.',
+      profileGoalTitle: 'My next step',
+      profileGoal:
+        'I am looking for a full-time role where I can take ownership, keep learning, and contribute to real products.',
       timezoneTitle: 'Timezone',
       timezoneText:
         'I live in Germany and can work remotely with teams worldwide',
-      ctaTitle: 'Want to work together?',
+      ctaTitle: "Let's connect",
       techStackTitle: 'Tech Stack',
       techStackCategories: {
         frontend: 'Frontend',
@@ -166,9 +178,6 @@ const translations: Record<Language, TranslationTree> = {
         fullstack: 'Fullstack',
         ui: 'UIs',
       },
-    },
-    timeline: {
-      heading: 'About Me In Detail',
     },
     projects: {
       heading: 'Projects',
@@ -190,17 +199,12 @@ const translations: Record<Language, TranslationTree> = {
             'A privacy-first period tracking app built with Expo, NativeWind, and i18n – all local, no cloud.',
           comingSoon: 'Expected to be published in app stores soon.',
         },
-        saas: {
-          title: 'SaaS Web App',
-          description: 'Under construction – more coming soon.',
-          underConstruction: 'Under construction – more coming soon.',
-        },
       },
     },
     contact: {
       heading: "Let's Talk",
       description:
-        "Need a new website, want to improve your platform, or build something special? I'm happy to help.",
+        "Looking for a full-stack developer to join your team, or want to talk technology? I'd be happy to hear from you.",
       fullName: 'Full Name',
       email: 'Email',
       message: 'Message',

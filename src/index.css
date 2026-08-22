@@ -60,11 +60,21 @@
 .animate-shine {
   animation: shine var(--duration, 14s) linear infinite;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: #030412;
   font-family: "Funnel Display", sans-serif;
   color: white;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -111,7 +121,7 @@ body {
 
 /* About Section */
 .grid-1 {
-  @apply row-span-2 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-2 md:col-span-3 min-h-96 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-2 {
   @apply row-span-1 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;

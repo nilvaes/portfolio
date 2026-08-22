@@ -57,7 +57,7 @@ export default function Hero() {
         />
       )}
 
-      <div className="relative z-10 flex flex-col items-center px-5 text-center md:gap-8">
+      <div className="relative z-10 flex flex-col items-center gap-4 px-5 text-center md:gap-8">
         <motion.p
           className="text-lg tracking-wide text-neutral-400 md:text-xl"
           variants={variants}
@@ -69,18 +69,22 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
+          className="flex max-w-4xl flex-col items-center gap-2 text-white md:gap-3"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          <span className="hidden md:inline">{t("hero.desktopTitle")}</span>
-          <span className="inline md:hidden">{t("hero.mobileTitle")}</span>
+          <span className="text-[1.7rem] leading-tight font-bold sm:text-4xl md:text-6xl lg:text-7xl">
+            {t("hero.title")}
+          </span>
+          <span className="text-lg font-medium text-neutral-300 sm:text-2xl md:text-3xl">
+            {t("hero.titleFocus")}
+          </span>
         </motion.h1>
 
         <motion.div
-          className="flex min-h-16 min-w-full items-center justify-center md:min-h-24"
+          className="flex min-h-12 min-w-full items-center justify-center md:min-h-24"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -89,29 +93,63 @@ export default function Hero() {
           {isInView ? (
             <MorphingText
               texts={morphWords}
-              className="h-16 text-lavender md:h-24"
+              className="h-12 text-lavender md:h-24"
             />
           ) : (
-            <span className="h-16 font-sans text-[40pt] font-bold leading-none text-lavender md:h-24 md:text-5xl lg:text-[6rem]">
+            <span className="h-12 font-sans text-[1.7rem] font-bold leading-none text-lavender md:h-24 md:text-5xl lg:text-[6rem]">
               {morphWords[0]}
             </span>
           )}
         </motion.div>
 
         <motion.p
-          className="max-w-2xl text-2xl font-medium text-neutral-300 md:text-3xl"
+          className="max-w-2xl text-xl font-medium text-neutral-300 sm:text-2xl md:text-3xl"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1.3, duration: 0.6 }}
         >
-          <span className="hidden md:inline">{t("hero.desktopSuffix")}</span>
-          <span className="inline md:hidden">{t("hero.mobileSuffix")}</span>
+          {t("hero.suffix")}
         </motion.p>
+
+        <motion.div
+          className="flex flex-col items-center gap-1 text-sm text-neutral-400"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1.5, duration: 0.6 }}
+        >
+          <span className="inline-flex items-center gap-2 font-medium text-neutral-200">
+            <span className="size-2 rounded-full bg-mint shadow-[0_0_12px_var(--color-mint)]" />
+            {t("hero.availability")}
+          </span>
+          <span>{t("hero.availabilityLocation")}</span>
+        </motion.div>
+
+        <motion.div
+          className="flex flex-wrap justify-center gap-3"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1.7, duration: 0.6 }}
+        >
+          <a
+            href="#projects"
+            className="rounded-full bg-lavender px-5 py-2.5 font-medium text-white transition-colors hover:bg-royal"
+          >
+            {t("hero.projectsCta")}
+          </a>
+          <a
+            href="#contact"
+            className="rounded-full border border-white/15 px-5 py-2.5 font-medium text-neutral-200 transition-colors hover:border-white/30 hover:bg-white/5"
+          >
+            {t("hero.contactCta")}
+          </a>
+        </motion.div>
       </div>
 
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40 bg-linear-to-b from-transparent to-primary"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-1 h-40 bg-linear-to-b from-transparent to-primary"
         aria-hidden
       />
     </section>

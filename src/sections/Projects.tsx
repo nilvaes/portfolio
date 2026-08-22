@@ -7,7 +7,7 @@ const CURSOR_IMAGE_OFFSET_X = 20;
 const CURSOR_IMAGE_OFFSET_Y = -24;
 
 type Project = {
-  key: "sumi" | "bosporus" | "dashboard" | "saas";
+  key: "sumi" | "bosporus" | "dashboard";
   github?: string;
   demo?: string;
   demoOnly?: boolean;
@@ -29,19 +29,11 @@ const PROJECTS: Project[] = [
   },
   {
     key: "dashboard",
-    github: "https://github.com/your-username/privacy-first-period-tracker",
-    demo: undefined,
     tech: ["Expo", "React Native", "NativeWind", "i18n"],
-  },
-  {
-    key: "saas",
-    github: "https://github.com/your-username/saas-web-app",
-    demo: "https://your-saas-demo.com",
-    tech: ["Next.js", "Nest.js", "PostgreSQL"],
   },
 ];
 
-type PreviewProject = "sumi" | "bosporus" | "dashboard";
+type PreviewProject = Project["key"];
 
 const PREVIEW_CONFIG: Record<
   PreviewProject,
@@ -135,87 +127,79 @@ export default function Projects() {
             <div
               key={project.key}
               className="group relative rounded-3xl transition-transform duration-300 hover:-translate-y-0.5"
-              {...(project.key === "sumi" ||
-              project.key === "bosporus" ||
-              project.key === "dashboard"
-                ? {
-                    onMouseEnter: (e) =>
-                      handlePreviewMouseEnter(e, project.key as PreviewProject),
-                    onMouseMove: (e) =>
-                      handlePreviewMouseMove(e, project.key as PreviewProject),
-                    onMouseLeave: handlePreviewMouseLeave,
-                  }
-                : {})}
+              onMouseEnter={(e) => handlePreviewMouseEnter(e, project.key)}
+              onMouseMove={(e) => handlePreviewMouseMove(e, project.key)}
+              onMouseLeave={handlePreviewMouseLeave}
             >
               <article className="relative flex flex-col justify-between p-6 rounded-3xl backdrop-blur-sm bg-primary/30">
                 <div>
-                <h3 className="text-xl font-semibold">
-                  {t(`projects.cards.${project.key}.title`)}
-                </h3>
-                <p className="mt-2 subtext">
-                  {t(`projects.cards.${project.key}.description`)}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 text-xs rounded-full text-neutral-300 bg-primary/60"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3 mt-6 text-sm">
-                {project.key === "dashboard" ? (
-                  <p className="subtext italic">
-                    {t("projects.cards.dashboard.comingSoon")}
+                  <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-primary/40 p-3 md:hidden">
+                    <img
+                      src={asset(PREVIEW_CONFIG[project.key].src)}
+                      alt={PREVIEW_CONFIG[project.key].alt}
+                      className={`mx-auto max-h-72 object-contain ${
+                        project.key === "dashboard" ? "w-auto" : "w-full"
+                      }`}
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold">
+                    {t(`projects.cards.${project.key}.title`)}
+                  </h3>
+                  <p className="mt-2 subtext">
+                    {t(`projects.cards.${project.key}.description`)}
                   </p>
-                ) : project.key === "saas" ? (
-                  <>
-                    <span className="text-neutral-500 cursor-not-allowed no-underline">
-                      GitHub
-                    </span>
-                    <span className="text-neutral-500 cursor-not-allowed no-underline">
+
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs rounded-full text-neutral-300 bg-primary/60"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3 mt-6 text-sm">
+                  {project.key === "dashboard" ? (
+                    <p className="subtext italic">
+                      {t("projects.cards.dashboard.comingSoon")}
+                    </p>
+                  ) : project.demoOnly && project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-aqua hover:text-white underline-offset-4 hover:underline"
+                    >
                       {t("projects.visitWebsite")}
-                    </span>
-                  </>
-                ) : project.demoOnly && project.demo ? (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-aqua hover:text-white underline-offset-4 hover:underline"
-                  >
-                    {t("projects.visitWebsite")}
-                  </a>
-                ) : (
-                  <>
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
-                      >
-                        GitHub
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-aqua hover:text-white underline-offset-4 hover:underline"
-                      >
-                        {t("projects.visitWebsite")}
-                      </a>
-                    )}
-                  </>
-                )}
-              </div>
+                    </a>
+                  ) : (
+                    <>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
+                        >
+                          GitHub
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-aqua hover:text-white underline-offset-4 hover:underline"
+                        >
+                          {t("projects.visitWebsite")}
+                        </a>
+                      )}
+                    </>
+                  )}
+                </div>
               </article>
               <ShineBorder
                 shineColor={["rgba(124,87,219,0.9)", "rgba(92,51,204,0.7)", "rgba(124,87,219,0.9)"]}

@@ -10,10 +10,26 @@ export default function About() {
   const { t } = useI18n();
   const grid2Container = useRef<HTMLDivElement>(null);
   return (
-    <section className="c-space mb-32 lg:mb-48" id="info">
+    <section className="c-space mb-32 lg:mb-48" id="about">
       <h2 className="text-heading">{t("about.heading")}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
-
+        <article className="grid-default-color grid-1 flex flex-col justify-between">
+          <div>
+            <p className="headtext">{t("about.profileTitle")}</p>
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-neutral-300">
+              <p>{t("about.profileIntro")}</p>
+              <p>{t("about.profileWorkStyle")}</p>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-white/10 pt-5">
+            <p className="text-sm font-semibold uppercase tracking-wider text-lavender">
+              {t("about.profileGoalTitle")}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-300">
+              {t("about.profileGoal")}
+            </p>
+          </div>
+        </article>
         {/* grid2 */}
         <div className="grid-default-color grid-2">
           <div
