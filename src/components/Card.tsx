@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
 
 const chipShadow =
-  "inset 0 1px 0 rgba(255,255,255,0.28), inset 0 -4px 8px rgba(0,0,0,0.4), 0 8px 14px rgba(0,0,0,0.45)";
+  "inset 0 1px 0 rgba(255,255,255,0.16), 0 3px 8px rgba(0,0,0,0.28)";
 const chipShadowLift =
-  "inset 0 1px 0 rgba(255,255,255,0.32), inset 0 -3px 6px rgba(0,0,0,0.3), 0 14px 24px rgba(0,0,0,0.55)";
+  "inset 0 1px 0 rgba(255,255,255,0.2), 0 6px 12px rgba(0,0,0,0.35)";
 
 const chipClass =
-  "border border-white/25 border-b-black/50 bg-linear-to-b from-[#3d4168] to-[#1c1f38]";
+  "border border-white/15 bg-linear-to-b from-[#32365a] to-[#23263f]";
 
 export default function Card({
   text,
