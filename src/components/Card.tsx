@@ -1,5 +1,13 @@
 import { motion } from "motion/react";
 
+const chipShadow =
+  "inset 0 1px 0 rgba(255,255,255,0.28), inset 0 -4px 8px rgba(0,0,0,0.4), 0 8px 14px rgba(0,0,0,0.45)";
+const chipShadowLift =
+  "inset 0 1px 0 rgba(255,255,255,0.32), inset 0 -3px 6px rgba(0,0,0,0.3), 0 14px 24px rgba(0,0,0,0.55)";
+
+const chipClass =
+  "border border-white/25 border-b-black/50 bg-linear-to-b from-[#3d4168] to-[#1c1f38]";
+
 export default function Card({
   text,
   style,
@@ -16,20 +24,26 @@ export default function Card({
     dragConstraints: containerRef,
     dragElastic: 1,
     whileHover: { scale: 1.06 },
-    whileDrag: { scale: 1.1, zIndex: 20, cursor: "grabbing" },
+    whileDrag: {
+      scale: 1.1,
+      zIndex: 20,
+      cursor: "grabbing",
+      boxShadow: chipShadowLift,
+    },
   };
 
   return image && !text ? (
-    <motion.img
-      src={image}
-      className="absolute w-9 cursor-grab touch-none select-none drop-shadow-lg sm:w-15"
-      style={style}
+    <motion.div
+      className={`absolute flex size-11 cursor-grab touch-none select-none items-center justify-center rounded-full sm:size-16 ${chipClass}`}
+      style={{ ...style, boxShadow: chipShadow }}
       {...dragProps}
-    />
+    >
+      <img src={image} alt="" className="w-6 sm:w-8" draggable={false} />
+    </motion.div>
   ) : (
     <motion.div
-      className="absolute flex w-28 cursor-grab touch-none select-none items-center justify-center gap-1.5 rounded-full bg-storm px-2 py-2 text-center text-xs font-extralight shadow-md ring ring-white/20 sm:w-48 sm:gap-2 sm:px-3 sm:py-4 sm:text-xl"
-      style={style}
+      className={`absolute flex w-28 cursor-grab touch-none select-none items-center justify-center gap-1.5 rounded-full px-2 py-2 text-center text-xs font-extralight sm:w-48 sm:gap-2 sm:px-3 sm:py-4 sm:text-xl ${chipClass}`}
+      style={{ ...style, boxShadow: chipShadow }}
       {...dragProps}
     >
       <span
