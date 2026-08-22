@@ -25,6 +25,7 @@ function Navigation({ links, onNavigate }: NavigationProps) {
     </ul>
   );
 }
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage, t } = useI18n();

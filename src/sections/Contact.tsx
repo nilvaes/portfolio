@@ -2,7 +2,6 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { useI18n } from "../i18n";
-import { asset } from "../lib/utils";
 
 export default function Contact() {
   const { t } = useI18n();
@@ -131,23 +130,6 @@ export default function Contact() {
             {isLoading ? t("contact.sending") : t("contact.submit")}
           </button>
         </form>
-      </div>
-      <div className="flex justify-center items-center mr-auto mt-auto gap-3 pt-20 pb-5">
-        <a
-          href="https://www.linkedin.com/in/savasdev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10"
-        >
-          <img className="w-8 md:w-10" src={asset("assets/logos/linkedin-white.svg")} alt="LinkedIn" />
-        </a>
-        <a
-          href="https://github.com/nilvaes"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="w-10 md:w-12" src={asset("assets/logos/github-white.svg")} alt="GitHub" />
-        </a>
       </div>
     </section>
   );

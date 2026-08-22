@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { LightRays } from "../components/LightRays";
 import { MorphingText } from "../components/MorphingText";
 import { useI18n } from "../i18n";
+import { asset } from "../lib/utils";
 
 export default function Hero() {
   const { t } = useI18n();
@@ -113,7 +114,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col items-center gap-1 text-sm text-neutral-400"
+          className="mt-10 flex flex-col items-center gap-1 text-sm text-neutral-400 md:mt-14"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -124,27 +125,34 @@ export default function Hero() {
             {t("hero.availability")}
           </span>
           <span>{t("hero.availabilityLocation")}</span>
-        </motion.div>
-
-        <motion.div
-          className="flex flex-wrap justify-center gap-3"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1.7, duration: 0.6 }}
-        >
-          <a
-            href="#projects"
-            className="rounded-full bg-lavender px-5 py-2.5 font-medium text-white transition-colors hover:bg-royal"
-          >
-            {t("hero.projectsCta")}
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full border border-white/15 px-5 py-2.5 font-medium text-neutral-200 transition-colors hover:border-white/30 hover:bg-white/5"
-          >
-            {t("hero.contactCta")}
-          </a>
+          <div className="mt-4 flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/savasdev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-70 transition-opacity hover:opacity-100"
+              aria-label="LinkedIn"
+            >
+              <img
+                className="h-7 w-7"
+                src={asset("assets/logos/linkedin-white.svg")}
+                alt=""
+              />
+            </a>
+            <a
+              href="https://github.com/nilvaes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-70 transition-opacity hover:opacity-100"
+              aria-label="GitHub"
+            >
+              <img
+                className="h-10 w-10"
+                src={asset("assets/logos/github-white.svg")}
+                alt=""
+              />
+            </a>
+          </div>
         </motion.div>
       </div>
 

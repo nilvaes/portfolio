@@ -32,6 +32,9 @@ export default function About() {
         </article>
         {/* grid2 */}
         <div className="grid-default-color grid-2">
+          <p className="pointer-events-none absolute right-3 bottom-3 z-10 text-[10px] tracking-wider text-neutral-500 uppercase sm:right-4 sm:bottom-4 sm:text-xs">
+            {t("about.dragHint")}
+          </p>
           <div
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
@@ -62,6 +65,21 @@ export default function About() {
               containerRef={grid2Container}
             />
             <Card
+              text={t("about.cards.next")}
+              style={{ rotate: "-12deg", top: "8%", left: "62%" }}
+              containerRef={grid2Container}
+            />
+            <Card
+              text={t("about.cards.rest")}
+              style={{ rotate: "18deg", bottom: "8%", left: "8%" }}
+              containerRef={grid2Container}
+            />
+            <Card
+              text={t("about.cards.agile")}
+              style={{ rotate: "-8deg", bottom: "18%", left: "52%" }}
+              containerRef={grid2Container}
+            />
+            <Card
               image={asset("assets/logos/vue.svg")}
               style={{ rotate: "30deg", bottom: "70%", left: "70%" }}
               containerRef={grid2Container}
@@ -84,6 +102,26 @@ export default function About() {
             <Card
               image={asset("assets/logos/typescript.svg")}
               style={{ rotate: "-45deg", top: "30%", left: "50%" }}
+              containerRef={grid2Container}
+            />
+            <Card
+              image={asset("assets/logos/nodejs.svg")}
+              style={{ rotate: "15deg", top: "42%", left: "78%" }}
+              containerRef={grid2Container}
+            />
+            <Card
+              image={asset("assets/logos/nestjs.svg")}
+              style={{ rotate: "-20deg", bottom: "12%", left: "78%" }}
+              containerRef={grid2Container}
+            />
+            <Card
+              image={asset("assets/logos/docker.svg")}
+              style={{ rotate: "25deg", top: "4%", left: "4%" }}
+              containerRef={grid2Container}
+            />
+            <Card
+              image={asset("assets/logos/git.svg")}
+              style={{ rotate: "-18deg", bottom: "4%", left: "32%" }}
               containerRef={grid2Container}
             />
           </div>
@@ -116,7 +154,7 @@ export default function About() {
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
                   {t("about.techStackCategories.frontend")}
                 </p>
-                <p>Nuxt, Vue, React, React Native, Tailwind CSS</p>
+                <p>Nuxt, Vue, React, Next.js, React Native, Tailwind CSS</p>
               </div>
               <div>
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">

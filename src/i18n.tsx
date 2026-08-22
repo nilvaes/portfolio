@@ -39,8 +39,6 @@ const translations: Record<Language, TranslationTree> = {
       suffix: 'Weblösungen',
       availability: 'Offen für Vollzeit',
       availabilityLocation: 'Deutschland · Remote',
-      projectsCta: 'Projekte ansehen',
-      contactCta: 'Kontakt aufnehmen',
       words: {
         first: 'innovative',
         second: 'zuverlässige',
@@ -51,15 +49,15 @@ const translations: Record<Language, TranslationTree> = {
       heading: 'Über mich',
       profileTitle: 'Full Stack mit Blick fürs Ganze',
       profileIntro:
-        'Nach meiner dreijährigen Ausbildung habe ich meinen Schwerpunkt in der Full-Stack-Entwicklung gefunden.',
+        'Nach meiner dreijährigen Ausbildung arbeite ich als Junior Full-Stack Entwickler mit Vue.js, Nuxt, Node.js und TypeScript.',
       profileWorkStyle:
-        'Ich entwickle zuverlässige, gut strukturierte Anwendungen und arbeite gern in Teams, die offen kommunizieren und gemeinsam gute Lösungen finden.',
+        'Ich entwickle zuverlässige, gut strukturierte Anwendungen. Ich arbeite gern im Team, kann aber auch selbstständig und eigenverantwortlich arbeiten.',
       profileGoalTitle: 'Mein nächster Schritt',
       profileGoal:
         'Ich suche eine Vollzeitstelle, in der ich Verantwortung übernehmen, weiterlernen und zu echten Produkten beitragen kann.',
       timezoneTitle: 'Zeitzone',
       timezoneText:
-        'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
+        'Ich wohne in Deutschland und kann remote weltweit arbeiten',
       ctaTitle: 'Lass uns ins Gespräch kommen',
       techStackTitle: 'Tech Stack',
       techStackCategories: {
@@ -74,7 +72,11 @@ const translations: Record<Language, TranslationTree> = {
         backend: 'Backend',
         fullstack: 'Fullstack',
         ui: 'UIs',
+        next: 'Next.js',
+        rest: 'REST APIs',
+        agile: 'Agile',
       },
+      dragHint: 'Ziehen',
     },
     projects: {
       heading: 'Projekte',
@@ -142,8 +144,6 @@ const translations: Record<Language, TranslationTree> = {
       suffix: 'web solutions',
       availability: 'Open to full-time',
       availabilityLocation: 'Germany · Remote',
-      projectsCta: 'View projects',
-      contactCta: 'Contact me',
       words: {
         first: 'innovative',
         second: 'reliable',
@@ -154,15 +154,15 @@ const translations: Record<Language, TranslationTree> = {
       heading: 'About',
       profileTitle: 'Full stack with a product mindset',
       profileIntro:
-        'After completing my three-year apprenticeship, I found my focus in full-stack development.',
+        'After completing my three-year apprenticeship, I work as a junior full-stack developer with Vue.js, Nuxt, Node.js, and TypeScript.',
       profileWorkStyle:
-        'I build reliable, well-structured applications and enjoy working in teams that communicate openly and solve problems together.',
+        'I build reliable, well-structured applications. I enjoy working in teams, and I can also work independently.',
       profileGoalTitle: 'My next step',
       profileGoal:
         'I am looking for a full-time role where I can take ownership, keep learning, and contribute to real products.',
       timezoneTitle: 'Timezone',
       timezoneText:
-        'I live in Germany and can work remotely with teams worldwide',
+        'I live in Germany and can work remotely worldwide',
       ctaTitle: "Let's connect",
       techStackTitle: 'Tech Stack',
       techStackCategories: {
@@ -177,7 +177,11 @@ const translations: Record<Language, TranslationTree> = {
         backend: 'Backend',
         fullstack: 'Fullstack',
         ui: 'UIs',
+        next: 'Next.js',
+        rest: 'REST APIs',
+        agile: 'Agile',
       },
+      dragHint: 'Drag me',
     },
     projects: {
       heading: 'Projects',
