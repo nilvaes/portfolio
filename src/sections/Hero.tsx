@@ -58,6 +58,19 @@ export default function Hero() {
         />
       )}
 
+      <img
+        src={asset("assets/hero-stipple.png")}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 right-[-8%] z-1 h-[78vh] w-auto max-w-[min(520px,70vw)] -translate-y-1/2 object-contain opacity-20 select-none sm:right-0 sm:opacity-25 lg:right-[6%] lg:opacity-30"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse 72% 78% at 58% 46%, #000 32%, transparent 74%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 72% 78% at 58% 46%, #000 32%, transparent 74%)",
+        }}
+      />
+
       <div className="relative z-10 flex flex-col items-center gap-4 px-5 text-center md:gap-8">
         <motion.p
           className="text-lg tracking-wide text-neutral-400 md:text-xl"

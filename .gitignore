@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Original photos — never commit or deploy these
+private/
+*.original.*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

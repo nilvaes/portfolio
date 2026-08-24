@@ -6,7 +6,7 @@ const chipShadowLift =
   "inset 0 1px 0 rgba(255,255,255,0.2), 0 6px 12px rgba(0,0,0,0.35)";
 
 const chipClass =
-  "border border-white/15 bg-linear-to-b from-[#32365a] to-[#23263f]";
+  "border border-white/10 bg-linear-to-b from-[#2a2a2a] to-[#141414]";
 
 export default function Card({
   text,

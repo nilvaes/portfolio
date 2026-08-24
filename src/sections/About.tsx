@@ -13,25 +13,42 @@ export default function About() {
     <section className="c-space mb-32 lg:mb-48" id="about">
       <h2 className="text-heading">{t("about.heading")}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
-        <article className="grid-default-color grid-1 flex flex-col justify-between">
-          <div>
-            <p className="headtext">{t("about.profileTitle")}</p>
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-neutral-300">
-              <p>{t("about.profileIntro")}</p>
-              <p>{t("about.profileWorkStyle")}</p>
-            </div>
+        <article className="grid-default-color grid-1 flex flex-col">
+          <p className="headtext">{t("about.profileTitle")}</p>
+          <p className="mt-4 text-base leading-relaxed text-neutral-300">
+            {t("about.profileIntro")}
+          </p>
+        </article>
+        <article className="grid-default-color grid-1 flex flex-col">
+          <p className="headtext">{t("about.lookingForTitle")}</p>
+          <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+            {t("about.lookingForText")}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              t("about.lookingFor.fullTime"),
+              t("about.lookingFor.frontend"),
+              t("about.lookingFor.backend"),
+              t("about.lookingFor.fullstack"),
+              t("about.lookingFor.remote"),
+            ].map((label) => (
+              <span
+                key={label}
+                className="rounded-full bg-primary/50 px-3 py-1 text-xs text-neutral-200"
+              >
+                {label}
+              </span>
+            ))}
           </div>
-          <div className="mt-8 border-t border-white/10 pt-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-lavender">
-              {t("about.profileGoalTitle")}
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-              {t("about.profileGoal")}
-            </p>
-          </div>
+          <p className="mt-4 text-[11px] font-semibold uppercase tracking-wider text-lavender">
+            {t("about.languagesTitle")}
+          </p>
+          <p className="mt-1 text-sm text-neutral-300">
+            {t("about.languagesText")}
+          </p>
         </article>
         {/* grid2 */}
-        <div className="grid-default-color grid-2">
+        <div className="grid-black-color grid-2">
           <p className="pointer-events-none absolute right-3 bottom-3 z-10 text-[10px] tracking-wider text-neutral-500 uppercase sm:right-4 sm:bottom-4 sm:text-xs">
             {t("about.dragHint")}
           </p>

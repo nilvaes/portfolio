@@ -47,14 +47,21 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       heading: 'Über mich',
-      profileTitle: 'Full Stack mit Blick fürs Ganze',
+      profileTitle: 'Junior Entwickler',
       profileIntro:
-        'Nach meiner dreijährigen Ausbildung arbeite ich als Junior Full-Stack Entwickler mit Vue.js, Nuxt, Node.js und TypeScript.',
-      profileWorkStyle:
-        'Ich entwickle zuverlässige, gut strukturierte Anwendungen. Ich arbeite gern im Team, kann aber auch selbstständig und eigenverantwortlich arbeiten.',
-      profileGoalTitle: 'Mein nächster Schritt',
-      profileGoal:
-        'Ich suche eine Vollzeitstelle, in der ich Verantwortung übernehmen, weiterlernen und zu echten Produkten beitragen kann.',
+        'Ich habe meine dreijährige Ausbildung abgeschlossen und entwickle zuverlässige, gut strukturierte Anwendungen. Im Team arbeite ich gern, selbstständig ebenso – neue Technologien lerne ich schnell.',
+      lookingForTitle: 'Wonach ich suche',
+      lookingForText:
+        'Eine Vollzeitstelle – Frontend, Backend oder Full-Stack. Hauptsache, ich kann weiterlernen und zu echten Produkten beitragen.',
+      lookingFor: {
+        fullTime: 'Vollzeit',
+        frontend: 'Frontend',
+        backend: 'Backend',
+        fullstack: 'Full-Stack',
+        remote: 'Remote',
+      },
+      languagesTitle: 'Sprachen',
+      languagesText: 'Deutsch · Englisch · Türkisch',
       timezoneTitle: 'Zeitzone',
       timezoneText:
         'Ich wohne in Deutschland und kann remote weltweit arbeiten',
@@ -152,14 +159,21 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       heading: 'About',
-      profileTitle: 'Full stack with a product mindset',
+      profileTitle: 'Junior Developer',
       profileIntro:
-        'After completing my three-year apprenticeship, I work as a junior full-stack developer with Vue.js, Nuxt, Node.js, and TypeScript.',
-      profileWorkStyle:
-        'I build reliable, well-structured applications. I enjoy working in teams, and I can also work independently.',
-      profileGoalTitle: 'My next step',
-      profileGoal:
-        'I am looking for a full-time role where I can take ownership, keep learning, and contribute to real products.',
+        'I have completed my three-year apprenticeship and build reliable, well-structured applications. I enjoy working in a team and independently — and I pick up new technologies quickly.',
+      lookingForTitle: 'What I am looking for',
+      lookingForText:
+        'A full-time role — frontend, backend, or full-stack. What matters is learning and contributing to real products.',
+      lookingFor: {
+        fullTime: 'Full-time',
+        frontend: 'Frontend',
+        backend: 'Backend',
+        fullstack: 'Full-stack',
+        remote: 'Remote',
+      },
+      languagesTitle: 'Languages',
+      languagesText: 'German · English · Turkish',
       timezoneTitle: 'Timezone',
       timezoneText:
         'I live in Germany and can work remotely worldwide',
