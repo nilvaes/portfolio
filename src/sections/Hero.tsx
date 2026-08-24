@@ -98,16 +98,18 @@ export default function Hero() {
           )}
         </motion.div>
 
-        <motion.p
-          className="max-w-2xl text-2xl font-medium text-neutral-300 md:text-3xl"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1.3, duration: 0.6 }}
-        >
-          <span className="hidden md:inline">{t("hero.desktopSuffix")}</span>
-          <span className="inline md:hidden">{t("hero.mobileSuffix")}</span>
-        </motion.p>
+        {(t("hero.desktopSuffix") || t("hero.mobileSuffix")) && (
+          <motion.p
+            className="max-w-2xl text-2xl font-medium text-neutral-300 md:text-3xl"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.3, duration: 0.6 }}
+          >
+            <span className="hidden md:inline">{t("hero.desktopSuffix")}</span>
+            <span className="inline md:hidden">{t("hero.mobileSuffix")}</span>
+          </motion.p>
+        )}
       </div>
 
       <div
