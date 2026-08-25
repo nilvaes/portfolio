@@ -89,11 +89,6 @@ const translations: Record<Language, TranslationTree> = {
             'Eine datenschutzorientierte Perioden-Tracking-App mit Expo, NativeWind und i18n – alles lokal, keine Cloud.',
           comingSoon: 'Voraussichtlich demnächst in den App-Stores.',
         },
-        saas: {
-          title: 'SaaS Web App',
-          description: 'Derzeit in Arbeit – demnächst mehr.',
-          underConstruction: 'Derzeit in Arbeit – demnächst mehr.',
-        },
       },
     },
     contact: {
@@ -189,11 +184,6 @@ const translations: Record<Language, TranslationTree> = {
           description:
             'A privacy-first period tracking app built with Expo, NativeWind, and i18n – all local, no cloud.',
           comingSoon: 'Expected to be published in app stores soon.',
-        },
-        saas: {
-          title: 'SaaS Web App',
-          description: 'Under construction – more coming soon.',
-          underConstruction: 'Under construction – more coming soon.',
         },
       },
     },

@@ -7,7 +7,7 @@ const CURSOR_IMAGE_OFFSET_X = 20;
 const CURSOR_IMAGE_OFFSET_Y = -24;
 
 type Project = {
-  key: "sumi" | "bosporus" | "dashboard" | "saas";
+  key: "sumi" | "bosporus" | "dashboard";
   github?: string;
   demo?: string;
   demoOnly?: boolean;
@@ -32,12 +32,6 @@ const PROJECTS: Project[] = [
     github: "https://github.com/your-username/privacy-first-period-tracker",
     demo: undefined,
     tech: ["Expo", "React Native", "NativeWind", "i18n"],
-  },
-  {
-    key: "saas",
-    github: "https://github.com/your-username/saas-web-app",
-    demo: "https://your-saas-demo.com",
-    tech: ["Next.js", "Nest.js", "PostgreSQL"],
   },
 ];
 
@@ -173,15 +167,6 @@ export default function Projects() {
                   <p className="subtext italic">
                     {t("projects.cards.dashboard.comingSoon")}
                   </p>
-                ) : project.key === "saas" ? (
-                  <>
-                    <span className="text-neutral-500 cursor-not-allowed no-underline">
-                      GitHub
-                    </span>
-                    <span className="text-neutral-500 cursor-not-allowed no-underline">
-                      {t("projects.visitWebsite")}
-                    </span>
-                  </>
                 ) : project.demoOnly && project.demo ? (
                   <a
                     href={project.demo}
