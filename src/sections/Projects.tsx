@@ -126,7 +126,8 @@ export default function Projects() {
           {PROJECTS.map((project) => (
             <div
               key={project.key}
-              className="group relative rounded-3xl transition-transform duration-300 hover:-translate-y-0.5"
+              id={project.key}
+              className="group relative rounded-3xl transition-transform duration-300 hover:-translate-y-0.5 scroll-mt-6"
               onMouseEnter={(e) => handlePreviewMouseEnter(e, project.key)}
               onMouseMove={(e) => handlePreviewMouseMove(e, project.key)}
               onMouseLeave={handlePreviewMouseLeave}
