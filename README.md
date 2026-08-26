@@ -1,6 +1,6 @@
 # Ömer Savas — Portfolio
 
-Personal portfolio site showcasing projects, experience, and contact info. Built with React, TypeScript, and Tailwind CSS, deployed to GitHub Pages.
+Personal, non-commercial project showcasing my own programming projects and the technologies I work with. Built with React, TypeScript, and Tailwind CSS, deployed to GitHub Pages.
 
 **Live site:** [portfolio.savasbuilds.com](https://portfolio.savasbuilds.com/)
 
@@ -11,7 +11,8 @@ Personal portfolio site showcasing projects, experience, and contact info. Built
 - About section with tech stack and interactive cards
 - Timeline / journey section
 - Projects with hover previews
-- Contact form (EmailJS)
+- Light / dark theme
+- Site info and privacy pages (hash routed)
 
 ## Tech stack
 
@@ -19,7 +20,6 @@ Personal portfolio site showcasing projects, experience, and contact info. Built
 - Vite 7
 - Tailwind CSS v4
 - Motion (animations)
-- EmailJS (contact form)
 
 ## Getting started
 

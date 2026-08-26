@@ -29,20 +29,20 @@ const translations: Record<Language, TranslationTree> = {
       home: 'Start',
       about: 'Über mich',
       projects: 'Projekte',
-      contact: 'Kontakt',
       toggleAria: 'Sprache wechseln',
       themeAria: 'Design wechseln',
     },
     hero: {
-      greeting: 'Softwareentwickler · Full-Stack',
-      desktopTitle: 'Moderne Webanwendungen mit',
+      greeting: 'Hi, ich bin Ömer',
+      desktopTitle: 'Ich entwickle Webanwendungen mit',
       mobileTitle: 'Webanwendungen mit',
-      desktopSuffix: '',
-      mobileSuffix: '',
+      tagline:
+        'Ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln – Full-Stack von der Datenbank bis zum Interface.',
+      ctaProjects: 'Projekte ansehen',
       words: {
         first: 'TypeScript',
-        second: 'Vue/Nuxt',
-        third: 'React/Next.js',
+        second: 'Vue & Nuxt',
+        third: 'React & Next.js',
       },
     },
     about: {
@@ -50,7 +50,8 @@ const translations: Record<Language, TranslationTree> = {
       timezoneTitle: 'Zeitzone',
       timezoneText:
         'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
-      ctaTitle: 'Hast du Lust, mit mir zu arbeiten?',
+      ctaTitle: 'Mehr Code auf GitHub',
+      ctaAction: 'Zum GitHub-Profil',
       techStackTitle: 'Tech Stack',
       techStackCategories: {
         frontend: 'Frontend',
@@ -94,33 +95,17 @@ const translations: Record<Language, TranslationTree> = {
         },
       },
     },
-    contact: {
-      heading: 'Lass uns reden',
-      description:
-        'Du brauchst eine neue Website, willst deine Plattform verbessern oder ein besonderes Projekt umsetzen? Ich helfe gern.',
-      fullName: 'Vollständiger Name',
-      email: 'E-Mail',
-      message: 'Nachricht',
-      fullNamePlaceholder: 'Max Mustermann',
-      emailPlaceholder: 'max.mustermann@gmail.com',
-      messagePlaceholder: 'Teile deine Gedanken',
-      submit: 'Senden',
-      sending: 'Sende...',
-      success: 'Deine Nachricht wurde erfolgreich gesendet!',
-      error: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
-    },
-    copyEmail: {
-      copy: 'E-Mail kopieren',
-      copied: 'E-Mail kopiert',
-    },
     footer: {
       rights: 'Alle Rechte vorbehalten.',
       builtWith: 'Gebaut mit',
       and: 'und',
+      privacy: 'Datenschutz',
+      siteInfo: 'Website-Info',
+      nonCommercial:
+        'Persönliches, nicht-kommerzielles Projekt zur Darstellung eigener Programmierprojekte.',
     },
-    alert: {
-      success: 'Erfolg',
-      failed: 'Fehler',
+    legal: {
+      back: 'Zurück zur Startseite',
     },
   },
   en: {
@@ -128,20 +113,20 @@ const translations: Record<Language, TranslationTree> = {
       home: 'Home',
       about: 'About',
       projects: 'Projects',
-      contact: 'Contact',
       toggleAria: 'Switch language',
       themeAria: 'Switch theme',
     },
     hero: {
-      greeting: 'Software Developer · Full-Stack',
-      desktopTitle: 'Modern web applications with',
+      greeting: "Hi, I'm Ömer",
+      desktopTitle: 'I build web applications with',
       mobileTitle: 'Web applications with',
-      desktopSuffix: '',
-      mobileSuffix: '',
+      tagline:
+        'Trained application developer (Fachinformatiker) based in Cologne – full-stack from database to interface.',
+      ctaProjects: 'View projects',
       words: {
         first: 'TypeScript',
-        second: 'Vue/Nuxt',
-        third: 'React/Next.js',
+        second: 'Vue & Nuxt',
+        third: 'React & Next.js',
       },
     },
     about: {
@@ -149,7 +134,8 @@ const translations: Record<Language, TranslationTree> = {
       timezoneTitle: 'Timezone',
       timezoneText:
         'I live in Germany and can work remotely with teams worldwide',
-      ctaTitle: 'Want to work together?',
+      ctaTitle: 'More code on GitHub',
+      ctaAction: 'Go to GitHub profile',
       techStackTitle: 'Tech Stack',
       techStackCategories: {
         frontend: 'Frontend',
@@ -193,33 +179,17 @@ const translations: Record<Language, TranslationTree> = {
         },
       },
     },
-    contact: {
-      heading: "Let's Talk",
-      description:
-        "Need a new website, want to improve your platform, or build something special? I'm happy to help.",
-      fullName: 'Full Name',
-      email: 'Email',
-      message: 'Message',
-      fullNamePlaceholder: 'John Doe',
-      emailPlaceholder: 'john.doe@gmail.com',
-      messagePlaceholder: 'Share your thoughts',
-      submit: 'Send',
-      sending: 'Sending...',
-      success: 'Your message has been sent successfully!',
-      error: 'Something went wrong. Please try again.',
-    },
-    copyEmail: {
-      copy: 'Copy email',
-      copied: 'Email copied',
-    },
     footer: {
       rights: 'All rights reserved.',
       builtWith: 'Built with',
       and: 'and',
+      privacy: 'Privacy',
+      siteInfo: 'Site info',
+      nonCommercial:
+        'Personal, non-commercial project showcasing my own programming work.',
     },
-    alert: {
-      success: 'Success',
-      failed: 'Failed',
+    legal: {
+      back: 'Back to home',
     },
   },
 };
@@ -245,6 +215,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, language);
+    document.documentElement.lang = language;
   }, [language]);
 
   const value = useMemo<I18nContextValue>(

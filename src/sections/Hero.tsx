@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { LightRays } from "../components/LightRays";
 import { MorphingText } from "../components/MorphingText";
+import SocialLinks from "../components/SocialLinks";
 import { useI18n } from "../i18n";
 import { useTheme } from "../theme";
 
@@ -68,7 +69,7 @@ export default function Hero() {
         />
       )}
 
-      <div className="relative z-10 flex flex-col items-center px-5 text-center md:gap-8">
+      <div className="relative z-10 flex flex-col items-center px-5 text-center md:gap-6">
         <motion.p
           className="text-lg tracking-wide text-muted md:text-xl"
           variants={variants}
@@ -109,18 +110,31 @@ export default function Hero() {
           )}
         </motion.div>
 
-        {(t("hero.desktopSuffix") || t("hero.mobileSuffix")) && (
-          <motion.p
-            className="max-w-2xl text-2xl font-medium text-muted md:text-3xl"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.3, duration: 0.6 }}
+        <motion.p
+          className="mt-4 max-w-xl text-base text-muted md:mt-0 md:text-lg"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1.3, duration: 0.6 }}
+        >
+          {t("hero.tagline")}
+        </motion.p>
+
+        <motion.div
+          className="mt-8 flex flex-col items-center gap-4 md:mt-2"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1.5, duration: 0.6 }}
+        >
+          <a
+            href="#projects"
+            className="rounded-full bg-radial from-lavender to-royal px-7 py-3 text-base font-medium text-on-accent transition hover:-translate-y-0.5 hover:brightness-110"
           >
-            <span className="hidden md:inline">{t("hero.desktopSuffix")}</span>
-            <span className="inline md:hidden">{t("hero.mobileSuffix")}</span>
-          </motion.p>
-        )}
+            {t("hero.ctaProjects")}
+          </a>
+          <SocialLinks />
+        </motion.div>
       </div>
 
       <div

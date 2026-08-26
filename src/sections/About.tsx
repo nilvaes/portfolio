@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/Globe";
-import CopyEmailButton from "../components/CopyEmailButton";
 import Frameworks from "../components/Frameworks";
 import { useI18n } from "../i18n";
 import { asset } from "../lib/utils";
@@ -86,7 +85,14 @@ export default function About() {
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">{t("about.ctaTitle")}</p>
-            <CopyEmailButton />
+            <a
+              href="https://github.com/nilvaes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-extralight text-ink transition hover:-translate-y-1 duration-200"
+            >
+              {t("about.ctaAction")}
+            </a>
           </div>
         </div>
         {/* grid5 */}

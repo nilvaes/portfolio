@@ -12,7 +12,6 @@
     "deploy": "gh-pages -d dist -b gh-pages-2"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.17",
     "clsx": "^2.1.1",
     "cobe": "^0.6.5",

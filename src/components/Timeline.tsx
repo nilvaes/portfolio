@@ -48,21 +48,32 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
                 <div className="w-4 h-4 p-2 border rounded-full bg-ink/10 border-ink/25" />
               </div>
-              <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-ink/85">
-                <h3>{item.date}</h3>
-                <h3 className="text-xl md:text-[20px] md:text-2xl text-muted ">
-                  {item.title}
-                </h3>
-                <h3 className="text-xl md:text-[20px] md:text-2xl text-subtle">
-                  {item.job}
-                </h3>
+              <div className="flex-col hidden gap-2 font-bold md:flex md:pl-20 text-ink/85">
+                <h3 className="text-2xl md:text-3xl">{item.date}</h3>
+                {item.title && (
+                  <h3 className="text-lg font-semibold md:text-xl text-muted">
+                    {item.title}
+                  </h3>
+                )}
+                {item.job && (
+                  <h3 className="text-base font-normal md:text-lg text-subtle">
+                    {item.job}
+                  </h3>
+                )}
               </div>
             </div>
 
             <div className="relative w-full pl-8 pr-4 md:pl-4">
-              <div className="block mb-4 text-2xl font-bold text-left text-ink/85 md:hidden ">
-                <h3>{item.date}</h3>
-                <h3>{item.job}</h3>
+              <div className="block mb-4 text-left md:hidden">
+                <h3 className="text-2xl font-bold text-ink/85">{item.date}</h3>
+                {item.title && (
+                  <h3 className="text-base font-semibold text-muted">
+                    {item.title}
+                  </h3>
+                )}
+                {item.job && (
+                  <h3 className="text-sm text-subtle">{item.job}</h3>
+                )}
               </div>
               {item.contents.map((content, index) => (
                 <p className="mb-3 font-normal text-muted" key={index}>
