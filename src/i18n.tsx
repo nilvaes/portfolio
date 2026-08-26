@@ -55,11 +55,11 @@ const translations: Record<Language, TranslationTree> = {
       techStackCategories: {
         frontend: 'Frontend',
         backend: 'Backend',
-        databases: 'Datenbanken & ORM',
-        tools: 'Tools & Workflow',
+        databases: 'Datenbanken',
+        tools: 'Tools',
       },
       cards: {
-        junior: 'Junior',
+        trained: 'FIAE',
         frontend: 'Frontend',
         backend: 'Backend',
         fullstack: 'Fullstack',
@@ -157,11 +157,11 @@ const translations: Record<Language, TranslationTree> = {
       techStackCategories: {
         frontend: 'Frontend',
         backend: 'Backend',
-        databases: 'Databases & ORM',
-        tools: 'Tools & Workflow',
+        databases: 'Database',
+        tools: 'Tools',
       },
       cards: {
-        junior: 'Junior',
+        trained: 'Trained',
         frontend: 'Frontend',
         backend: 'Backend',
         fullstack: 'Fullstack',

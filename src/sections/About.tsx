@@ -21,7 +21,7 @@ export default function About() {
             className="flex items-center justify-center w-full h-full"
           >
             <Card
-              text={t("about.cards.junior")}
+              text={t("about.cards.trained")}
               style={{ rotate: "75deg", top: "30%", left: "20%" }}
               containerRef={grid2Container}
             />
@@ -100,25 +100,25 @@ export default function About() {
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
                   {t("about.techStackCategories.frontend")}
                 </p>
-                <p>Nuxt, Vue, React, React Native, Tailwind CSS</p>
+                <p>TypeScript, Vue.js, Nuxt, React, Next.js, Tailwind</p>
               </div>
               <div>
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
                   {t("about.techStackCategories.backend")}
                 </p>
-                <p>Node.js, Nest.js, REST APIs</p>
+                <p>Node.js, REST APIs, NestJS</p>
               </div>
               <div>
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
                   {t("about.techStackCategories.databases")}
                 </p>
-                <p>Prisma, TypeORM, PostgreSQL, MariaDB, Supabase, Firebase</p>
+                <p>PostgreSQL, Supabase, Prisma</p>
               </div>
               <div>
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
                   {t("about.techStackCategories.tools")}
                 </p>
-                <p>Git, GitHub, GitLab, Docker, TypeScript, Cursor, Codex, KI Tools</p>
+                <p>Git, Docker</p>
               </div>
             </div>
           </div>
