@@ -6,8 +6,11 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import { Particles } from "./components/Particles";
+import { useTheme } from "./theme";
 
 function App() {
+  const { theme } = useTheme();
+
   return (
     <>
       <Navbar />
@@ -22,7 +25,7 @@ function App() {
           className="absolute inset-0 z-0"
           quantity={150}
           ease={80}
-          color="#ffffff"
+          color={theme === "light" ? "#967aa1" : "#ffffff"}
           refresh
         />
         <div className="relative z-10">

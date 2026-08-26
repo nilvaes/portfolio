@@ -31,6 +31,7 @@ const translations: Record<Language, TranslationTree> = {
       projects: 'Projekte',
       contact: 'Kontakt',
       toggleAria: 'Sprache wechseln',
+      themeAria: 'Design wechseln',
     },
     hero: {
       greeting: 'Softwareentwickler · Full-Stack',
@@ -129,6 +130,7 @@ const translations: Record<Language, TranslationTree> = {
       projects: 'Projects',
       contact: 'Contact',
       toggleAria: 'Switch language',
+      themeAria: 'Switch theme',
     },
     hero: {
       greeting: 'Software Developer · Full-Stack',

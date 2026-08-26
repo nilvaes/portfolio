@@ -3,9 +3,22 @@ import { motion } from "motion/react";
 import { LightRays } from "../components/LightRays";
 import { MorphingText } from "../components/MorphingText";
 import { useI18n } from "../i18n";
+import { useTheme } from "../theme";
+
+const RAY_COLOR = {
+  dark: "rgba(124, 87, 219, 0.15)",
+  light: "rgba(150, 122, 161, 0.30)",
+} as const;
+
+const RAY_GLOW = {
+  dark: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124, 87, 219, 0.12), transparent 70%)",
+  light:
+    "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(150, 122, 161, 0.22), transparent 70%)",
+} as const;
 
 export default function Hero() {
   const { t } = useI18n();
+  const { theme } = useTheme();
   const sectionRef = useRef<HTMLElement>(null);
   const [isInView, setIsInView] = useState(true);
 
@@ -40,7 +53,8 @@ export default function Hero() {
       {isInView ? (
         <LightRays
           count={6}
-          color="rgba(124, 87, 219, 0.15)"
+          color={RAY_COLOR[theme]}
+          blendMode={theme === "light" ? "multiply" : "screen"}
           blur={8}
           speed={4}
           length="90vh"
@@ -49,17 +63,14 @@ export default function Hero() {
       ) : (
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124, 87, 219, 0.12), transparent 70%)",
-          }}
+          style={{ background: RAY_GLOW[theme] }}
           aria-hidden
         />
       )}
 
       <div className="relative z-10 flex flex-col items-center px-5 text-center md:gap-8">
         <motion.p
-          className="text-lg tracking-wide text-neutral-400 md:text-xl"
+          className="text-lg tracking-wide text-muted md:text-xl"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -69,7 +80,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
+          className="max-w-4xl text-4xl font-bold leading-tight text-ink md:text-6xl lg:text-7xl"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -100,7 +111,7 @@ export default function Hero() {
 
         {(t("hero.desktopSuffix") || t("hero.mobileSuffix")) && (
           <motion.p
-            className="max-w-2xl text-2xl font-medium text-neutral-300 md:text-3xl"
+            className="max-w-2xl text-2xl font-medium text-muted md:text-3xl"
             variants={variants}
             initial="hidden"
             animate="visible"

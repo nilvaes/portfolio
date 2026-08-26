@@ -11,7 +11,7 @@
       content="Portfolio of Ömer Savas, a full stack web developer from Germany. Projects include Sumi - Track & Explore New Anime, Bosporus restaurant site, and more — React, TypeScript, Next.js."
     />
     <meta name="author" content="Ömer Savas" />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#030412" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Ömer Savas — Full Stack Developer" />
@@ -37,6 +37,24 @@
     />
   </head>
   <body>
+    <script>
+      // Applied before paint so a saved light theme never flashes dark.
+      (function () {
+        try {
+          var saved = localStorage.getItem("portfolio-theme");
+          var theme =
+            saved === "light" || saved === "dark"
+              ? saved
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+          if (theme === "light") {
+            document.documentElement.classList.add("light");
+          }
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {}
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

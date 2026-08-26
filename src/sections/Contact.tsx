@@ -70,10 +70,10 @@ export default function Contact() {
       className="relative flex flex-col px-5 lg:px-20 items-center pt-36"
     >
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary ">
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-ink/10 rounded-2xl bg-surface ">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">{t("contact.heading")}</h2>
-          <p className="font-normal text-neutral-400">{t("contact.description")}</p>
+          <p className="font-normal text-muted">{t("contact.description")}</p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
@@ -126,7 +126,7 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal text-on-accent hover-animation"
           >
             {isLoading ? t("contact.sending") : t("contact.submit")}
           </button>
@@ -139,7 +139,11 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="w-10"
         >
-          <img className="w-8 md:w-10" src={asset("assets/logos/linkedin-white.svg")} alt="LinkedIn" />
+          <img
+            className="w-8 md:w-10 light:invert"
+            src={asset("assets/logos/linkedin-white.svg")}
+            alt="LinkedIn"
+          />
         </a>
         <a
           href="https://www.xing.com/profile/Oemer_Savas094643"
@@ -147,14 +151,22 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="w-10"
         >
-          <img className="w-8 md:w-10" src={asset("assets/logos/xing-white.svg")} alt="Xing" />
+          <img
+            className="w-8 md:w-10 light:invert"
+            src={asset("assets/logos/xing-white.svg")}
+            alt="Xing"
+          />
         </a>
         <a
           href="https://github.com/nilvaes"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img className="w-10 md:w-12" src={asset("assets/logos/github-white.svg")} alt="GitHub" />
+          <img
+            className="w-10 md:w-12 light:invert"
+            src={asset("assets/logos/github-white.svg")}
+            alt="GitHub"
+          />
         </a>
       </div>
     </section>

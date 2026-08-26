@@ -17,7 +17,7 @@ export default function CopyEmailButton() {
       onClick={copyToClipboard}
       whileHover={{ y: -5 }}
       whileTap={{ scale: 1.05 }}
-      className="relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-48 cursor-pointer overflow-hidden"
+      className="relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary text-ink w-48 cursor-pointer overflow-hidden"
     >
       <AnimatePresence mode="wait">
         {copied ? (
@@ -29,7 +29,11 @@ export default function CopyEmailButton() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
           >
-            <img src={asset("assets/copy-done.svg")} className="w-5" alt="copy icon" />
+            <img
+              src={asset("assets/copy-done.svg")}
+              className="w-5 light:invert"
+              alt="copy icon"
+            />
             {t("copyEmail.copied")}
           </motion.p>
         ) : (
@@ -41,7 +45,11 @@ export default function CopyEmailButton() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <img src={asset("assets/copy.svg")} className="w-5 " alt="Copy Icon" />
+            <img
+              src={asset("assets/copy.svg")}
+              className="w-5 light:invert"
+              alt="Copy Icon"
+            />
             {t("copyEmail.copy")}
           </motion.p>
         )}

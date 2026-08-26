@@ -23,7 +23,7 @@ export default function Card({
     />
   ) : (
     <motion.div
-      className="absolute px-1 py-4 text-xl text-center rounded-full ring ring-gray-700 font-extralight bg-storm w-48 cursor-grab"
+      className="absolute px-1 py-4 text-xl text-center rounded-full ring ring-ink/20 font-extralight bg-storm text-ink w-48 cursor-grab"
       style={style}
       whileHover={{ scale: 1.05 }}
       drag

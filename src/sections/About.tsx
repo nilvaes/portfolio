@@ -95,27 +95,27 @@ export default function About() {
             <div>
               <p className="headtext">{t("about.techStackTitle")}</p>
             </div>
-            <div className="mt-1 grid grid-cols-1 gap-y-3 text-xs text-neutral-300 md:grid-cols-2 md:gap-x-4 md:gap-y-3 md:text-sm">
+            <div className="mt-1 grid grid-cols-1 gap-y-3 text-xs text-ink/80 md:grid-cols-2 md:gap-x-4 md:gap-y-3 md:text-sm">
               <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
                   {t("about.techStackCategories.frontend")}
                 </p>
                 <p>TypeScript, Vue.js, Nuxt, React, Next.js, Tailwind</p>
               </div>
               <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
                   {t("about.techStackCategories.backend")}
                 </p>
                 <p>Node.js, REST APIs, NestJS</p>
               </div>
               <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
                   {t("about.techStackCategories.databases")}
                 </p>
                 <p>PostgreSQL, Supabase, Prisma</p>
               </div>
               <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-neutral-400 md:text-xs">
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
                   {t("about.techStackCategories.tools")}
                 </p>
                 <p>Git, Docker</p>

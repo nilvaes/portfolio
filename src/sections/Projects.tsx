@@ -125,7 +125,7 @@ export default function Projects() {
             <img
               src={asset(activePreview.src)}
               alt={activePreview.alt}
-              className={`rounded-xl border border-white/10 shadow-xl ${activePreview.widthClass}`}
+              className={`rounded-xl border border-ink/10 shadow-xl ${activePreview.widthClass}`}
             />
           </div>
         )}
@@ -145,7 +145,7 @@ export default function Projects() {
                   }
                 : {})}
             >
-              <article className="relative flex flex-col justify-between p-6 rounded-3xl backdrop-blur-sm bg-primary/30">
+              <article className="relative flex flex-col justify-between p-6 rounded-3xl backdrop-blur-sm card-surface">
                 <div>
                 <h3 className="text-xl font-semibold">
                   {t(`projects.cards.${project.key}.title`)}
@@ -158,7 +158,7 @@ export default function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs rounded-full text-neutral-300 bg-primary/60"
+                      className="px-3 py-1 text-xs rounded-full text-muted bg-ink/8"
                     >
                       {tech}
                     </span>
@@ -178,7 +178,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-aqua hover:text-white underline-offset-4 hover:underline"
+                    className="text-aqua hover:text-ink underline-offset-4 hover:underline"
                   >
                     {t("projects.visitWebsite")}
                   </a>
@@ -189,7 +189,7 @@ export default function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-violet-300 hover:text-violet-100 underline-offset-4 hover:underline"
+                        className="text-lavender hover:text-ink underline-offset-4 hover:underline"
                       >
                         GitHub
                       </a>
@@ -199,7 +199,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-aqua hover:text-white underline-offset-4 hover:underline"
+                        className="text-aqua hover:text-ink underline-offset-4 hover:underline"
                       >
                         {t("projects.visitWebsite")}
                       </a>

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
+import ThemeToggle from "../components/ThemeToggle";
 import { useI18n } from "../i18n";
 import { asset } from "../lib/utils";
 
@@ -42,36 +43,41 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="#home"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            className="text-xl font-bold transition-colors text-muted hover:text-ink"
           >
             Ömer
           </a>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
-          >
-            <img
-              src={isOpen ? asset("assets/close.svg") : asset("assets/menu.svg")}
-              className="w-6 h-6 text-white"
-              alt="toggle"
-            />
-          </button>
+          <div className="flex items-center gap-2 sm:hidden">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex cursor-pointer text-muted hover:text-ink focus:outline-none"
+            >
+              <img
+                src={
+                  isOpen ? asset("assets/close.svg") : asset("assets/menu.svg")
+                }
+                className="w-6 h-6 light:invert"
+                alt="toggle"
+              />
+            </button>
+          </div>
           <nav className="hidden sm:flex items-center gap-4">
             <Navigation links={navLinks} />
             <div className="flex items-center gap-2 text-sm">
               <button
                 className={`cursor-pointer ${
-                  language === "de" ? "text-white" : "text-neutral-400"
+                  language === "de" ? "text-ink" : "text-muted"
                 }`}
                 onClick={() => setLanguage("de")}
                 aria-label={t("nav.toggleAria")}
               >
                 DE
               </button>
-              <span className="text-neutral-500">/</span>
+              <span className="text-subtle">/</span>
               <button
                 className={`cursor-pointer ${
-                  language === "en" ? "text-white" : "text-neutral-400"
+                  language === "en" ? "text-ink" : "text-muted"
                 }`}
                 onClick={() => setLanguage("en")}
                 aria-label={t("nav.toggleAria")}
@@ -79,6 +85,7 @@ export default function Navbar() {
                 EN
               </button>
             </div>
+            <ThemeToggle />
           </nav>
         </div>
       </div>
@@ -95,7 +102,7 @@ export default function Navbar() {
             <div className="flex items-center justify-center gap-4 mt-2 text-sm">
               <button
                 className={`cursor-pointer ${
-                  language === "de" ? "text-white" : "text-neutral-400"
+                  language === "de" ? "text-ink" : "text-muted"
                 }`}
                 onClick={() => setLanguage("de")}
                 aria-label={t("nav.toggleAria")}
@@ -104,7 +111,7 @@ export default function Navbar() {
               </button>
               <button
                 className={`cursor-pointer ${
-                  language === "en" ? "text-white" : "text-neutral-400"
+                  language === "en" ? "text-ink" : "text-muted"
                 }`}
                 onClick={() => setLanguage("en")}
                 aria-label={t("nav.toggleAria")}

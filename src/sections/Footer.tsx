@@ -4,8 +4,8 @@ export default function Footer() {
   const { t } = useI18n();
 
   return (
-    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
-      <div className="bg-linear-to-r from-transparent mb-4 via-neutral-700 to-transparent h-px w-full" />
+    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-muted c-space">
+      <div className="bg-linear-to-r from-transparent mb-4 via-ink/20 to-transparent h-px w-full" />
       <div>
         © {new Date().getFullYear()} Ömer. {t("footer.rights")}
       </div>
@@ -15,7 +15,7 @@ export default function Footer() {
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-white"
+          className="underline hover:text-ink"
         >
           React
         </a>
@@ -24,7 +24,7 @@ export default function Footer() {
           href="https://www.typescriptlang.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-white"
+          className="underline hover:text-ink"
         >
           TypeScript{" "}
         </a>
@@ -33,7 +33,7 @@ export default function Footer() {
           href="https://tailwindcss.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-white"
+          className="underline hover:text-ink"
         >
           Tailwind CSS
         </a>
