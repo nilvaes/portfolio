@@ -27,7 +27,6 @@ const translations: Record<Language, TranslationTree> = {
   de: {
     nav: {
       home: 'Start',
-      info: 'Info',
       about: 'Über mich',
       projects: 'Projekte',
       contact: 'Kontakt',
@@ -46,7 +45,7 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     about: {
-      heading: 'Info',
+      heading: 'Über mich',
       timezoneTitle: 'Zeitzone',
       timezoneText:
         'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
@@ -65,9 +64,6 @@ const translations: Record<Language, TranslationTree> = {
         fullstack: 'Fullstack',
         ui: 'UIs',
       },
-    },
-    timeline: {
-      heading: 'Über mich im Detail',
     },
     projects: {
       heading: 'Projekte',
@@ -129,7 +125,6 @@ const translations: Record<Language, TranslationTree> = {
   en: {
     nav: {
       home: 'Home',
-      info: 'Info',
       about: 'About',
       projects: 'Projects',
       contact: 'Contact',
@@ -148,7 +143,7 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     about: {
-      heading: 'Info',
+      heading: 'About',
       timezoneTitle: 'Timezone',
       timezoneText:
         'I live in Germany and can work remotely with teams worldwide',
@@ -167,9 +162,6 @@ const translations: Record<Language, TranslationTree> = {
         fullstack: 'Fullstack',
         ui: 'UIs',
       },
-    },
-    timeline: {
-      heading: 'About Me In Detail',
     },
     projects: {
       heading: 'Projects',

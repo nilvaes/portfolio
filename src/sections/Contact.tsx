@@ -142,6 +142,14 @@ export default function Contact() {
           <img className="w-8 md:w-10" src={asset("assets/logos/linkedin-white.svg")} alt="LinkedIn" />
         </a>
         <a
+          href="https://www.xing.com/profile/Oemer_Savas094643"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10"
+        >
+          <img className="w-8 md:w-10" src={asset("assets/logos/xing-white.svg")} alt="Xing" />
+        </a>
+        <a
           href="https://github.com/nilvaes"
           target="_blank"
           rel="noopener noreferrer"

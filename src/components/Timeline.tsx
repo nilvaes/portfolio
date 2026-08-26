@@ -1,18 +1,16 @@
 "use client";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
-import { useI18n } from "../i18n";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 interface TimelineEntry {
   title: string;
-  content?: React.ReactNode;
+  content?: ReactNode;
   date: string;
   job: string;
   contents: string[];
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const { t } = useI18n();
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -39,9 +37,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(smoothProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="c-space section-spacing" ref={containerRef}>
-      <h2 className="text-heading">{t("timeline.heading")}</h2>
-
+    <div className="c-space pb-20" ref={containerRef}>
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (
           <div

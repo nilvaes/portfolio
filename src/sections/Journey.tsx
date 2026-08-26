@@ -6,8 +6,8 @@ export default function Journey() {
   const { language } = useI18n();
 
   return (
-    <section id="about" className="relative min-h-screen">
+    <div className="relative">
       <Timeline data={getExperiences(language)} />
-    </section>
+    </div>
   );
 }

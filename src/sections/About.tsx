@@ -10,7 +10,7 @@ export default function About() {
   const { t } = useI18n();
   const grid2Container = useRef<HTMLDivElement>(null);
   return (
-    <section className="c-space mb-32 lg:mb-48" id="info">
+    <section className="c-space mb-8 md:mb-12" id="about">
       <h2 className="text-heading">{t("about.heading")}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
 

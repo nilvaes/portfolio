@@ -12,7 +12,7 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
     {
       title: "",
       job: "",
-      date: "Über mich & Ausbildung",
+      date: "Ausbildung",
       contents: [
         "Ausgebildeter Fachinformatiker für Anwendungsentwicklung mit über drei Jahren praktischer Entwicklungserfahrung im Ausbildungsbetrieb. Mein Schwerpunkt liegt auf Full-Stack-Webentwicklung mit TypeScript, Vue.js/Nuxt und Node.js.",
         "Eigene Anwendungen baue ich zusätzlich mit React und Next.js.",
@@ -22,7 +22,7 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
     {
       title: "",
       job: "",
-      date: "Mein Tech-Stack",
+      date: "Tech-Stack",
       contents: [
         "Frontend: TypeScript, Vue.js, Nuxt, React, Next.js und Tailwind CSS.",
         "Backend: Node.js, REST APIs und NestJS.",
@@ -45,7 +45,7 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
     {
       title: "",
       job: "",
-      date: "About me & Education",
+      date: "Education",
       contents: [
         "Trained Fachinformatiker for Application Development with over three years of practical development experience at my training company. My focus is full-stack web development with TypeScript, Vue.js/Nuxt, and Node.js.",
         "I also build my own applications with React and Next.js.",
@@ -55,7 +55,7 @@ const experiencesByLanguage: Record<Language, ExperienceEntry[]> = {
     {
       title: "",
       job: "",
-      date: "My Tech Stack",
+      date: "Tech Stack",
       contents: [
         "Frontend: TypeScript, Vue.js, Nuxt, React, Next.js, and Tailwind CSS.",
         "Backend: Node.js, REST APIs, and NestJS.",
