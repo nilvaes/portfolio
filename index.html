@@ -11,7 +11,7 @@
       content="Persönliches, nicht-kommerzielles Portfolio-Projekt von Ömer Savas. Eigene Programmierprojekte und Technologien: TypeScript, Vue.js/Nuxt, React/Next.js, Node.js, PostgreSQL und Docker."
     />
     <meta name="author" content="Ömer Savas" />
-    <meta name="theme-color" content="#030412" />
+    <meta name="theme-color" content="#f5e6e8" />
     <link rel="canonical" href="https://portfolio.savasbuilds.com/" />
 
     <meta property="og:type" content="website" />
@@ -46,20 +46,25 @@
   </head>
   <body>
     <script>
-      // Applied before paint so a saved light theme never flashes dark.
+      // Applied before paint so a saved theme never flashes the other one.
+      // Light is the default; must match getInitialTheme() in src/theme.tsx.
       (function () {
         try {
-          var saved = localStorage.getItem("portfolio-theme");
           var theme =
-            saved === "light" || saved === "dark"
-              ? saved
-              : window.matchMedia("(prefers-color-scheme: light)").matches
-              ? "light"
-              : "dark";
+            localStorage.getItem("portfolio-theme") === "dark"
+              ? "dark"
+              : "light";
           if (theme === "light") {
             document.documentElement.classList.add("light");
           }
           document.documentElement.style.colorScheme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) {
+            meta.setAttribute(
+              "content",
+              theme === "light" ? "#f5e6e8" : "#030412"
+            );
+          }
         } catch (e) {}
       })();
     </script>

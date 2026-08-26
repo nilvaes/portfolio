@@ -121,13 +121,24 @@ html {
   background-color: var(--color-primary);
 }
 
+/* The viewport only inherits scroll-behavior from the root element, never from body. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   background: var(--color-primary);
   font-family: "Funnel Display", sans-serif;
   color: var(--color-ink);
-  scroll-behavior: smooth;
   overflow-x: hidden;
   transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* Keeps anchor targets clear of the fixed navbar. */
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
 .c-space {

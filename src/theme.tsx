@@ -25,15 +25,11 @@ const THEME_COLOR: Record<Theme, string> = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
+// Light is the default for first-time visitors; only an explicit choice opts into dark.
+// Kept in sync with the pre-paint script in index.html.
 function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
-
-  const savedTheme = window.localStorage.getItem(STORAGE_KEY);
-  if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
-
-  return window.matchMedia('(prefers-color-scheme: light)').matches
-    ? 'light'
-    : 'dark';
+  if (typeof window === 'undefined') return 'light';
+  return window.localStorage.getItem(STORAGE_KEY) === 'dark' ? 'dark' : 'light';
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {

@@ -41,8 +41,9 @@ function Document({ doc }: { doc: LegalDocument }) {
 export default function Legal({ page }: { page: LegalPage }) {
   const { language, t } = useI18n();
 
+  // Instant, so opening a legal page lands at the top instead of animating there.
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, [page]);
 
   const doc =
