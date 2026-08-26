@@ -5,8 +5,8 @@ import { useCallback, useEffect, useRef } from "react"
 // import { cn } from "../lib/utils"
 import { twMerge } from "tailwind-merge"
 
-const morphTime = 1.5
-const cooldownTime = 0.5
+const morphTime = 1.8
+const cooldownTime = 0.8
 
 const useMorphingText = (texts: string[]) => {
   const textIndexRef = useRef(0)
