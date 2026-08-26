@@ -72,11 +72,17 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       heading: 'Projekte',
       visitWebsite: 'Website besuchen',
+      caseStudy: 'Case Study · Quellcode nicht öffentlich',
       cards: {
         sumi: {
           title: 'Sumi - Track & Explore New Anime',
           description:
             'Eine Fullstack-Anime-Plattform zum Entdecken und Verfolgen von Anime – mit Browse, Fuzzy-Suche, Airing-Schedule und Detailseiten, powered by AniList und Supabase.',
+        },
+        onboarding: {
+          title: 'Onboarding Portal · IHK-Abschlussprojekt',
+          description:
+            'Onboarding-Plattform mit Dokumentenverwaltung, Authentifizierung und rollenbasierten Zugriffsrechten.',
         },
         bosporus: {
           title: 'Bosporus Lahmacun & Pide',
@@ -168,11 +174,17 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       heading: 'Projects',
       visitWebsite: 'Visit Website',
+      caseStudy: 'Case study · source code not public',
       cards: {
         sumi: {
           title: 'Sumi - Track & Explore New Anime',
           description:
             'A full-stack anime discovery platform to browse, search, and track airing shows — with fuzzy search, schedule, and detail pages, powered by AniList and Supabase.',
+        },
+        onboarding: {
+          title: 'Onboarding Portal · IHK Final Project',
+          description:
+            'Onboarding platform with document management, authentication, and role-based access control.',
         },
         bosporus: {
           title: 'Bosporus Lahmacun & Pide',

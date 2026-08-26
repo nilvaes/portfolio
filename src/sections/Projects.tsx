@@ -7,10 +7,11 @@ const CURSOR_IMAGE_OFFSET_X = 20;
 const CURSOR_IMAGE_OFFSET_Y = -24;
 
 type Project = {
-  key: "sumi" | "bosporus" | "dashboard";
+  key: "sumi" | "onboarding" | "bosporus" | "dashboard";
   github?: string;
   demo?: string;
   demoOnly?: boolean;
+  caseStudy?: boolean;
   tech: string[];
 };
 
@@ -20,6 +21,11 @@ const PROJECTS: Project[] = [
     github: "https://github.com/nilvaes/sumi",
     demo: "https://sumi.savasbuilds.com/",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "AniList GraphQL"],
+  },
+  {
+    key: "onboarding",
+    caseStudy: true,
+    tech: ["Nuxt", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Clerk"],
   },
   {
     key: "bosporus",
@@ -129,9 +135,7 @@ export default function Projects() {
             <div
               key={project.key}
               className="group relative rounded-3xl transition-transform duration-300 hover:-translate-y-0.5"
-              {...(project.key === "sumi" ||
-              project.key === "bosporus" ||
-              project.key === "dashboard"
+              {...(project.key in PREVIEW_CONFIG
                 ? {
                     onMouseEnter: (e) =>
                       handlePreviewMouseEnter(e, project.key as PreviewProject),
@@ -163,7 +167,9 @@ export default function Projects() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 mt-6 text-sm">
-                {project.key === "dashboard" ? (
+                {project.caseStudy ? (
+                  <p className="subtext italic">{t("projects.caseStudy")}</p>
+                ) : project.key === "dashboard" ? (
                   <p className="subtext italic">
                     {t("projects.cards.dashboard.comingSoon")}
                   </p>
