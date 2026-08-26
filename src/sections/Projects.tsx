@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { ShineBorder } from "../components/ShineBorder";
 import { useI18n } from "../i18n";
+import { useTheme } from "../theme";
 import { asset } from "../lib/utils";
+
+const SHINE_COLOR = {
+  dark: ["rgba(65,90,119,0.95)", "rgba(27,38,59,0.85)", "rgba(65,90,119,0.95)"],
+  light: ["rgba(124,87,219,0.9)", "rgba(92,51,204,0.7)", "rgba(124,87,219,0.9)"],
+} as const;
 
 const CURSOR_IMAGE_OFFSET_X = 20;
 const CURSOR_IMAGE_OFFSET_Y = -24;
@@ -67,6 +73,7 @@ const PREVIEW_CONFIG: Record<
 
 export default function Projects() {
   const { t } = useI18n();
+  const { theme } = useTheme();
   const [cursorPreview, setCursorPreview] = useState<{
     project: PreviewProject;
     x: number;
@@ -209,7 +216,7 @@ export default function Projects() {
               </div>
               </article>
               <ShineBorder
-                shineColor={["rgba(124,87,219,0.9)", "rgba(92,51,204,0.7)", "rgba(124,87,219,0.9)"]}
+                shineColor={[...SHINE_COLOR[theme]]}
                 borderWidth={1}
                 duration={3}
                 className="rounded-3xl opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100"

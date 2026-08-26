@@ -16,6 +16,12 @@ const LIGHT_GLOBE = {
   glowColor: [0.78, 0.72, 0.85],
 } satisfies Partial<COBEOptions>;
 
+const DARK_GLOBE = {
+  dark: 1,
+  baseColor: [119 / 255, 141 / 255, 169 / 255],
+  glowColor: [65 / 255, 90 / 255, 119 / 255],
+} satisfies Partial<COBEOptions>;
+
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
@@ -59,7 +65,7 @@ export function Globe({
   const pointerInteractionMovement = useRef(0);
 
   const themedConfig = useMemo<COBEOptions>(
-    () => (theme === "light" ? { ...config, ...LIGHT_GLOBE } : config),
+    () => ({ ...config, ...(theme === "light" ? LIGHT_GLOBE : DARK_GLOBE) }),
     [config, theme]
   );
 

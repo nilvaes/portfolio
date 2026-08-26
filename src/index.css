@@ -27,20 +27,20 @@
 }
 
 @theme {
-  --color-primary: #030412;
-  --color-surface: #030412;
-  --color-ink: #ffffff;
-  --color-muted: #a3a3a3;
-  --color-subtle: #737373;
-  --color-on-accent: #ffffff;
-  --color-midnight: #06091f;
-  --color-navy: #161a31;
-  --color-indigo: #1f1e39;
-  --color-storm: #282b4b;
-  --color-aqua: #33c2cc;
+  --color-primary: #0d1b2a;
+  --color-surface: #1b263b;
+  --color-ink: #e0e1dd;
+  --color-muted: #778da9;
+  --color-subtle: #778da9;
+  --color-on-accent: #e0e1dd;
+  --color-midnight: #0d1b2a;
+  --color-navy: #1b263b;
+  --color-indigo: #0d1b2a;
+  --color-storm: #1b263b;
+  --color-aqua: #778da9;
   --color-mint: #57db96;
-  --color-royal: #5c33cc;
-  --color-lavender: #7a57db;
+  --color-royal: #415a77;
+  --color-lavender: #778da9;
   --color-fuchsia: #ca2f8c;
   --color-orange: #cc6033;
   --color-sand: #d6995c;
@@ -89,9 +89,9 @@
 }
 
 :root {
-  --card-bg: rgb(3 4 18 / 0.3);
-  --globe-card-from: #3a3a3a;
-  --globe-card-via: #242424;
+  --card-bg: rgb(27 38 59 / 0.55);
+  --globe-card-from: #1b263b;
+  --globe-card-via: #0d1b2a;
 }
 
 html.light {
@@ -100,6 +100,7 @@ html.light {
   --color-ink: #192a51;
   --color-muted: #5b5378;
   --color-subtle: #857e9c;
+  --color-on-accent: #ffffff;
   --color-midnight: #f5e6e8;
   --color-navy: #d5c6e0;
   --color-indigo: #d5c6e0;
@@ -199,8 +200,17 @@ section[id] {
 }
 
 .grid-special-color {
-  @apply p-6 bg-linear-to-b from-royal to-lavender text-on-accent rounded-2xl;
+  @apply p-6 bg-linear-to-b from-royal to-navy text-on-accent rounded-2xl;
 }
+
+html.light .grid-special-color {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-royal),
+    var(--color-lavender)
+  );
+}
+
 .grid-black-color {
   @apply p-6 rounded-2xl;
   background-image: linear-gradient(
@@ -214,4 +224,21 @@ section[id] {
 /* Translucent card that lets the particle field show through */
 .card-surface {
   background-color: var(--card-bg);
+}
+
+/* Same idea as light: two close jewel tones, so the radial is a soft sheen not a hotspot. */
+.cta-pill {
+  background-image: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--color-royal) 85%, var(--color-muted)),
+    var(--color-royal)
+  );
+}
+
+html.light .cta-pill {
+  background-image: radial-gradient(
+    circle at 50% 40%,
+    var(--color-lavender),
+    var(--color-royal)
+  );
 }

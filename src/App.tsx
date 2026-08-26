@@ -64,7 +64,7 @@ function App() {
           className="absolute inset-0 z-0"
           quantity={150}
           ease={80}
-          color={theme === "light" ? "#967aa1" : "#ffffff"}
+          color={theme === "light" ? "#967aa1" : "#415a77"}
           refresh
         />
         <div className="relative z-10">

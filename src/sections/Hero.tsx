@@ -7,12 +7,12 @@ import { useI18n } from "../i18n";
 import { useTheme } from "../theme";
 
 const RAY_COLOR = {
-  dark: "rgba(124, 87, 219, 0.15)",
+  dark: "rgba(65, 90, 119, 0.18)",
   light: "rgba(150, 122, 161, 0.30)",
 } as const;
 
 const RAY_GLOW = {
-  dark: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124, 87, 219, 0.12), transparent 70%)",
+  dark: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(27, 38, 59, 0.45), transparent 70%)",
   light:
     "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(150, 122, 161, 0.22), transparent 70%)",
 } as const;
@@ -129,7 +129,7 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="rounded-full bg-radial from-lavender to-royal px-7 py-3 text-base font-medium text-on-accent transition hover:-translate-y-0.5 hover:brightness-110"
+            className="cta-pill rounded-full px-7 py-3 text-base font-medium text-on-accent transition hover:-translate-y-0.5 hover:brightness-110"
           >
             {t("hero.ctaProjects")}
           </a>
