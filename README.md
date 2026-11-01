@@ -2,7 +2,7 @@
 
 Personal, non-commercial project showcasing my own programming projects and the technologies I work with. Built with React, TypeScript, and Tailwind CSS, deployed to GitHub Pages.
 
-**Live site:** [portfolio.savasbuilds.com](https://portfolio.savasbuilds.com/)
+**Live site:** [savasbuilds.com](https://savasbuilds.com/)
 
 ## Features
 
