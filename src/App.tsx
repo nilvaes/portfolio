@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import About from "./sections/About";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
-import Journey from "./sections/Journey";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
 import Legal, { type LegalPage } from "./sections/Legal";
@@ -57,9 +56,6 @@ function App() {
         <Hero />
       </div>
       <div className="relative container mx-auto max-w-7xl">
-        <div className="relative z-10 bg-primary">
-          <About />
-        </div>
         <Particles
           className="absolute inset-0 z-0"
           quantity={150}
@@ -68,8 +64,8 @@ function App() {
           refresh
         />
         <div className="relative z-10">
-          <Journey />
           <Projects />
+          <About />
           <Footer />
         </div>
       </div>
