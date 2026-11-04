@@ -4,28 +4,26 @@ const LERP = 0.18; // lower = more lag
 const INTERACTIVE = "a, button, [role='tab'], [data-cursor]";
 
 /**
- * A small dot that sits on the pointer plus a ring that trails it with a soft
- * lag. The ring grows over interactive elements and clicks send out a ripple.
+ * A ring that trails the pointer with a soft lag. It grows over interactive
+ * elements and clicks send out a ripple.
  * The native cursor stays visible. Disabled on touch devices and for users who
  * prefer reduced motion.
  *
- * Positioning and visuals live on separate elements: the outer wrappers are
+ * Positioning and visuals live on separate elements: the outer wrapper is
  * only ever moved with `transform`, while size/scale changes happen on the
- * inner elements. Mixing both on one element makes `scale` shrink the
+ * inner ring. Mixing both on one element makes `scale` shrink the
  * translate offset too, which threw the ring towards the top-left on click.
  */
 export function CursorRing() {
   const rootRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
-  const dotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const root = rootRef.current;
     const ring = ringRef.current;
-    const dot = dotRef.current;
     const finePointer = window.matchMedia("(pointer: fine)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!root || !ring || !dot || !finePointer || reducedMotion) return;
+    if (!root || !ring || !finePointer || reducedMotion) return;
 
     const target = { x: -100, y: -100 };
     const pos = { x: -100, y: -100 };
@@ -46,7 +44,6 @@ export function CursorRing() {
     const onMove = (e: PointerEvent) => {
       target.x = e.clientX;
       target.y = e.clientY;
-      place(dot, target.x, target.y);
       if (!visible) {
         // Jump to the cursor on first move instead of flying in from the corner.
         pos.x = target.x;
@@ -108,9 +105,6 @@ export function CursorRing() {
     >
       <div ref={ringRef} className="cursor-follow">
         <div className="cursor-ring" />
-      </div>
-      <div ref={dotRef} className="cursor-follow">
-        <div className="cursor-dot" />
       </div>
     </div>
   );

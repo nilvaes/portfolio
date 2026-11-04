@@ -188,16 +188,12 @@ html.light {
   will-change: transform;
 }
 
-.cursor-ring,
-.cursor-dot {
+.cursor-ring {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 9999px;
   translate: -50% -50%;
-}
-
-.cursor-ring {
   width: 36px;
   height: 36px;
   border: 1.5px solid color-mix(in srgb, var(--color-ink) 40%, transparent);
@@ -207,13 +203,6 @@ html.light {
     background-color 300ms ease,
     border-color 300ms ease,
     scale 180ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-accent);
-  transition: scale 250ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;
 }
 
 .cursor-root[data-state="link"] .cursor-ring {
@@ -229,14 +218,8 @@ html.light {
   border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
 }
 
-.cursor-root[data-state="link"] .cursor-dot,
-.cursor-root[data-state="card"] .cursor-dot {
-  scale: 0;
-  opacity: 0;
-}
 
 .cursor-root[data-pressed="true"] .cursor-ring { scale: 0.82; }
-.cursor-root[data-pressed="true"] .cursor-dot { scale: 1.6; }
 
 /* Click ripple: a thin ring that expands from the click point and fades. */
 .cursor-ripple::before {
