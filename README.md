@@ -42,7 +42,7 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ## Deploy
 
-The site is served at [portfolio.savasbuilds.com](https://portfolio.savasbuilds.com/) via GitHub Pages (`gh-pages-2` branch) and Cloudflare DNS.
+The site is served at [savasbuilds.com](https://savasbuilds.com/) via GitHub Pages (`gh-pages-2` branch) and Cloudflare DNS.
 
 Deploy with:
 
