@@ -33,16 +33,18 @@ const translations: Record<Language, TranslationTree> = {
       themeAria: 'Design wechseln',
     },
     hero: {
-      greeting: 'Hi, ich bin Ömer',
-      desktopTitle: 'Ich entwickle Webanwendungen mit',
-      mobileTitle: 'Webanwendungen mit',
+      badge: "Fachinformatiker für Anwendungsentwicklung · Köln",
+      titlePrefix: "Ich baue Webanwendungen mit",
       tagline:
-        'Ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln – Full-Stack von der Datenbank bis zum Interface.',
-      ctaProjects: 'Projekte ansehen',
+        "Full-Stack von der Datenbank bis zum Interface – vom Kundenprojekt bis zur eigenen Web-App, sauber gebaut und durchdacht gestaltet.",
+      ctaProjects: "Projekte ansehen",
+      ctaContact: "Kontakt aufnehmen",
+      scroll: "Scrollen",
       words: {
-        first: 'TypeScript',
-        second: 'Vue & Nuxt',
-        third: 'React & Next.js',
+        first: "TypeScript",
+        second: "Vue & Nuxt",
+        third: "React & Next.js",
+        fourth: "Node.js",
       },
     },
     about: {
@@ -117,16 +119,18 @@ const translations: Record<Language, TranslationTree> = {
       themeAria: 'Switch theme',
     },
     hero: {
-      greeting: "Hi, I'm Ömer",
-      desktopTitle: 'I build web applications with',
-      mobileTitle: 'Web applications with',
+      badge: "Trained application developer · Cologne",
+      titlePrefix: "I build web applications with",
       tagline:
-        'Trained application developer (Fachinformatiker) based in Cologne – full-stack from database to interface.',
-      ctaProjects: 'View projects',
+        "Full-stack from database to interface – from client projects to my own web apps, cleanly built and thoughtfully designed.",
+      ctaProjects: "View projects",
+      ctaContact: "Get in touch",
+      scroll: "Scroll",
       words: {
-        first: 'TypeScript',
-        second: 'Vue & Nuxt',
-        third: 'React & Next.js',
+        first: "TypeScript",
+        second: "Vue & Nuxt",
+        third: "React & Next.js",
+        fourth: "Node.js",
       },
     },
     about: {

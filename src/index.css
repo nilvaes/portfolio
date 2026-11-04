@@ -242,3 +242,69 @@ html.light .cta-pill {
     var(--color-royal)
   );
 }
+/* ---------- Hero ---------- */
+:root {
+  --grad-from: #e0e1dd;
+  --grad-via: #a9bcd4;
+  --grad-to: #778da9;
+  --spotlight: rgb(119 141 169 / 0.16);
+  --aurora-a: rgb(65 90 119 / 0.45);
+  --aurora-b: rgb(87 219 150 / 0.08);
+}
+
+html.light {
+  --grad-from: #6b4f8a;
+  --grad-via: #7c57db;
+  --grad-to: #0f7b83;
+  --spotlight: rgb(124 87 219 / 0.12);
+  --aurora-a: rgb(150 122 161 / 0.35);
+  --aurora-b: rgb(15 123 131 / 0.12);
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--grad-from),
+    var(--grad-via) 50%,
+    var(--grad-to)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+}
+
+.hero-spotlight {
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 30%),
+    var(--spotlight),
+    transparent 60%
+  );
+}
+
+.hero-aurora {
+  background:
+    radial-gradient(40% 50% at 85% 20%, var(--aurora-a), transparent 70%),
+    radial-gradient(35% 45% at 10% 90%, var(--aurora-b), transparent 70%);
+  filter: blur(20px);
+}
+
+.scroll-cue {
+  animation: scroll-cue 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-cue {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue { animation: none; }
+}
