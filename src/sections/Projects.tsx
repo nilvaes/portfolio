@@ -218,7 +218,7 @@ export default function Projects() {
           <div
             role="tablist"
             aria-label={t("projects.filterLabel")}
-            className="flex w-fit flex-wrap gap-1 rounded-full border border-ink/10 bg-surface/50 p-1 backdrop-blur"
+            className="flex w-fit max-w-full gap-1 overflow-x-auto rounded-full border border-ink/10 bg-surface/50 p-1 backdrop-blur [scrollbar-width:none]"
           >
             {FILTERS.map((f) => (
               <button
@@ -227,7 +227,7 @@ export default function Projects() {
                 aria-selected={filter === f}
                 onClick={() => setFilter(f)}
                 className={cn(
-                  "relative cursor-pointer rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  "relative shrink-0 cursor-pointer whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium transition-colors sm:px-4",
                   filter === f ? "text-on-accent" : "text-muted hover:text-ink"
                 )}
               >
