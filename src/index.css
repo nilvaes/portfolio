@@ -167,41 +167,92 @@ html.light {
 }
 
 
-/* ---------- Cursor ring ---------- */
-.cursor-ring {
+/* ---------- Cursor ---------- */
+.cursor-root {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 100;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid color-mix(in srgb, var(--color-ink) 45%, transparent);
-  border-radius: 9999px;
   pointer-events: none;
   opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.cursor-root[data-visible="true"] { opacity: 1; }
+
+/* Wrappers are only ever moved with transform (see CursorRing.tsx). */
+.cursor-follow,
+.cursor-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
   will-change: transform;
+}
+
+.cursor-ring,
+.cursor-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  translate: -50% -50%;
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid color-mix(in srgb, var(--color-ink) 40%, transparent);
   transition:
-    width 300ms cubic-bezier(0.22, 1, 0.36, 1),
-    height 300ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 200ms ease,
+    width 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 350ms cubic-bezier(0.22, 1, 0.36, 1),
     background-color 300ms ease,
     border-color 300ms ease,
-    scale 150ms ease;
+    scale 180ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.cursor-ring[data-visible="true"] { opacity: 1; }
-
-.cursor-ring[data-state="link"] {
-  width: 56px;
-  height: 56px;
-  background-color: color-mix(in srgb, var(--color-ink) 6%, transparent);
-  border-color: color-mix(in srgb, var(--color-ink) 25%, transparent);
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  transition: scale 250ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;
 }
 
-.cursor-ring[data-state="card"] {
-  width: 84px;
-  height: 84px;
-  border-color: color-mix(in srgb, var(--color-ink) 20%, transparent);
+.cursor-root[data-state="link"] .cursor-ring {
+  width: 52px;
+  height: 52px;
+  background-color: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent) 70%, transparent);
 }
 
-.cursor-ring[data-pressed="true"] { scale: 0.8; }
+.cursor-root[data-state="card"] .cursor-ring {
+  width: 80px;
+  height: 80px;
+  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
+}
+
+.cursor-root[data-state="link"] .cursor-dot,
+.cursor-root[data-state="card"] .cursor-dot {
+  scale: 0;
+  opacity: 0;
+}
+
+.cursor-root[data-pressed="true"] .cursor-ring { scale: 0.82; }
+.cursor-root[data-pressed="true"] .cursor-dot { scale: 1.6; }
+
+/* Click ripple: a thin ring that expands from the click point and fades. */
+.cursor-ripple::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--color-accent);
+  translate: -50% -50%;
+  animation: cursor-ripple 550ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes cursor-ripple {
+  from { scale: 0.4; opacity: 0.9; }
+  to { scale: 2.2; opacity: 0; }
+}

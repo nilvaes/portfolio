@@ -1,63 +1,89 @@
 import { useEffect, useRef } from "react";
 
-const LERP = 0.16; // lower = more lag
+const LERP = 0.18; // lower = more lag
 const INTERACTIVE = "a, button, [role='tab'], [data-cursor]";
 
 /**
- * A ring that trails the mouse with a soft lag and grows over interactive
- * elements. The native cursor stays visible. Disabled on touch devices and
- * for users who prefer reduced motion.
+ * A small dot that sits on the pointer plus a ring that trails it with a soft
+ * lag. The ring grows over interactive elements and clicks send out a ripple.
+ * The native cursor stays visible. Disabled on touch devices and for users who
+ * prefer reduced motion.
+ *
+ * Positioning and visuals live on separate elements: the outer wrappers are
+ * only ever moved with `transform`, while size/scale changes happen on the
+ * inner elements. Mixing both on one element makes `scale` shrink the
+ * translate offset too, which threw the ring towards the top-left on click.
  */
 export function CursorRing() {
+  const rootRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const root = rootRef.current;
     const ring = ringRef.current;
+    const dot = dotRef.current;
     const finePointer = window.matchMedia("(pointer: fine)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!ring || !finePointer || reducedMotion) return;
+    if (!root || !ring || !dot || !finePointer || reducedMotion) return;
 
     const target = { x: -100, y: -100 };
     const pos = { x: -100, y: -100 };
     let raf = 0;
     let visible = false;
 
+    const place = (el: HTMLElement, x: number, y: number) => {
+      el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    };
+
     const tick = () => {
       pos.x += (target.x - pos.x) * LERP;
       pos.y += (target.y - pos.y) * LERP;
-      ring.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0) translate(-50%, -50%)`;
+      place(ring, pos.x, pos.y);
       raf = requestAnimationFrame(tick);
     };
 
     const onMove = (e: PointerEvent) => {
       target.x = e.clientX;
       target.y = e.clientY;
+      place(dot, target.x, target.y);
       if (!visible) {
         // Jump to the cursor on first move instead of flying in from the corner.
         pos.x = target.x;
         pos.y = target.y;
         visible = true;
-        ring.dataset.visible = "true";
+        root.dataset.visible = "true";
       }
     };
 
     const onOver = (e: PointerEvent) => {
       const el = (e.target as Element | null)?.closest<HTMLElement>(INTERACTIVE);
-      ring.dataset.state = el?.dataset.cursor ?? (el ? "link" : "default");
+      root.dataset.state = el?.dataset.cursor ?? (el ? "link" : "default");
     };
 
     const onLeave = () => {
       visible = false;
-      ring.dataset.visible = "false";
+      root.dataset.visible = "false";
     };
-    const onDown = () => (ring.dataset.pressed = "true");
-    const onUp = () => (ring.dataset.pressed = "false");
+
+    const onDown = (e: PointerEvent) => {
+      if (e.button !== 0) return;
+      root.dataset.pressed = "true";
+
+      const ripple = document.createElement("span");
+      ripple.className = "cursor-ripple";
+      place(ripple, e.clientX, e.clientY);
+      ripple.addEventListener("animationend", () => ripple.remove(), { once: true });
+      root.appendChild(ripple);
+    };
+    const onUp = () => (root.dataset.pressed = "false");
 
     window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("pointerover", onOver, { passive: true });
     document.documentElement.addEventListener("pointerleave", onLeave);
-    window.addEventListener("pointerdown", onDown);
-    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointerdown", onDown, { passive: true });
+    window.addEventListener("pointerup", onUp, { passive: true });
+    window.addEventListener("blur", onUp);
     raf = requestAnimationFrame(tick);
 
     return () => {
@@ -67,16 +93,25 @@ export function CursorRing() {
       document.documentElement.removeEventListener("pointerleave", onLeave);
       window.removeEventListener("pointerdown", onDown);
       window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("blur", onUp);
     };
   }, []);
 
   return (
     <div
-      ref={ringRef}
-      className="cursor-ring"
+      ref={rootRef}
+      className="cursor-root"
       data-visible="false"
       data-state="default"
+      data-pressed="false"
       aria-hidden
-    />
+    >
+      <div ref={ringRef} className="cursor-follow">
+        <div className="cursor-ring" />
+      </div>
+      <div ref={dotRef} className="cursor-follow">
+        <div className="cursor-dot" />
+      </div>
+    </div>
   );
 }
