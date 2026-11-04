@@ -40,7 +40,6 @@ export default function Contact() {
         transition={{ duration: 0.8, ease: EASE }}
         className="relative z-10 overflow-hidden rounded-[2rem] border border-ink/10 px-6 py-16 text-center card-surface backdrop-blur-sm md:px-16 md:py-24"
       >
-        <div className="hero-aurora pointer-events-none absolute inset-0" aria-hidden />
         <div className="hero-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden />
 
         <div className="relative mx-auto max-w-2xl">
