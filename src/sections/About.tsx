@@ -46,7 +46,51 @@ const STACK: { key: string; items: Tech[] }[] = [
 ];
 
 const FACTS = ["ihk", "practice", "location"] as const;
-const PRINCIPLES = ["clean", "team", "ai"] as const;
+const PRINCIPLES = ["clean", "team", "build"] as const;
+
+const iconProps = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.6,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  className: "size-5",
+} as const;
+
+// Tags are i18n keys so they can be translated where needed.
+const EXTRAS = [
+  {
+    key: "ai",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z" />
+        <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z" />
+      </svg>
+    ),
+    tags: [
+      "about.extras.ai.tags.claude",
+      "about.extras.ai.tags.codex",
+      "about.extras.ai.tags.agents",
+      "about.extras.ai.tags.review",
+    ],
+  },
+  {
+    key: "hobby",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M12 2l9 5v10l-9 5-9-5V7z" />
+        <path d="M12 22V12M21 7l-9 5-9-5" />
+      </svg>
+    ),
+    tags: [
+      "about.extras.hobby.tags.modeling",
+      "about.extras.hobby.tags.meshing",
+      "about.extras.hobby.tags.rigging",
+      "about.extras.hobby.tags.gameDesign",
+    ],
+  },
+] as const;
 
 const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -107,6 +151,35 @@ export default function About() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* AI workflow + hobbies */}
+      <div className="relative z-10 mt-6 grid gap-4 md:grid-cols-2">
+        {EXTRAS.map((extra, i) => (
+          <motion.div
+            key={extra.key}
+            {...reveal(i * 0.08)}
+            className="flex flex-col gap-4 rounded-3xl border border-ink/10 p-6 card-surface backdrop-blur-sm md:p-8"
+          >
+            <div className="flex items-center gap-3">
+              <span className="grid size-10 place-items-center rounded-full bg-ink/6 text-ink" aria-hidden>
+                {extra.icon}
+              </span>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+                {t(`about.extras.${extra.key}.eyebrow`)}
+              </p>
+            </div>
+            <h3 className="text-2xl font-bold text-ink">{t(`about.extras.${extra.key}.title`)}</h3>
+            <p className="text-muted text-pretty">{t(`about.extras.${extra.key}.text`)}</p>
+            <ul className="mt-auto flex flex-wrap gap-2 pt-2">
+              {extra.tags.map((tag) => (
+                <li key={tag} className="rounded-full border border-ink/10 px-3 py-1 text-xs text-muted">
+                  {t(tag)}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
       </div>
 
       <motion.div {...reveal()} className="relative z-10 mt-16">

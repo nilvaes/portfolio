@@ -55,7 +55,7 @@ const translations: Record<Language, TranslationTree> = {
       "eyebrow": "Über mich",
       "heading": "Code, der zuverlässig läuft – und gut aussieht.",
       "bio1": "Ich bin Ömer, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln. In dreieinhalb Jahren Ausbildung habe ich an echten Produkten mitgearbeitet – von der ersten Komponente bis zu Features im Produktivbetrieb, mit Schwerpunkt auf TypeScript, Vue/Nuxt und Node.js.",
-      "bio2": "Heute baue ich eigene Web-Apps und Websites für Kunden und beschäftige mich damit, wie sich KI sinnvoll in Webanwendungen einbauen lässt. Neue Technologien lerne ich am liebsten, indem ich etwas damit baue.",
+      "bio2": "Heute baue ich eigene Web-Apps und Websites für Kunden und beschäftige mich damit, wie sich KI sinnvoll in Webanwendungen einbauen lässt.",
       "facts": {
         "ihk": {
           "label": "IHK-Abschluss",
@@ -70,6 +70,30 @@ const translations: Record<Language, TranslationTree> = {
           "value": "Köln"
         }
       },
+      "extras": {
+        "ai": {
+          "eyebrow": "KI im Workflow",
+          "title": "Mit KI-Agenten entwickeln",
+          "text": "Ich arbeite täglich mit KI-Coding-Agenten wie Claude Code und Codex – für Prototypen, Refactorings, Tests und Code-Reviews. Architektur-Entscheidungen und das letzte Review bleiben bei mir: Ich übernehme nur Code, den ich verstehe.",
+          "tags": {
+            "claude": "Claude Code",
+            "codex": "OpenAI Codex",
+            "agents": "Agentische Workflows",
+            "review": "Code-Review"
+          }
+        },
+        "hobby": {
+          "eyebrow": "Abseits vom Code",
+          "title": "3D & Game Design",
+          "text": "In meiner Freizeit experimentiere ich mit 3D-Modellierung, Meshing und Rigging und erkunde, wie KI das Game Design verändert – von der ersten Idee bis zum spielbaren Prototyp.",
+          "tags": {
+            "modeling": "3D-Modellierung",
+            "meshing": "Meshing",
+            "rigging": "Rigging",
+            "gameDesign": "Game Design mit KI"
+          }
+        }
+      },
       "principles": {
         "clean": {
           "title": "Sauber und durchdacht",
@@ -79,9 +103,9 @@ const translations: Record<Language, TranslationTree> = {
           "title": "Im Team zu Hause",
           "text": "Kommunikativ, hilfsbereit und lösungsorientiert – ich frage nach, bevor ich rate."
         },
-        "ai": {
-          "title": "KI als Werkzeug",
-          "text": "Ich nutze KI-Tools bewusst als Beschleuniger – verstehen und prüfen muss ich den Code trotzdem selbst."
+        "build": {
+          "title": "Lernen durch Bauen",
+          "text": "Neue Technologien lerne ich am liebsten, indem ich ein echtes Projekt damit umsetze – nicht nur durch Lesen."
         }
       },
       "techStackTitle": "Tech Stack",
@@ -170,7 +194,7 @@ const translations: Record<Language, TranslationTree> = {
       "eyebrow": "About me",
       "heading": "Code that runs reliably – and looks good doing it.",
       "bio1": "I am Ömer, a trained application developer (Fachinformatiker) from Cologne. During my three-and-a-half-year apprenticeship I worked on real products – from a first component to features running in production, focused on TypeScript, Vue/Nuxt and Node.js.",
-      "bio2": "Today I build my own web apps and websites for clients, and I am exploring how AI can be built into web applications in a way that actually helps. I learn new technologies best by building something with them.",
+      "bio2": "Today I build my own web apps and websites for clients, and I am exploring how AI can be built into web applications in a way that actually helps.",
       "facts": {
         "ihk": {
           "label": "IHK certified",
@@ -185,6 +209,30 @@ const translations: Record<Language, TranslationTree> = {
           "value": "Cologne"
         }
       },
+      "extras": {
+        "ai": {
+          "eyebrow": "AI in my workflow",
+          "title": "Building with AI agents",
+          "text": "I work with AI coding agents such as Claude Code and Codex every day – for prototypes, refactoring, tests and code reviews. Architecture decisions and the final review stay with me: I only ship code I understand.",
+          "tags": {
+            "claude": "Claude Code",
+            "codex": "OpenAI Codex",
+            "agents": "Agentic workflows",
+            "review": "Code review"
+          }
+        },
+        "hobby": {
+          "eyebrow": "Beyond code",
+          "title": "3D & game design",
+          "text": "In my free time I experiment with 3D modelling, meshing and rigging, and explore how AI is changing game design – from a first idea to a playable prototype.",
+          "tags": {
+            "modeling": "3D modelling",
+            "meshing": "Meshing",
+            "rigging": "Rigging",
+            "gameDesign": "Game design with AI"
+          }
+        }
+      },
       "principles": {
         "clean": {
           "title": "Clean and considered",
@@ -194,9 +242,9 @@ const translations: Record<Language, TranslationTree> = {
           "title": "At home in a team",
           "text": "Communicative, helpful and solution-oriented – I ask before I guess."
         },
-        "ai": {
-          "title": "AI as a tool",
-          "text": "I use AI tools deliberately as an accelerator – but I still review and understand the code myself."
+        "build": {
+          "title": "Learning by building",
+          "text": "I learn new technologies best by shipping a real project with them – not just by reading about them."
         }
       },
       "techStackTitle": "Tech stack",
