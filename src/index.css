@@ -308,3 +308,47 @@ html.light {
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue { animation: none; }
 }
+
+/* ---------- Project cards ---------- */
+.spotlight-card {
+  --glow: color-mix(in srgb, var(--grad-via) 22%, transparent);
+  --glow-border: color-mix(in srgb, var(--grad-via) 60%, transparent);
+}
+
+/* Soft light that follows the cursor */
+.spotlight-card::before,
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.spotlight-card::before {
+  background: radial-gradient(
+    500px circle at var(--mx, 50%) var(--my, 50%),
+    var(--glow),
+    transparent 45%
+  );
+}
+
+/* Brighter 1px border under the cursor */
+.spotlight-card::after {
+  padding: 1px;
+  background: radial-gradient(
+    350px circle at var(--mx, 50%) var(--my, 50%),
+    var(--glow-border),
+    transparent 50%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.spotlight-card:hover::before,
+.spotlight-card:hover::after {
+  opacity: 1;
+}

@@ -70,32 +70,29 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     projects: {
-      heading: 'Projekte',
-      visitWebsite: 'Website besuchen',
-      caseStudy: 'Case Study · Quellcode nicht öffentlich',
-      cards: {
-        sumi: {
-          title: 'Sumi - Track & Explore New Anime',
-          description:
-            'Eine Fullstack-Anime-Plattform zum Entdecken und Verfolgen von Anime – mit Browse, Fuzzy-Suche, Airing-Schedule und Detailseiten, powered by AniList und Supabase.',
-        },
-        onboarding: {
-          title: 'Onboarding Portal · IHK-Abschlussprojekt',
-          description:
-            'Onboarding-Plattform mit Dokumentenverwaltung, Authentifizierung und rollenbasierten Zugriffsrechten.',
-        },
-        bosporus: {
-          title: 'Bosporus Lahmacun & Pide',
-          description:
-            'Moderne Restaurant-Website für ein türkisches Restaurant in Köln – mit Speisekarte, Catering, Öffnungszeiten und zweisprachiger DE/TR-Oberfläche.',
-        },
-        dashboard: {
-          title: 'Privacy First Period Tracker',
-          description:
-            'Eine datenschutzorientierte Perioden-Tracking-App mit Expo, NativeWind und i18n – alles lokal, keine Cloud.',
-          comingSoon: 'Voraussichtlich demnächst in den App-Stores.',
-        },
+      "eyebrow": "Ausgewählte Arbeiten",
+      "heading": "Projekte",
+      "intro": "Von Full-Stack-Webanwendungen über Landingpages für Kunden bis zum Windows-Tool – eine Auswahl von Dingen, die ich gebaut habe.",
+      "filterLabel": "Projekte filtern",
+      "filters": {
+        "all": "Alle",
+        "webapp": "Web-Apps",
+        "landing": "Landingpages",
+        "desktop": "Desktop"
       },
+      "status": {
+        "live": "Live",
+        "client": "Kundenprojekt",
+        "concept": "Konzept",
+        "wip": "In Arbeit",
+        "caseStudy": "Case Study",
+        "openSource": "Open Source"
+      },
+      "links": {
+        "live": "Live ansehen",
+        "code": "Code",
+        "private": "Quellcode privat"
+      }
     },
     footer: {
       rights: 'Alle Rechte vorbehalten.',
@@ -156,32 +153,29 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     projects: {
-      heading: 'Projects',
-      visitWebsite: 'Visit Website',
-      caseStudy: 'Case study · source code not public',
-      cards: {
-        sumi: {
-          title: 'Sumi - Track & Explore New Anime',
-          description:
-            'A full-stack anime discovery platform to browse, search, and track airing shows — with fuzzy search, schedule, and detail pages, powered by AniList and Supabase.',
-        },
-        onboarding: {
-          title: 'Onboarding Portal · IHK Final Project',
-          description:
-            'Onboarding platform with document management, authentication, and role-based access control.',
-        },
-        bosporus: {
-          title: 'Bosporus Lahmacun & Pide',
-          description:
-            'A modern restaurant website for a Turkish restaurant in Cologne — with menu, catering, opening hours, and a bilingual DE/TR interface.',
-        },
-        dashboard: {
-          title: 'Privacy First Period Tracker',
-          description:
-            'A privacy-first period tracking app built with Expo, NativeWind, and i18n – all local, no cloud.',
-          comingSoon: 'Expected to be published in app stores soon.',
-        },
+      "eyebrow": "Selected work",
+      "heading": "Projects",
+      "intro": "From full-stack web apps and landing pages for clients to a Windows tool – a selection of things I have built.",
+      "filterLabel": "Filter projects",
+      "filters": {
+        "all": "All",
+        "webapp": "Web apps",
+        "landing": "Landing pages",
+        "desktop": "Desktop"
       },
+      "status": {
+        "live": "Live",
+        "client": "Client project",
+        "concept": "Concept",
+        "wip": "In progress",
+        "caseStudy": "Case study",
+        "openSource": "Open source"
+      },
+      "links": {
+        "live": "View live",
+        "code": "Code",
+        "private": "Private source"
+      }
     },
     footer: {
       rights: 'All rights reserved.',
