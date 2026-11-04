@@ -27,9 +27,9 @@
 }
 
 /*
- * Palette: neutral "paper" surfaces with slate/cyan accents
- * (Light Blue #C2DFE3, Cool Steel #9DB4C0, Jet Black #253237).
- *  - cta:    button fill (Jet Black in light, Light Blue in dark)
+ * Palette: neutral "paper" surfaces with sage/forest green accents
+ * (taken from the Your Dictionary project: sage #BED7AC, forest #314739).
+ *  - cta:    button fill (forest in light, sage in dark)
  *  - accent: small highlights – labels, numbers, bullets
  * Dark values live in @theme (default), light values override on html.light.
  */
@@ -39,10 +39,10 @@
   --color-ink: #f4f4f5;
   --color-muted: #a1a1aa;
   --color-subtle: #71717a;
-  --color-accent: #a6d5dc;
-  --color-accent-2: #9db4c0;
-  --color-cta: #c2dfe3;
-  --color-on-accent: #162024;
+  --color-accent: #bed7ac;
+  --color-accent-2: #9cb98a;
+  --color-cta: #bed7ac;
+  --color-on-accent: #1b301c;
   --color-mint: #34d399;
   --color-sand: #fbbf24;
 }
@@ -57,10 +57,10 @@ html.light {
   --color-ink: #18181b;
   --color-muted: #52525b;
   --color-subtle: #71717a;
-  --color-accent: #3b6f7a;
-  --color-accent-2: #5c8d99;
-  --color-cta: #253237;
-  --color-on-accent: #ffffff;
+  --color-accent: #445e4c;
+  --color-accent-2: #5f7d65;
+  --color-cta: #314739;
+  --color-on-accent: #edf0e7;
   --color-mint: #059669;
   --color-sand: #d97706;
 
@@ -111,19 +111,19 @@ section[id] {
 
 /* ---------- Hero ---------- */
 :root {
-  --grad-from: #e0fbfc;
-  --grad-via: #c2dfe3;
-  --grad-to: #9db4c0;
-  --aurora-a: rgb(157 180 192 / 0.12);
-  --aurora-b: rgb(157 180 192 / 0.04);
+  --grad-from: #e3eedb;
+  --grad-via: #bed7ac;
+  --grad-to: #9cb98a;
+  --aurora-a: rgb(190 215 172 / 0.10);
+  --aurora-b: rgb(190 215 172 / 0.04);
 }
 
 html.light {
-  --grad-from: #253237;
-  --grad-via: #3b6f7a;
-  --grad-to: #5c8d99;
-  --aurora-a: rgb(157 180 192 / 0.18);
-  --aurora-b: rgb(157 180 192 / 0.05);
+  --grad-from: #1b301c;
+  --grad-via: #314739;
+  --grad-to: #5f7d65;
+  --aurora-a: rgb(156 185 138 / 0.18);
+  --aurora-b: rgb(156 185 138 / 0.05);
 }
 
 .text-gradient {

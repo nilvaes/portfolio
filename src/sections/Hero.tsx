@@ -15,8 +15,8 @@ import { useTheme } from "../theme";
 import { asset } from "../lib/utils";
 
 const RAY_COLOR = {
-  dark: "rgba(194, 223, 227, 0.07)",
-  light: "rgba(92, 107, 115, 0.12)",
+  dark: "rgba(190, 215, 172, 0.07)",
+  light: "rgba(68, 94, 76, 0.10)",
 } as const;
 
 const NAME = "Ömer Savas";
