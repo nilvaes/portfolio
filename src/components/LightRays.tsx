@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, type CSSProperties } from "react"
+import { useState, type CSSProperties } from "react"
 import { motion } from "motion/react"
 
 // import { cn } from "../lib/utils"
@@ -98,12 +98,10 @@ export function LightRays({
   ref,
   ...props
 }: LightRaysProps) {
-  const [rays, setRays] = useState<LightRay[]>([])
   const cycleDuration = Math.max(speed, 0.1)
-
-  useEffect(() => {
-    setRays(createRays(count, cycleDuration))
-  }, [count, cycleDuration])
+  // Random rays are generated once on mount. To regenerate them when
+  // count/speed change, give the component a new `key` from the parent.
+  const [rays] = useState<LightRay[]>(() => createRays(count, cycleDuration))
 
   return (
     <div
