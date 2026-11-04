@@ -54,7 +54,7 @@ const translations: Record<Language, TranslationTree> = {
     about: {
       "eyebrow": "Über mich",
       "heading": "Code, der zuverlässig läuft – und gut aussieht.",
-      "bio1": "Ich bin Ömer, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln. In dreieinhalb Jahren Ausbildung habe ich an echten Produkten mitgearbeitet – von der ersten Komponente bis zu Features im Produktivbetrieb, mit Schwerpunkt auf TypeScript, Vue/Nuxt und Node.js.",
+      "bio1": "Ich bin Ömer, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln. In meiner Ausbildung habe ich an echten Produkten mitgearbeitet – von der ersten Komponente bis zu Features im Produktivbetrieb, mit Schwerpunkt auf TypeScript, Vue/Nuxt und Node.js.",
       "bio2": "Heute baue ich eigene Web-Apps und Websites für Kunden und beschäftige mich damit, wie sich KI sinnvoll in Webanwendungen einbauen lässt.",
       "facts": {
         "ihk": {
@@ -193,7 +193,7 @@ const translations: Record<Language, TranslationTree> = {
     about: {
       "eyebrow": "About me",
       "heading": "Code that runs reliably – and looks good doing it.",
-      "bio1": "I am Ömer, a trained application developer (Fachinformatiker) from Cologne. During my three-and-a-half-year apprenticeship I worked on real products – from a first component to features running in production, focused on TypeScript, Vue/Nuxt and Node.js.",
+      "bio1": "I am Ömer, a trained application developer (Fachinformatiker) from Cologne. During my apprenticeship I worked on real products – from a first component to features running in production, focused on TypeScript, Vue/Nuxt and Node.js.",
       "bio2": "Today I build my own web apps and websites for clients, and I am exploring how AI can be built into web applications in a way that actually helps.",
       "facts": {
         "ihk": {
