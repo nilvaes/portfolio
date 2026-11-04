@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
         highlights: [
           "Fuzzy-Suche, Browse-Ansicht und Airing-Schedule",
           "Benutzerkonten mit Supabase-Auth und -Datenbank",
-          "Typsichere GraphQL-Abfragen per Code-Generierung",
+          "Detailseiten mit Daten aus der AniList-GraphQL-API",
         ],
       },
       en: {
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
         highlights: [
           "Fuzzy search, browse view and airing schedule",
           "User accounts with Supabase auth and database",
-          "Type-safe GraphQL queries via code generation",
+          "Detail pages powered by the AniList GraphQL API",
         ],
       },
     },
