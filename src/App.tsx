@@ -7,6 +7,7 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Legal, { type LegalPage } from "./sections/Legal";
 import { Particles } from "./components/Particles";
+import { CursorRing } from "./components/CursorRing";
 import { useTheme } from "./theme";
 
 const LEGAL_PAGES: LegalPage[] = ["datenschutz", "info"];
@@ -40,6 +41,7 @@ function App() {
     return (
       <>
         <Navbar />
+        <CursorRing />
         <div className="relative z-10 bg-primary">
           <Legal page={legalPage} />
           <div className="container mx-auto max-w-7xl">
@@ -53,6 +55,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <CursorRing />
       {/* Viewport-sized and fixed: a full-page canvas would be huge on HiDPI screens */}
       <Particles
         className="fixed inset-0 z-0"

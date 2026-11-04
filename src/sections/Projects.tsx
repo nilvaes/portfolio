@@ -23,13 +23,6 @@ const STATUS_STYLE: Record<Project["status"], string> = {
   openSource: "bg-royal/20 text-ink",
 };
 
-/** Updates CSS variables so the card's glow follows the cursor. */
-function trackSpotlight(e: React.PointerEvent<HTMLElement>) {
-  const rect = e.currentTarget.getBoundingClientRect();
-  e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-  e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
-}
-
 function hostname(url: string) {
   return new URL(url).hostname;
 }
@@ -122,8 +115,8 @@ function FeatureCard({ project, index }: { project: Project; index: number }) {
 
   return (
     <article
-      onPointerMove={trackSpotlight}
-      className="spotlight-card group relative grid items-center gap-8 overflow-hidden rounded-3xl border border-ink/10 p-5 card-surface backdrop-blur-sm md:p-8 lg:grid-cols-[1.25fr_1fr] lg:gap-12 lg:p-10"
+      data-cursor="card"
+      className="group relative grid items-center gap-8 overflow-hidden rounded-3xl border border-ink/10 p-5 card-surface backdrop-blur-sm md:p-8 lg:grid-cols-[1.25fr_1fr] lg:gap-12 lg:p-10"
     >
       <div className={cn("relative", reversed && "lg:order-2")}>
         <ProjectMedia project={project} />
@@ -162,8 +155,8 @@ function GridCard({ project, index }: { project: Project; index: number }) {
 
   return (
     <article
-      onPointerMove={trackSpotlight}
-      className="spotlight-card group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-ink/10 p-5 card-surface backdrop-blur-sm"
+      data-cursor="card"
+      className="group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-ink/10 p-5 card-surface backdrop-blur-sm"
     >
       <div className="relative">
         <ProjectMedia project={project} />
@@ -218,7 +211,7 @@ export default function Projects() {
           <div
             role="tablist"
             aria-label={t("projects.filterLabel")}
-            className="flex w-fit max-w-full gap-1 overflow-x-auto rounded-full border border-ink/10 bg-surface/50 p-1 backdrop-blur [scrollbar-width:none]"
+            className="flex w-fit max-w-full shrink-0 gap-1 overflow-x-auto rounded-full border border-ink/10 bg-surface/50 p-1 backdrop-blur [scrollbar-width:none]"
           >
             {FILTERS.map((f) => (
               <button

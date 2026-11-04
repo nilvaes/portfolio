@@ -138,7 +138,6 @@ html.light .cta-pill {
   --grad-from: #e0e1dd;
   --grad-via: #a9bcd4;
   --grad-to: #778da9;
-  --spotlight: rgb(119 141 169 / 0.16);
   --aurora-a: rgb(65 90 119 / 0.45);
   --aurora-b: rgb(87 219 150 / 0.08);
 }
@@ -147,7 +146,6 @@ html.light {
   --grad-from: #6b4f8a;
   --grad-via: #7c57db;
   --grad-to: #0f7b83;
-  --spotlight: rgb(124 87 219 / 0.12);
   --aurora-a: rgb(150 122 161 / 0.35);
   --aurora-b: rgb(15 123 131 / 0.12);
 }
@@ -172,14 +170,6 @@ html.light {
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
 }
 
-.hero-spotlight {
-  background: radial-gradient(
-    600px circle at var(--x, 50%) var(--y, 30%),
-    var(--spotlight),
-    transparent 60%
-  );
-}
-
 .hero-aurora {
   background:
     radial-gradient(40% 50% at 85% 20%, var(--aurora-a), transparent 70%),
@@ -200,46 +190,42 @@ html.light {
   .scroll-cue { animation: none; }
 }
 
-/* ---------- Project cards ---------- */
-.spotlight-card {
-  --glow: color-mix(in srgb, var(--grad-via) 22%, transparent);
-  --glow-border: color-mix(in srgb, var(--grad-via) 60%, transparent);
-}
 
-/* Soft light that follows the cursor */
-.spotlight-card::before,
-.spotlight-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
+/* ---------- Cursor ring ---------- */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid color-mix(in srgb, var(--color-ink) 45%, transparent);
+  border-radius: 9999px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 300ms ease;
+  will-change: transform;
+  transition:
+    width 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 200ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    scale 150ms ease;
 }
 
-.spotlight-card::before {
-  background: radial-gradient(
-    500px circle at var(--mx, 50%) var(--my, 50%),
-    var(--glow),
-    transparent 45%
-  );
+.cursor-ring[data-visible="true"] { opacity: 1; }
+
+.cursor-ring[data-state="link"] {
+  width: 56px;
+  height: 56px;
+  background-color: color-mix(in srgb, var(--color-ink) 6%, transparent);
+  border-color: color-mix(in srgb, var(--color-ink) 25%, transparent);
 }
 
-/* Brighter 1px border under the cursor */
-.spotlight-card::after {
-  padding: 1px;
-  background: radial-gradient(
-    350px circle at var(--mx, 50%) var(--my, 50%),
-    var(--glow-border),
-    transparent 50%
-  );
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+.cursor-ring[data-state="card"] {
+  width: 84px;
+  height: 84px;
+  border-color: color-mix(in srgb, var(--color-ink) 20%, transparent);
 }
 
-.spotlight-card:hover::before,
-.spotlight-card:hover::after {
-  opacity: 1;
-}
+.cursor-ring[data-pressed="true"] { scale: 0.8; }

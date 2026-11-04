@@ -105,7 +105,6 @@ export default function Hero() {
   const { t } = useI18n();
   const { theme } = useTheme();
   const sectionRef = useRef<HTMLElement>(null);
-  const spotlightRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(true);
 
   // Normalised mouse position (-0.5 … 0.5), smoothed with a spring.
@@ -127,13 +126,11 @@ export default function Hero() {
     return () => observer.disconnect();
   }, []);
 
-  // Pointer tracking writes straight to CSS variables / motion values — no re-renders.
+  // Pointer tracking writes straight to motion values — no re-renders.
   const handlePointerMove = (e: React.PointerEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const px = e.clientX - rect.left;
     const py = e.clientY - rect.top;
-    spotlightRef.current?.style.setProperty("--x", `${px}px`);
-    spotlightRef.current?.style.setProperty("--y", `${py}px`);
     rawX.set(px / rect.width - 0.5);
     rawY.set(py / rect.height - 0.5);
   };
@@ -177,11 +174,6 @@ export default function Hero() {
         />
       )}
       <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden />
-      <div
-        ref={spotlightRef}
-        className="hero-spotlight pointer-events-none absolute inset-0"
-        aria-hidden
-      />
       <div className="hero-aurora pointer-events-none absolute inset-0" aria-hidden />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-16 c-space lg:grid-cols-[1.1fr_1fr]">
