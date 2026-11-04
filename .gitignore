@@ -24,3 +24,15 @@ dist-ssr
 *.sw?
 
 notesforme.md
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Private notes, plans and AI assistant files (keep local only)
+notes/
+*.private.md
+CLAUDE.md
+CLAUDE.local.md
+.claude/
