@@ -5,7 +5,7 @@ const INTERACTIVE = "a, button, [role='tab'], [data-cursor]";
 
 /**
  * A ring that trails the pointer with a soft lag. It grows over interactive
- * elements and clicks send out a ripple.
+ * elements and tightens briefly on click.
  * The native cursor stays visible. Disabled on touch devices and for users who
  * prefer reduced motion.
  *
@@ -66,12 +66,6 @@ export function CursorRing() {
     const onDown = (e: PointerEvent) => {
       if (e.button !== 0) return;
       root.dataset.pressed = "true";
-
-      const ripple = document.createElement("span");
-      ripple.className = "cursor-ripple";
-      place(ripple, e.clientX, e.clientY);
-      ripple.addEventListener("animationend", () => ripple.remove(), { once: true });
-      root.appendChild(ripple);
     };
     const onUp = () => (root.dataset.pressed = "false");
 
