@@ -232,7 +232,7 @@ export default function Hero() {
 
           <motion.p
             {...fadeUp(0.35)}
-            className="mt-6 text-2xl font-semibold leading-tight text-ink/90 md:text-4xl"
+            className="mt-6 text-2xl font-semibold leading-tight text-ink/90 md:text-4xl lg:text-[clamp(1.75rem,2.5vw,2.25rem)]"
           >
             {t("hero.titlePrefix")}
             <br />

@@ -45,53 +45,10 @@
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
-  --animate-orbit: orbit 50s linear infinite;
-  @keyframes orbit {
-    0% {
-      transform: rotate(calc(var(--angle) * 1deg))
-        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
-    }
-    100% {
-      transform: rotate(calc(var(--angle) * 1deg + 360deg))
-        translateY(calc(var(--radius) * 1px))
-        rotate(calc((var(--angle) * -1deg) - 360deg));
-    }
-  }
-  --animate-marquee: marquee 50s linear infinite;
-  --animate-marquee-vertical: marquee-vertical 50s linear infinite;
-
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
-
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
-  --animate-shine: shine var(--duration, 14s) linear infinite;
-  @keyframes shine {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 200% 200%;
-    }
-  }
 }
 
 :root {
   --card-bg: rgb(27 38 59 / 0.55);
-  --globe-card-from: #1b263b;
-  --globe-card-via: #0d1b2a;
 }
 
 html.light {
@@ -109,14 +66,7 @@ html.light {
   --color-royal: #553f77;
   --color-lavender: #6b4f8a;
 
-  --card-bg: rgb(255 255 255 / 0.6);
-  --globe-card-from: #d9cbe4;
-  --globe-card-via: #c6b4d6;
-}
-
-.animate-shine {
-  animation: shine var(--duration, 14s) linear infinite;
-}
+  --card-bg: rgb(255 255 255 / 0.6);}
 
 html {
   background-color: var(--color-primary);
@@ -146,24 +96,8 @@ section[id] {
   @apply sm:px-10 px-5 lg:px-15;
 }
 
-.hover-animation {
-  @apply hover:-translate-y-1 duration-200;
-}
-
-.section-spacing {
-  @apply min-h-screen mt-20 md:mt-30;
-}
-
 .text-heading {
   @apply font-bold text-3xl md:text-4xl;
-}
-
-.headtext {
-  @apply mt-2 mb-2 text-xl;
-}
-
-.subtext {
-  @apply text-muted text-sm md:text-base text-pretty;
 }
 
 /* Navigation */
@@ -178,49 +112,6 @@ section[id] {
 .nav-link {
   @apply text-lg md:text-base hover:text-ink transition-colors;
 }
-/* About Section */
-.grid-1 {
-  @apply row-span-2 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
-}
-.grid-2 {
-  @apply row-span-1 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
-}
-.grid-3 {
-  @apply row-span-1 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
-}
-.grid-4 {
-  @apply row-span-1 md:col-span-2 h-76 md:h-80 relative overflow-hidden hover:-translate-y-1 duration-200;
-}
-.grid-5 {
-  @apply row-span-1 md:col-span-4 min-h-76 md:h-80 relative overflow-hidden hover:-translate-y-1 duration-200;
-}
-
-.grid-default-color {
-  @apply p-6 bg-linear-to-b from-storm to-indigo rounded-2xl;
-}
-
-.grid-special-color {
-  @apply p-6 bg-linear-to-b from-royal to-navy text-on-accent rounded-2xl;
-}
-
-html.light .grid-special-color {
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-royal),
-    var(--color-lavender)
-  );
-}
-
-.grid-black-color {
-  @apply p-6 rounded-2xl;
-  background-image: linear-gradient(
-    to top left,
-    var(--globe-card-from),
-    var(--globe-card-via),
-    var(--globe-card-from)
-  );
-}
-
 /* Translucent card that lets the particle field show through */
 .card-surface {
   background-color: var(--card-bg);
