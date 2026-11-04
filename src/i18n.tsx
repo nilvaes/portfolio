@@ -33,6 +33,7 @@ const translations: Record<Language, TranslationTree> = {
       openMenu: 'Menü öffnen',
       closeMenu: 'Menü schließen',
       toggleAria: 'Sprache wechseln',
+      mainAria: 'Hauptnavigation',
       themeAria: 'Design wechseln',
     },
     hero: {
@@ -147,6 +148,7 @@ const translations: Record<Language, TranslationTree> = {
       openMenu: 'Open menu',
       closeMenu: 'Close menu',
       toggleAria: 'Switch language',
+      mainAria: 'Main navigation',
       themeAria: 'Switch theme',
     },
     hero: {
