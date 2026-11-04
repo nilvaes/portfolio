@@ -19,8 +19,8 @@ type ThemeContextValue = {
 const STORAGE_KEY = 'portfolio-theme';
 
 const THEME_COLOR: Record<Theme, string> = {
-  dark: '#0d1b2a',
-  light: '#f5e6e8',
+  dark: '#0a0a0c',
+  light: '#f7f6f3',
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);

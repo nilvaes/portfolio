@@ -61,7 +61,7 @@ function App() {
         className="fixed inset-0 z-0"
         quantity={90}
         ease={80}
-        color={theme === "light" ? "#967aa1" : "#415a77"}
+        color={theme === "light" ? "#a5a3c9" : "#3f3f6b"}
         refresh
       />
       <main>

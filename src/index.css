@@ -26,47 +26,42 @@
     U+A720-A7FF;
 }
 
+/*
+ * Palette "paper & indigo": neutral surfaces with a single indigo accent,
+ * so the colourful project screenshots are what stands out.
+ * Dark values live in @theme (default), light values override on html.light.
+ */
 @theme {
-  --color-primary: #0d1b2a;
-  --color-surface: #1b263b;
-  --color-ink: #e0e1dd;
-  --color-muted: #778da9;
-  --color-subtle: #778da9;
-  --color-on-accent: #e0e1dd;
-  --color-midnight: #0d1b2a;
-  --color-navy: #1b263b;
-  --color-indigo: #0d1b2a;
-  --color-storm: #1b263b;
-  --color-aqua: #778da9;
-  --color-mint: #57db96;
-  --color-royal: #415a77;
-  --color-lavender: #778da9;
-  --color-fuchsia: #ca2f8c;
-  --color-orange: #cc6033;
-  --color-sand: #d6995c;
-  --color-coral: #ea4884;
+  --color-primary: #0a0a0c;
+  --color-surface: #151519;
+  --color-ink: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-subtle: #71717a;
+  --color-accent: #818cf8;
+  --color-accent-2: #7dd3fc;
+  --color-on-accent: #0a0a0c;
+  --color-mint: #34d399;
+  --color-sand: #fbbf24;
 }
 
 :root {
-  --card-bg: rgb(27 38 59 / 0.55);
+  --card-bg: rgb(21 21 25 / 0.72);
 }
 
 html.light {
-  --color-primary: #f5e6e8;
-  --color-surface: #fffafb;
-  --color-ink: #192a51;
-  --color-muted: #5b5378;
-  --color-subtle: #857e9c;
+  --color-primary: #f7f6f3;
+  --color-surface: #ffffff;
+  --color-ink: #18181b;
+  --color-muted: #52525b;
+  --color-subtle: #71717a;
+  --color-accent: #4f46e5;
+  --color-accent-2: #0284c7;
   --color-on-accent: #ffffff;
-  --color-midnight: #f5e6e8;
-  --color-navy: #d5c6e0;
-  --color-indigo: #d5c6e0;
-  --color-storm: #e9dcef;
-  --color-aqua: #0f7b83;
-  --color-royal: #553f77;
-  --color-lavender: #6b4f8a;
+  --color-mint: #059669;
+  --color-sand: #d97706;
 
-  --card-bg: rgb(255 255 255 / 0.6);}
+  --card-bg: rgb(255 255 255 / 0.78);
+}
 
 html {
   background-color: var(--color-primary);
@@ -105,37 +100,26 @@ section[id] {
   background-color: var(--card-bg);
 }
 
-/* Same idea as light: two close jewel tones, so the radial is a soft sheen not a hotspot. */
+/* Solid accent button */
 .cta-pill {
-  background-image: radial-gradient(
-    circle at 50% 40%,
-    color-mix(in srgb, var(--color-royal) 85%, var(--color-muted)),
-    var(--color-royal)
-  );
+  background-color: var(--color-accent);
 }
 
-html.light .cta-pill {
-  background-image: radial-gradient(
-    circle at 50% 40%,
-    var(--color-lavender),
-    var(--color-royal)
-  );
-}
 /* ---------- Hero ---------- */
 :root {
-  --grad-from: #e0e1dd;
-  --grad-via: #a9bcd4;
-  --grad-to: #778da9;
-  --aurora-a: rgb(65 90 119 / 0.45);
-  --aurora-b: rgb(87 219 150 / 0.08);
+  --grad-from: #c7d2fe;
+  --grad-via: #a5b4fc;
+  --grad-to: #818cf8;
+  --aurora-a: rgb(129 140 248 / 0.14);
+  --aurora-b: rgb(129 140 248 / 0.05);
 }
 
 html.light {
-  --grad-from: #6b4f8a;
-  --grad-via: #7c57db;
-  --grad-to: #0f7b83;
-  --aurora-a: rgb(150 122 161 / 0.35);
-  --aurora-b: rgb(15 123 131 / 0.12);
+  --grad-from: #4338ca;
+  --grad-via: #4f46e5;
+  --grad-to: #6366f1;
+  --aurora-a: rgb(79 70 229 / 0.10);
+  --aurora-b: rgb(79 70 229 / 0.04);
 }
 
 .text-gradient {

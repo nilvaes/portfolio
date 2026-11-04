@@ -107,7 +107,7 @@ export default function About() {
       <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         {/* Bio */}
         <motion.div {...reveal()}>
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">
             {t("about.eyebrow")}
           </p>
           <h2 className="text-4xl font-bold tracking-tight text-pretty md:text-5xl">
@@ -165,7 +165,7 @@ export default function About() {
               <span className="grid size-10 place-items-center rounded-full bg-ink/6 text-ink" aria-hidden>
                 {extra.icon}
               </span>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
                 {t(`about.extras.${extra.key}.eyebrow`)}
               </p>
             </div>
@@ -183,7 +183,7 @@ export default function About() {
       </div>
 
       <motion.div {...reveal()} className="relative z-10 mt-16">
-        <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+        <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
           {t("about.techStackTitle")}
         </h3>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

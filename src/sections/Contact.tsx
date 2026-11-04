@@ -43,7 +43,7 @@ export default function Contact() {
         <div className="hero-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden />
 
         <div className="relative mx-auto max-w-2xl">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">
             {t("contact.eyebrow")}
           </p>
           <h2 className="text-4xl font-bold tracking-tight text-balance md:text-6xl">
@@ -59,7 +59,7 @@ export default function Contact() {
               <>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="cta-pill rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-royal/30 transition hover:-translate-y-0.5 hover:brightness-110"
+                  className="cta-pill rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:brightness-110"
                 >
                   {t("contact.email")}
                 </a>
@@ -80,7 +80,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className={
                   !CONTACT_EMAIL && i === 0
-                    ? "cta-pill inline-flex items-center gap-2 rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-royal/30 transition hover:-translate-y-0.5 hover:brightness-110"
+                    ? "cta-pill inline-flex items-center gap-2 rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:brightness-110"
                     : "inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-medium text-ink transition hover:-translate-y-0.5 hover:border-ink/40 hover:bg-ink/5"
                 }
               >
@@ -88,7 +88,7 @@ export default function Contact() {
                   src={asset(`assets/logos/${icon}`)}
                   alt=""
                   aria-hidden
-                  className={`size-4 ${!CONTACT_EMAIL && i === 0 ? "" : "light:invert"}`}
+                  className={`size-4 ${!CONTACT_EMAIL && i === 0 ? "invert light:invert-0" : "light:invert"}`}
                 />
                 {label}
               </a>

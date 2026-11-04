@@ -16,11 +16,11 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const STATUS_STYLE: Record<Project["status"], string> = {
   live: "bg-mint/15 text-ink",
-  client: "bg-aqua/15 text-ink",
+  client: "bg-accent-2/15 text-ink",
   concept: "bg-ink/8 text-muted",
   wip: "bg-sand/20 text-ink",
-  caseStudy: "bg-lavender/20 text-ink",
-  openSource: "bg-royal/20 text-ink",
+  caseStudy: "bg-ink/8 text-ink",
+  openSource: "bg-accent/12 text-ink",
 };
 
 function hostname(url: string) {
@@ -137,7 +137,7 @@ function FeatureCard({ project, index }: { project: Project; index: number }) {
           <ul className="flex flex-col gap-2 text-sm text-ink/85">
             {text.highlights.map((h) => (
               <li key={h} className="flex gap-2.5">
-                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-lavender" aria-hidden />
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
                 {h}
               </li>
             ))}
@@ -198,7 +198,7 @@ export default function Projects() {
           className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
         >
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">
               {t("projects.eyebrow")}
             </p>
             <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
