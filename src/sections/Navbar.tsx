@@ -4,7 +4,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import { useI18n, type Language } from "../i18n";
 import { cn } from "../lib/utils";
 
-const SECTIONS = ["projects", "about"] as const;
+const SECTIONS = ["projects", "about", "contact"] as const;
 const LANGUAGES: Language[] = ["de", "en"];
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -27,7 +27,7 @@ function useActiveSection() {
       },
       { rootMargin: "-45% 0px -50% 0px" }
     );
-    ["home", ...SECTIONS, "contact"].forEach((id) => {
+    ["home", ...SECTIONS].forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -37,23 +37,18 @@ function useActiveSection() {
   return active;
 }
 
-/** Hide the bar while scrolling down, show it again when scrolling up. */
-function useScrollState() {
-  const [state, setState] = useState({ scrolled: false, hidden: false });
+/** Whether the page has been scrolled past the very top. */
+function useScrolled() {
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    let lastY = window.scrollY;
-    const onScroll = () => {
-      const y = window.scrollY;
-      setState({ scrolled: y > 24, hidden: y > 240 && y > lastY });
-      lastY = y;
-    };
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return state;
+  return scrolled;
 }
 
 function LanguageSwitch({ className }: { className?: string }) {
@@ -104,7 +99,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useI18n();
   const active = useActiveSection();
-  const { scrolled, hidden } = useScrollState();
+  const scrolled = useScrolled();
 
   // Lock page scroll and allow Escape while the mobile menu is open.
   useEffect(() => {
@@ -122,11 +117,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.header
-        className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4"
-        animate={{ y: hidden && !isOpen ? "-120%" : "0%" }}
-        transition={{ duration: 0.35, ease: EASE }}
-      >
+      <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
         <nav
           aria-label={t("nav.mainAria")}
           className={cn(
@@ -165,13 +156,6 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <LanguageSwitch className="hidden md:flex" />
             <ThemeToggle />
-            <a
-              href="#contact"
-              className="cta-pill hidden rounded-full px-5 py-2 text-sm font-medium text-on-accent transition hover:brightness-110 md:block"
-            >
-              {t("nav.contact")}
-            </a>
-
             {/* Mobile menu button */}
             <button
               type="button"
@@ -198,7 +182,7 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Mobile full-screen menu */}
       <AnimatePresence>
@@ -212,7 +196,7 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
           >
             <ul className="flex flex-col gap-2">
-              {[...SECTIONS, "contact"].map((id, i) => (
+              {SECTIONS.map((id, i) => (
                 <motion.li
                   key={id}
                   initial={{ opacity: 0, y: 24 }}
