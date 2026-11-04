@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
         description:
           "Eine Full-Stack-Plattform zum Entdecken und Verfolgen von Anime, angebunden an die AniList-GraphQL-API.",
         highlights: [
-          "Fuzzy-Suche, Browse-Ansicht und Airing-Schedule",
+          "Anime-Suche, Browse-Ansicht und Airing-Schedule",
           "Benutzerkonten mit Supabase-Auth und -Datenbank",
           "Detailseiten mit Daten aus der AniList-GraphQL-API",
         ],
@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
         description:
           "A full-stack platform to discover and track anime, built on top of the AniList GraphQL API.",
         highlights: [
-          "Fuzzy search, browse view and airing schedule",
+          "Anime search, browse view and airing schedule",
           "User accounts with Supabase auth and database",
           "Detail pages powered by the AniList GraphQL API",
         ],
