@@ -31,9 +31,9 @@ export default function Navbar() {
   const { language, setLanguage, t } = useI18n();
 
   const navLinks = [
-    { label: t("nav.home"), href: "#home" },
-    { label: t("nav.about"), href: "#about" },
     { label: t("nav.projects"), href: "#projects" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.contact"), href: "#contact" },
   ];
 
   return (
@@ -49,15 +49,19 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:hidden">
             <ThemeToggle />
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="flex cursor-pointer text-muted hover:text-ink focus:outline-none"
+              aria-expanded={isOpen}
+              aria-label={t(isOpen ? "nav.closeMenu" : "nav.openMenu")}
+              className="flex cursor-pointer text-muted hover:text-ink"
             >
               <img
                 src={
                   isOpen ? asset("assets/close.svg") : asset("assets/menu.svg")
                 }
                 className="w-6 h-6 light:invert"
-                alt="toggle"
+                alt=""
+                aria-hidden
               />
             </button>
           </div>

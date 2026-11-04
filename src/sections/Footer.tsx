@@ -1,13 +1,10 @@
-import SocialLinks from "../components/SocialLinks";
 import { useI18n } from "../i18n";
 
 export default function Footer() {
   const { t } = useI18n();
 
   return (
-    <footer className="c-space pt-16 pb-6 text-sm text-muted">
-      <SocialLinks className="justify-center pb-10" />
-
+    <footer className="c-space pt-20 pb-6 text-sm text-muted">
       <div className="h-px w-full bg-linear-to-r from-transparent via-ink/20 to-transparent" />
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">

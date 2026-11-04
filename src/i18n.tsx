@@ -29,6 +29,9 @@ const translations: Record<Language, TranslationTree> = {
       home: 'Start',
       about: 'Über mich',
       projects: 'Projekte',
+      contact: 'Kontakt',
+      openMenu: 'Menü öffnen',
+      closeMenu: 'Menü schließen',
       toggleAria: 'Sprache wechseln',
       themeAria: 'Design wechseln',
     },
@@ -48,26 +51,45 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     about: {
-      heading: 'Über mich',
-      timezoneTitle: 'Zeitzone',
-      timezoneText:
-        'Ich wohne in Deutschland und kann remote mit Teams weltweit arbeiten',
-      ctaTitle: 'Mehr Code auf GitHub',
-      ctaAction: 'Zum GitHub-Profil',
-      techStackTitle: 'Tech Stack',
-      techStackCategories: {
-        frontend: 'Frontend',
-        backend: 'Backend',
-        databases: 'Datenbanken',
-        tools: 'Tools',
+      "eyebrow": "Über mich",
+      "heading": "Code, der zuverlässig läuft – und gut aussieht.",
+      "bio1": "Ich bin Ömer, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln. In dreieinhalb Jahren Ausbildung habe ich an echten Produkten mitgearbeitet – von der ersten Komponente bis zu Features im Produktivbetrieb, mit Schwerpunkt auf TypeScript, Vue/Nuxt und Node.js.",
+      "bio2": "Heute baue ich eigene Web-Apps und Websites für Kunden und beschäftige mich damit, wie sich KI sinnvoll in Webanwendungen einbauen lässt. Neue Technologien lerne ich am liebsten, indem ich etwas damit baue.",
+      "facts": {
+        "ihk": {
+          "label": "IHK-Abschluss",
+          "value": "FIAE"
+        },
+        "practice": {
+          "label": "Jahre Praxis",
+          "value": "3,5"
+        },
+        "location": {
+          "label": "Standort",
+          "value": "Köln"
+        }
       },
-      cards: {
-        trained: 'FIAE',
-        frontend: 'Frontend',
-        backend: 'Backend',
-        fullstack: 'Fullstack',
-        ui: 'UIs',
+      "principles": {
+        "clean": {
+          "title": "Sauber und durchdacht",
+          "text": "Gut strukturierter, verständlicher Code und Oberflächen, die auf jedem Gerät funktionieren."
+        },
+        "team": {
+          "title": "Im Team zu Hause",
+          "text": "Kommunikativ, hilfsbereit und lösungsorientiert – ich frage nach, bevor ich rate."
+        },
+        "ai": {
+          "title": "KI als Werkzeug",
+          "text": "Ich nutze KI-Tools bewusst als Beschleuniger – verstehen und prüfen muss ich den Code trotzdem selbst."
+        }
       },
+      "techStackTitle": "Tech Stack",
+      "techStackCategories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "databases": "Datenbanken",
+        "tools": "Tools & DevOps"
+      }
     },
     projects: {
       "eyebrow": "Ausgewählte Arbeiten",
@@ -94,6 +116,15 @@ const translations: Record<Language, TranslationTree> = {
         "private": "Quellcode privat"
       }
     },
+    contact: {
+      "eyebrow": "Kontakt",
+      "headingStart": "Lassen Sie uns zusammen",
+      "headingAccent": "etwas bauen.",
+      "text": "Ob Jobangebot, Projektidee oder einfach ein Austausch über Webentwicklung – ich freue mich über Ihre Nachricht.",
+      "email": "E-Mail schreiben",
+      "copy": "Adresse kopieren",
+      "copied": "Kopiert ✓"
+    },
     footer: {
       rights: 'Alle Rechte vorbehalten.',
       builtWith: 'Gebaut mit',
@@ -112,6 +143,9 @@ const translations: Record<Language, TranslationTree> = {
       home: 'Home',
       about: 'About',
       projects: 'Projects',
+      contact: 'Contact',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
       toggleAria: 'Switch language',
       themeAria: 'Switch theme',
     },
@@ -131,26 +165,45 @@ const translations: Record<Language, TranslationTree> = {
       },
     },
     about: {
-      heading: 'About',
-      timezoneTitle: 'Timezone',
-      timezoneText:
-        'I live in Germany and can work remotely with teams worldwide',
-      ctaTitle: 'More code on GitHub',
-      ctaAction: 'Go to GitHub profile',
-      techStackTitle: 'Tech Stack',
-      techStackCategories: {
-        frontend: 'Frontend',
-        backend: 'Backend',
-        databases: 'Database',
-        tools: 'Tools',
+      "eyebrow": "About me",
+      "heading": "Code that runs reliably – and looks good doing it.",
+      "bio1": "I am Ömer, a trained application developer (Fachinformatiker) from Cologne. During my three-and-a-half-year apprenticeship I worked on real products – from a first component to features running in production, focused on TypeScript, Vue/Nuxt and Node.js.",
+      "bio2": "Today I build my own web apps and websites for clients, and I am exploring how AI can be built into web applications in a way that actually helps. I learn new technologies best by building something with them.",
+      "facts": {
+        "ihk": {
+          "label": "IHK certified",
+          "value": "FIAE"
+        },
+        "practice": {
+          "label": "Years of practice",
+          "value": "3.5"
+        },
+        "location": {
+          "label": "Based in",
+          "value": "Cologne"
+        }
       },
-      cards: {
-        trained: 'Trained',
-        frontend: 'Frontend',
-        backend: 'Backend',
-        fullstack: 'Fullstack',
-        ui: 'UIs',
+      "principles": {
+        "clean": {
+          "title": "Clean and considered",
+          "text": "Well-structured, readable code and interfaces that work on every device."
+        },
+        "team": {
+          "title": "At home in a team",
+          "text": "Communicative, helpful and solution-oriented – I ask before I guess."
+        },
+        "ai": {
+          "title": "AI as a tool",
+          "text": "I use AI tools deliberately as an accelerator – but I still review and understand the code myself."
+        }
       },
+      "techStackTitle": "Tech stack",
+      "techStackCategories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "databases": "Databases",
+        "tools": "Tools & DevOps"
+      }
     },
     projects: {
       "eyebrow": "Selected work",
@@ -176,6 +229,15 @@ const translations: Record<Language, TranslationTree> = {
         "code": "Code",
         "private": "Private source"
       }
+    },
+    contact: {
+      "eyebrow": "Contact",
+      "headingStart": "Let us build",
+      "headingAccent": "something together.",
+      "text": "Whether it is a job offer, a project idea or just a chat about web development – I would love to hear from you.",
+      "email": "Send an email",
+      "copy": "Copy address",
+      "copied": "Copied ✓"
     },
     footer: {
       rights: 'All rights reserved.',

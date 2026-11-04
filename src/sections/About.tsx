@@ -1,138 +1,147 @@
-import { useRef } from "react";
-import Card from "../components/Card";
-import { Globe } from "../components/Globe";
-import Frameworks from "../components/Frameworks";
+import { motion } from "motion/react";
 import { useI18n } from "../i18n";
 import { asset } from "../lib/utils";
 
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+type Tech = { name: string; icon?: string };
+
+const STACK: { key: string; items: Tech[] }[] = [
+  {
+    key: "frontend",
+    items: [
+      { name: "TypeScript", icon: "typescript.svg" },
+      { name: "Vue", icon: "vue.svg" },
+      { name: "Nuxt", icon: "nuxt-icon.svg" },
+      { name: "React", icon: "react.svg" },
+      { name: "Next.js" },
+      { name: "Tailwind CSS", icon: "tailwindcss.svg" },
+    ],
+  },
+  {
+    key: "backend",
+    items: [
+      { name: "Node.js", icon: "nodejs.svg" },
+      { name: "NestJS", icon: "nestjs.svg" },
+      { name: "REST APIs" },
+      { name: "C# / .NET", icon: "csharp-pink.png" },
+    ],
+  },
+  {
+    key: "databases",
+    items: [
+      { name: "PostgreSQL", icon: "sql.svg" },
+      { name: "Supabase" },
+      { name: "Prisma" },
+    ],
+  },
+  {
+    key: "tools",
+    items: [
+      { name: "Git", icon: "git.svg" },
+      { name: "Docker", icon: "docker.svg" },
+      { name: "GitHub Actions", icon: "github-white.svg" },
+    ],
+  },
+];
+
+const FACTS = ["ihk", "practice", "location"] as const;
+const PRINCIPLES = ["clean", "team", "ai"] as const;
+
+const reveal = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { delay, duration: 0.7, ease: EASE },
+});
+
 export default function About() {
   const { t } = useI18n();
-  const grid2Container = useRef<HTMLDivElement>(null);
-  return (
-    <section className="c-space mb-8 md:mb-12" id="about">
-      <h2 className="text-heading">{t("about.heading")}</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
 
-        {/* grid2 */}
-        <div className="grid-default-color grid-2">
-          <div
-            ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
-          >
-            <Card
-              text={t("about.cards.trained")}
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              text={t("about.cards.frontend")}
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              text={t("about.cards.backend")}
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              text={t("about.cards.fullstack")}
-              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              text={t("about.cards.ui")}
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              image={asset("assets/logos/vue.svg")}
-              style={{ rotate: "30deg", bottom: "70%", left: "70%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              image={asset("assets/logos/react.svg")}
-              style={{ rotate: "-45deg", bottom: "30%", left: "25%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              image={asset("assets/logos/tailwindcss.svg")}
-              style={{ rotate: "-45deg", top: "12%", left: "18%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              image={asset("assets/logos/nuxt-icon.svg")}
-              style={{ rotate: "-45deg", top: "22%", left: "35%" }}
-              containerRef={grid2Container}
-            />
-            <Card
-              image={asset("assets/logos/typescript.svg")}
-              style={{ rotate: "-45deg", top: "30%", left: "50%" }}
-              containerRef={grid2Container}
-            />
+  return (
+    <section id="about" className="relative c-space pt-24 md:pt-32">
+      <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+        {/* Bio */}
+        <motion.div {...reveal()}>
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+            {t("about.eyebrow")}
+          </p>
+          <h2 className="text-4xl font-bold tracking-tight text-pretty md:text-5xl">
+            {t("about.heading")}
+          </h2>
+          <div className="mt-6 flex flex-col gap-4 text-muted text-pretty md:text-lg">
+            <p>{t("about.bio1")}</p>
+            <p>{t("about.bio2")}</p>
           </div>
-        </div>
-        {/* grid3 */}
-        <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
-            <p className="headtext">{t("about.timezoneTitle")}</p>
-            <p className="subtext">{t("about.timezoneText")}</p>
-          </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
-          </figure>
-        </div>
-        {/* grid4 */}
-        <div className="grid-special-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">{t("about.ctaTitle")}</p>
-            <a
-              href="https://github.com/nilvaes"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-primary px-6 py-3 text-sm font-extralight text-ink transition hover:-translate-y-1 duration-200"
+
+          <dl className="mt-10 grid grid-cols-3 gap-3">
+            {FACTS.map((fact) => (
+              <div
+                key={fact}
+                className="rounded-2xl border border-ink/10 p-4 card-surface backdrop-blur-sm"
+              >
+                <dt className="text-xs text-muted md:text-sm">{t(`about.facts.${fact}.label`)}</dt>
+                <dd className="text-gradient mt-1 text-xl font-bold md:text-3xl">
+                  {t(`about.facts.${fact}.value`)}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </motion.div>
+
+        {/* Principles + stack */}
+        <div className="flex flex-col gap-4">
+          {PRINCIPLES.map((p, i) => (
+            <motion.div
+              key={p}
+              {...reveal(0.1 + i * 0.08)}
+              className="flex gap-4 rounded-2xl border border-ink/10 p-5 card-surface backdrop-blur-sm"
             >
-              {t("about.ctaAction")}
-            </a>
-          </div>
-        </div>
-        {/* grid5 */}
-        <div className="grid-default-color grid-5">
-          <div className="relative z-10 flex min-h-0 w-full flex-col gap-3 overflow-y-auto rounded-2xl p-4 backdrop-blur-sm bg-primary/50 md:h-full md:w-[55%] md:rounded-none md:bg-transparent md:backdrop-blur-none md:p-0">
-            <div>
-              <p className="headtext">{t("about.techStackTitle")}</p>
-            </div>
-            <div className="mt-1 grid grid-cols-1 gap-y-3 text-xs text-ink/80 md:grid-cols-2 md:gap-x-4 md:gap-y-3 md:text-sm">
+              <span className="font-mono text-sm text-subtle">0{i + 1}</span>
               <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
-                  {t("about.techStackCategories.frontend")}
+                <h3 className="font-semibold text-ink">{t(`about.principles.${p}.title`)}</h3>
+                <p className="mt-1 text-sm text-muted text-pretty">
+                  {t(`about.principles.${p}.text`)}
                 </p>
-                <p>TypeScript, Vue.js, Nuxt, React, Next.js, Tailwind</p>
               </div>
-              <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
-                  {t("about.techStackCategories.backend")}
-                </p>
-                <p>Node.js, REST APIs, NestJS</p>
-              </div>
-              <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
-                  {t("about.techStackCategories.databases")}
-                </p>
-                <p>PostgreSQL, Supabase, Prisma</p>
-              </div>
-              <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted md:text-xs">
-                  {t("about.techStackCategories.tools")}
-                </p>
-                <p>Git, Docker</p>
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-y-2 z-0 w-full h-full start-[55%] md:inset-y-6 md:scale-110">
-            <Frameworks />
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
+
+      <motion.div {...reveal()} className="relative z-10 mt-16">
+        <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-lavender">
+          {t("about.techStackTitle")}
+        </h3>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {STACK.map((group) => (
+            <div key={group.key}>
+              <p className="mb-3 text-sm font-semibold text-ink">
+                {t(`about.techStackCategories.${group.key}`)}
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="flex items-center gap-2 rounded-full border border-ink/10 px-3 py-1.5 text-sm text-ink/85 card-surface transition hover:-translate-y-0.5 hover:border-ink/30"
+                  >
+                    {item.icon && (
+                      <img
+                        src={asset(`assets/logos/${item.icon}`)}
+                        alt=""
+                        aria-hidden
+                        loading="lazy"
+                        className={`size-4 object-contain ${item.icon.includes("white") ? "light:invert" : ""}`}
+                      />
+                    )}
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
