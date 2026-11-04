@@ -119,7 +119,7 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       "eyebrow": "Ausgewählte Arbeiten",
       "heading": "Projekte",
-      "intro": "Von Full-Stack-Webanwendungen über Landingpages für Kunden bis zum Windows-Tool – eine Auswahl von Dingen, die ich gebaut habe.",
+      "intro": "Von Full-Stack-Webanwendungen über Landingpages bis zum Windows-Tool – eine Auswahl von Dingen, die ich gebaut habe.",
       "filterLabel": "Projekte filtern",
       "filters": {
         "all": "Alle",
@@ -258,7 +258,7 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       "eyebrow": "Selected work",
       "heading": "Projects",
-      "intro": "From full-stack web apps and landing pages for clients to a Windows tool – a selection of things I have built.",
+      "intro": "From full-stack web apps and landing pages to a Windows tool – a selection of things I have built.",
       "filterLabel": "Filter projects",
       "filters": {
         "all": "All",

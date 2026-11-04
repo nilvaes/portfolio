@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     status: "live",
     image: "assets/projects/dictionary.jpg",
     live: "https://dictionary.savasbuilds.com/",
-    tech: ["Nuxt", "Vue", "TypeScript"],
+    tech: ["Nuxt", "Vue", "TypeScript", "Supabase", "PostgreSQL"],
     text: {
       de: {
         title: "Your Dictionary",
@@ -136,7 +136,7 @@ export const PROJECTS: Project[] = [
     id: "feride",
     category: "landing",
     layout: "card",
-    status: "wip",
+    status: "concept",
     image: "assets/projects/feride.jpg",
     live: "https://landing-frd.savas-qrx.workers.dev/de/",
     tech: ["Astro", "TypeScript", "Cloudflare Workers"],
@@ -144,12 +144,12 @@ export const PROJECTS: Project[] = [
       de: {
         title: "Feride – Coaching für Familien",
         description:
-          "Zweisprachige Landingpage (DE/TR) für ein Familien-Coaching – warm, ruhig und auf Vertrauen ausgelegt.",
+          "Konzept einer zweisprachigen Landingpage (DE/TR) für ein Familien-Coaching – warm, ruhig und auf Vertrauen ausgelegt.",
       },
       en: {
         title: "Feride – Family Coaching",
         description:
-          "Bilingual landing page (DE/TR) for a family coaching practice – warm, calm and built to create trust.",
+          "Concept for a bilingual landing page (DE/TR) for a family coaching practice – warm, calm and built to create trust.",
       },
     },
   },
