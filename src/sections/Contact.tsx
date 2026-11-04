@@ -59,7 +59,7 @@ export default function Contact() {
               <>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="cta-pill rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:brightness-110"
+                  className="cta-pill rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-cta/20 transition hover:-translate-y-0.5 hover:brightness-110"
                 >
                   {t("contact.email")}
                 </a>
@@ -80,7 +80,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className={
                   !CONTACT_EMAIL && i === 0
-                    ? "cta-pill inline-flex items-center gap-2 rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:brightness-110"
+                    ? "cta-pill inline-flex items-center gap-2 rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-cta/20 transition hover:-translate-y-0.5 hover:brightness-110"
                     : "inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-medium text-ink transition hover:-translate-y-0.5 hover:border-ink/40 hover:bg-ink/5"
                 }
               >

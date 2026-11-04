@@ -15,8 +15,8 @@ import { useTheme } from "../theme";
 import { asset } from "../lib/utils";
 
 const RAY_COLOR = {
-  dark: "rgba(129, 140, 248, 0.10)",
-  light: "rgba(79, 70, 229, 0.12)",
+  dark: "rgba(194, 223, 227, 0.07)",
+  light: "rgba(92, 107, 115, 0.12)",
 } as const;
 
 const NAME = "Ömer Savas";
@@ -244,7 +244,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="cta-pill group inline-flex items-center gap-2 rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:brightness-110"
+              className="cta-pill group inline-flex items-center gap-2 rounded-full px-7 py-3 font-medium text-on-accent shadow-lg shadow-cta/20 transition hover:-translate-y-0.5 hover:brightness-110"
             >
               {t("hero.ctaProjects")}
               <span className="transition-transform group-hover:translate-y-0.5" aria-hidden>
