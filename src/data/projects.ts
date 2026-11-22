@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
       de: {
         title: "Onboarding-Portal · IHK-Abschlussprojekt",
         description:
-          "Plattform, die neue Mitarbeitende durch ihr Onboarding führt – entwickelt als Abschlussprojekt meiner Ausbildung.",
+          "Plattform, die neue Mitarbeitende durch ihr Onboarding führt und als Abschlussprojekt meiner Ausbildung entstanden ist.",
         highlights: [
           "Zentrale Dokumentenverwaltung für Onboarding-Unterlagen",
           "Authentifizierung und rollenbasierte Zugriffsrechte",
@@ -174,7 +174,7 @@ export const PROJECTS: Project[] = [
       en: {
         title: "Onboarding Portal · IHK Final Project",
         description:
-          "A platform that guides new employees through their onboarding – built as the final project of my apprenticeship.",
+          "A platform that guides new employees through their onboarding and was built as the final project of my apprenticeship.",
         highlights: [
           "Central document management for onboarding material",
           "Authentication and role-based access control",
