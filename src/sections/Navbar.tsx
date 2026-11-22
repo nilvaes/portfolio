@@ -86,7 +86,7 @@ function LanguageSwitch({ className }: { className?: string }) {
 
 function Logo() {
   return (
-    <a href="#home" className="group flex items-center gap-2.5" aria-label="Ömer Savas – Start">
+    <a href="#home" className="group flex items-center gap-2.5" aria-label="Ömer Savas, zur Startseite">
       <span className="grid size-9 place-items-center rounded-full bg-ink text-sm font-bold text-primary transition-transform duration-300 group-hover:-rotate-12">
         ÖS
       </span>

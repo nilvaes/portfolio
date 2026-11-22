@@ -40,7 +40,7 @@ const translations: Record<Language, TranslationTree> = {
       badge: "Fachinformatiker für Anwendungsentwicklung · Köln",
       titlePrefix: "Ich baue Webanwendungen mit",
       tagline:
-        "Full-Stack von der Datenbank bis zum Interface – vom Kundenprojekt bis zur eigenen Web-App, sauber gebaut und durchdacht gestaltet.",
+        "Full-Stack von der Datenbank bis zum Interface, vom Kundenprojekt bis zur eigenen Web-App. Sauber gebaut und durchdacht gestaltet.",
       ctaProjects: "Projekte ansehen",
       ctaContact: "Kontakt aufnehmen",
       scroll: "Scrollen",
@@ -53,8 +53,8 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       "eyebrow": "Über mich",
-      "heading": "Code, der zuverlässig läuft – und gut aussieht.",
-      "bio1": "Ich bin Ömer, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln. In meiner Ausbildung habe ich an echten Produkten mitgearbeitet – von der ersten Komponente bis zu Features im Produktivbetrieb, mit Schwerpunkt auf TypeScript, Vue/Nuxt und Node.js.",
+      "heading": "Code, der zuverlässig läuft und gut aussieht.",
+      "bio1": "Ich bin Ömer, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Köln. In meiner Ausbildung habe ich an echten Produkten mitgearbeitet, von der ersten Komponente bis zu Features im Produktivbetrieb. Mein Schwerpunkt liegt auf TypeScript, Vue/Nuxt und Node.js.",
       "bio2": "Heute baue ich eigene Web-Apps und Websites für Kunden und beschäftige mich damit, wie sich KI sinnvoll in Webanwendungen einbauen lässt.",
       "facts": {
         "ihk": {
@@ -74,7 +74,7 @@ const translations: Record<Language, TranslationTree> = {
         "ai": {
           "eyebrow": "KI im Workflow",
           "title": "Mit KI-Agenten entwickeln",
-          "text": "Ich arbeite täglich mit KI-Coding-Agenten wie Claude Code und Codex – für Prototypen, Refactorings, Tests und Code-Reviews. Architektur-Entscheidungen und das letzte Review bleiben bei mir: Ich übernehme nur Code, den ich verstehe.",
+          "text": "Ich arbeite täglich mit KI-Coding-Agenten wie Claude Code und Codex, zum Beispiel für Prototypen, Refactorings, Tests und Code-Reviews. Architektur-Entscheidungen und das letzte Review bleiben bei mir: Ich übernehme nur Code, den ich verstehe.",
           "tags": {
             "claude": "Claude Code",
             "codex": "OpenAI Codex",
@@ -85,7 +85,7 @@ const translations: Record<Language, TranslationTree> = {
         "hobby": {
           "eyebrow": "Abseits vom Code",
           "title": "3D & Game Design",
-          "text": "In meiner Freizeit experimentiere ich mit 3D-Modellierung, Meshing und Rigging und erkunde, wie KI das Game Design verändert – von der ersten Idee bis zum spielbaren Prototyp.",
+          "text": "In meiner Freizeit experimentiere ich mit 3D-Modellierung, Meshing und Rigging und erkunde, wie KI das Game Design verändert, von der ersten Idee bis zum spielbaren Prototyp.",
           "tags": {
             "modeling": "3D-Modellierung",
             "meshing": "Meshing",
@@ -101,11 +101,11 @@ const translations: Record<Language, TranslationTree> = {
         },
         "team": {
           "title": "Im Team zu Hause",
-          "text": "Kommunikativ, hilfsbereit und lösungsorientiert – ich frage nach, bevor ich rate."
+          "text": "Kommunikativ, hilfsbereit und lösungsorientiert. Ich frage nach, bevor ich rate."
         },
         "build": {
           "title": "Lernen durch Bauen",
-          "text": "Neue Technologien lerne ich am liebsten, indem ich ein echtes Projekt damit umsetze – nicht nur durch Lesen."
+          "text": "Neue Technologien lerne ich am liebsten, indem ich ein echtes Projekt damit umsetze, nicht nur durch Lesen."
         }
       },
       "techStackTitle": "Tech Stack",
@@ -119,7 +119,7 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       "eyebrow": "Ausgewählte Arbeiten",
       "heading": "Projekte",
-      "intro": "Von Full-Stack-Webanwendungen über Landingpages bis zum Windows-Tool – eine Auswahl von Dingen, die ich gebaut habe.",
+      "intro": "Eine Auswahl von Dingen, die ich gebaut habe, von Full-Stack-Webanwendungen über Landingpages bis zum Windows-Tool.",
       "filterLabel": "Projekte filtern",
       "filters": {
         "all": "Alle",
@@ -145,7 +145,7 @@ const translations: Record<Language, TranslationTree> = {
       "eyebrow": "Kontakt",
       "headingStart": "Lassen Sie uns zusammen",
       "headingAccent": "etwas bauen.",
-      "text": "Ob Jobangebot, Projektidee oder einfach ein Austausch über Webentwicklung – ich freue mich über Ihre Nachricht.",
+      "text": "Ob Jobangebot, Projektidee oder einfach ein Austausch über Webentwicklung: Ich freue mich über Ihre Nachricht.",
       "email": "E-Mail schreiben",
       "copy": "Adresse kopieren",
       "copied": "Kopiert ✓"
@@ -179,7 +179,7 @@ const translations: Record<Language, TranslationTree> = {
       badge: "Trained application developer · Cologne",
       titlePrefix: "I build web applications with",
       tagline:
-        "Full-stack from database to interface – from client projects to my own web apps, cleanly built and thoughtfully designed.",
+        "Full-stack from database to interface, from client projects to my own web apps. Cleanly built and thoughtfully designed.",
       ctaProjects: "View projects",
       ctaContact: "Get in touch",
       scroll: "Scroll",
@@ -192,8 +192,8 @@ const translations: Record<Language, TranslationTree> = {
     },
     about: {
       "eyebrow": "About me",
-      "heading": "Code that runs reliably – and looks good doing it.",
-      "bio1": "I am Ömer, a trained application developer (Fachinformatiker) from Cologne. During my apprenticeship I worked on real products – from a first component to features running in production, focused on TypeScript, Vue/Nuxt and Node.js.",
+      "heading": "Code that runs reliably and looks good doing it.",
+      "bio1": "I am Ömer, a trained application developer (Fachinformatiker) from Cologne. During my apprenticeship I worked on real products, from a first component to features running in production. My focus is on TypeScript, Vue/Nuxt and Node.js.",
       "bio2": "Today I build my own web apps and websites for clients, and I am exploring how AI can be built into web applications in a way that actually helps.",
       "facts": {
         "ihk": {
@@ -213,7 +213,7 @@ const translations: Record<Language, TranslationTree> = {
         "ai": {
           "eyebrow": "AI in my workflow",
           "title": "Building with AI agents",
-          "text": "I work with AI coding agents such as Claude Code and Codex every day – for prototypes, refactoring, tests and code reviews. Architecture decisions and the final review stay with me: I only ship code I understand.",
+          "text": "I work with AI coding agents such as Claude Code and Codex every day, for prototypes, refactoring, tests and code reviews. Architecture decisions and the final review stay with me: I only ship code I understand.",
           "tags": {
             "claude": "Claude Code",
             "codex": "OpenAI Codex",
@@ -224,7 +224,7 @@ const translations: Record<Language, TranslationTree> = {
         "hobby": {
           "eyebrow": "Beyond code",
           "title": "3D & game design",
-          "text": "In my free time I experiment with 3D modelling, meshing and rigging, and explore how AI is changing game design – from a first idea to a playable prototype.",
+          "text": "In my free time I experiment with 3D modelling, meshing and rigging, and explore how AI is changing game design, from a first idea to a playable prototype.",
           "tags": {
             "modeling": "3D modelling",
             "meshing": "Meshing",
@@ -240,11 +240,11 @@ const translations: Record<Language, TranslationTree> = {
         },
         "team": {
           "title": "At home in a team",
-          "text": "Communicative, helpful and solution-oriented – I ask before I guess."
+          "text": "Communicative, helpful and solution-oriented. I ask before I guess."
         },
         "build": {
           "title": "Learning by building",
-          "text": "I learn new technologies best by shipping a real project with them – not just by reading about them."
+          "text": "I learn new technologies best by shipping a real project with them, not just by reading about them."
         }
       },
       "techStackTitle": "Tech stack",
@@ -258,7 +258,7 @@ const translations: Record<Language, TranslationTree> = {
     projects: {
       "eyebrow": "Selected work",
       "heading": "Projects",
-      "intro": "From full-stack web apps and landing pages to a Windows tool – a selection of things I have built.",
+      "intro": "A selection of things I have built, from full-stack web apps and landing pages to a Windows tool.",
       "filterLabel": "Filter projects",
       "filters": {
         "all": "All",
@@ -284,7 +284,7 @@ const translations: Record<Language, TranslationTree> = {
       "eyebrow": "Contact",
       "headingStart": "Let us build",
       "headingAccent": "something together.",
-      "text": "Whether it is a job offer, a project idea or just a chat about web development – I would love to hear from you.",
+      "text": "Whether it is a job offer, a project idea or just a chat about web development, I would love to hear from you.",
       "email": "Send an email",
       "copy": "Copy address",
       "copied": "Copied ✓"

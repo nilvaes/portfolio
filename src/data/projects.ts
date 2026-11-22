@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
         description:
           "A personal dictionary for language learners: collect words, explain them in your own words and practise them with flashcards.",
         highlights: [
-          "Multiple dictionaries per language, browsable A–Z",
+          "Multiple dictionaries per language, sorted alphabetically",
           "Flashcard mode to practise new words",
           "User accounts with private data and export",
         ],
@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
     tech: ["Next.js", "TypeScript", "Supabase", "TanStack Query", "GraphQL"],
     text: {
       de: {
-        title: "Sumi – Anime entdecken & verfolgen",
+        title: "Sumi · Anime entdecken & verfolgen",
         description:
           "Eine Full-Stack-Plattform zum Entdecken und Verfolgen von Anime, angebunden an die AniList-GraphQL-API.",
         highlights: [
@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
         ],
       },
       en: {
-        title: "Sumi – Discover & Track Anime",
+        title: "Sumi · Discover & Track Anime",
         description:
           "A full-stack platform to discover and track anime, built on top of the AniList GraphQL API.",
         highlights: [
@@ -101,12 +101,12 @@ export const PROJECTS: Project[] = [
       de: {
         title: "Bosporus Lahmacun & Pide",
         description:
-          "Restaurant-Website für ein türkisches Restaurant in Köln – mit Speisekarte, Catering und zweisprachiger DE/TR-Oberfläche.",
+          "Website für ein türkisches Restaurant in Köln mit Speisekarte, Catering und zweisprachiger Oberfläche (DE/TR).",
       },
       en: {
         title: "Bosporus Lahmacun & Pide",
         description:
-          "Website for a Turkish restaurant in Cologne – with menu, catering and a bilingual DE/TR interface.",
+          "Website for a Turkish restaurant in Cologne with menu, catering and a bilingual DE/TR interface.",
       },
     },
   },
@@ -123,12 +123,12 @@ export const PROJECTS: Project[] = [
       de: {
         title: "Immobilienmakler Köln",
         description:
-          "Konzept-Landingpage für einen Immobilienmakler – mit Leistungen, Referenzen, Fotogalerie und klarer Kontaktführung.",
+          "Konzept-Landingpage für einen Immobilienmakler mit Leistungen, Referenzen, Fotogalerie und klarer Kontaktführung.",
       },
       en: {
         title: "Real Estate Agent Cologne",
         description:
-          "Concept landing page for a real estate agent – with services, references, photo gallery and a clear path to contact.",
+          "Concept landing page for a real estate agent with services, references, photo gallery and a clear path to contact.",
       },
     },
   },
@@ -142,14 +142,14 @@ export const PROJECTS: Project[] = [
     tech: ["Astro", "TypeScript", "Cloudflare Workers"],
     text: {
       de: {
-        title: "Feride – Coaching für Familien",
+        title: "Feride · Coaching für Familien",
         description:
-          "Konzept einer zweisprachigen Landingpage (DE/TR) für ein Familien-Coaching – warm, ruhig und auf Vertrauen ausgelegt.",
+          "Konzept einer zweisprachigen Landingpage (DE/TR) für ein Familien-Coaching. Warm, ruhig und darauf ausgelegt, Vertrauen zu schaffen.",
       },
       en: {
-        title: "Feride – Family Coaching",
+        title: "Feride · Family Coaching",
         description:
-          "Concept for a bilingual landing page (DE/TR) for a family coaching practice – warm, calm and built to create trust.",
+          "Concept for a bilingual landing page (DE/TR) for a family coaching practice. Warm, calm and built to create trust.",
       },
     },
   },
@@ -195,7 +195,7 @@ export const PROJECTS: Project[] = [
       de: {
         title: "Switch Audio",
         description:
-          "Ein schlankes Windows-Tray-Tool, das per globalem Hotkey zwischen zwei Audioausgängen wechselt – ohne Installer, ohne externe Abhängigkeiten.",
+          "Ein schlankes Windows-Tray-Tool, das per globalem Hotkey zwischen zwei Audioausgängen wechselt. Ohne Installer und ohne externe Abhängigkeiten.",
         highlights: [
           "Steuert die Windows-Core-Audio-COM-Schnittstellen direkt an",
           "Systemweiter Hotkey über die Win32-API, frei belegbar",
@@ -205,7 +205,7 @@ export const PROJECTS: Project[] = [
       en: {
         title: "Switch Audio",
         description:
-          "A lightweight Windows tray app that switches between two audio outputs with a global hotkey – no installer, no external dependencies.",
+          "A lightweight Windows tray app that switches between two audio outputs with a global hotkey. No installer and no external dependencies.",
         highlights: [
           "Talks to the Windows Core Audio COM interfaces directly",
           "System-wide, customisable hotkey via the Win32 API",
